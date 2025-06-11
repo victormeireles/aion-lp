@@ -1,0 +1,153 @@
+{
+  "index": [
+    {
+      "question": "O que é a AION Solution e o que vocês fazem?",
+      "answer": "A AION Solution é uma empresa de tecnologia especializada em inteligência artificial para pequenas e médias empresas. Oferecemos 4 soluções principais: AION Vendas (gestão para empresas de serviços), AION E-Commerce (BI para lojas online), Soluções de IA (websites e atendentes virtuais) e Consultoria Personalizada para empresas maiores."
+    },
+    {
+      "question": "Como escolher a solução ideal para minha empresa?",
+      "answer": "Depende do seu segmento e faturamento: <strong>Serviços</strong> → AION Vendas. <strong>E-commerce</strong> → AION E-Commerce. <strong>Qualquer empresa</strong> → Soluções de IA. <strong>Faturamento +R$200k/mês</strong> → Consultoria. Oferecemos consultoria gratuita para te ajudar a escolher a melhor opção."
+    },
+    {
+      "question": "Qual a experiência dos fundadores da AION?",
+      "answer": "Gustavo Martins e Victor Meireles são mentores 5 estrelas na G4 Educação e levaram TODAS as 8 empresas que lideraram do prejuízo ao lucro (Dafiti, Kanui, C&A, etc.). Têm experiência prática em virar empresas e gerar bilhões em resultados através de transformação digital e IA."
+    },
+    {
+      "question": "Como funciona a consultoria inicial gratuita?",
+      "answer": "É uma reunião de 60-90 minutos onde analisamos seu negócio, identificamos oportunidades e recomendamos a melhor solução. Você sai com insights valiosos mesmo que não feche nada conosco. É nossa forma de demonstrar competência antes de qualquer compromisso comercial."
+    },
+    {
+      "question": "Em quanto tempo vejo resultados com as soluções AION?",
+      "answer": "Varia por solução: <strong>Websites/IA</strong> → resultados imediatos após entrega (15-30 dias). <strong>AION Vendas</strong> → primeiros resultados em 30 dias. <strong>AION E-Commerce</strong> → após integração completa (30-45 dias). <strong>Consultoria</strong> → 60-90 dias para mudanças estruturais."
+    },
+    {
+      "question": "Vocês atendem empresas de qualquer segmento?",
+      "answer": "Sim! Temos experiência em diversos setores: saúde, educação, e-commerce, serviços, tecnologia, manufatura. Nossos fundadores trabalharam com gigantes como Dafiti, C&A, EMS. Adaptamos nossas soluções para qualquer segmento, sempre respeitando as particularidades de cada mercado."
+    },
+    {
+      "question": "Qual o diferencial da AION em relação a outras empresas de IA?",
+      "answer": "Nosso diferencial é a experiência prática: não somos apenas teóricos, somos executivos que viraram empresas reais. Combinamos IA com estratégia de negócios, focamos em ROI mensurável e oferecemos soluções acessíveis para PMEs. Não fazemos apenas tecnologia, fazemos transformação de resultados."
+    }
+  ],
+  "campanhas": [
+    {
+      "question": "O que é o AION Vendas e como funciona?",
+      "answer": "O AION Vendas é um sistema completo de gestão para empresas de serviços. Integra CRM, automação de marketing, gestão de equipes e relatórios inteligentes. Automatiza desde a captação de leads até o pós-venda, permitindo que você foque na estratégia enquanto a IA cuida da operação."
+    },
+    {
+      "question": "Qual o tipo de empresa que mais se beneficia do AION Vendas?",
+      "answer": "Empresas de serviços B2B com faturamento entre R$50k e R$500k/mês: consultorias, agências, escritórios, clínicas, empresas de tecnologia, educação, etc. Ideal para quem tem processos manuais e quer escalar sem perder qualidade no atendimento."
+    },
+    {
+      "question": "Como o AION Vendas se integra com as ferramentas que já uso?",
+      "answer": "Temos integrações nativas com as principais plataformas: WhatsApp Business, Google Ads, Facebook Ads, RD Station, pipelines de email, calendários e muito mais. Nossa equipe técnica cuida de toda a integração sem interromper sua operação atual."
+    },
+    {
+      "question": "O AION Vendas substitui meu CRM atual?",
+      "answer": "Pode substituir ou complementar, dependendo da sua necessidade. Muitos clientes migram completamente para nosso sistema por ser mais intuitivo e focado em resultados. Outros mantêm sistemas legados para dados históricos e usam o AION para processos novos."
+    },
+    {
+      "question": "Preciso treinar minha equipe para usar o sistema?",
+      "question": "Em quanto tempo consigo lotar minha agenda de consultas?",
+      "answer": "Com a estratégia correta de reativação + aquisição, nossos clientes conseguem agenda cheia entre 15-30 dias. Primeiro reativamos quem já te conhece (resultado mais rápido), depois estruturamos a aquisição de novos clientes."
+    },
+    {
+      "question": "Vocês oferecem garantia dos resultados?",
+      "answer": "Sim! Oferecemos garantia de satisfação. Se em 60 dias você não conseguir reativar pelo menos 3x o investimento em clientes inativos, devolvemos 100% do valor pago. Temos essa confiança porque nossa metodologia é comprovada."
+    },
+    {
+      "question": "A plataforma integra com meus sistemas atuais?",
+      "answer": "Sim, o AION Vendas integra com as principais ferramentas do mercado: WhatsApp Business, Google Ads, Meta Ads, RD Station, HubSpot e sistemas de agendamento. Se usar algo específico, verificamos a compatibilidade na consultoria gratuita."
+    }
+  ],
+  "ecommerce": [
+    {
+      "question": "Quais ERPs e plataformas vocês integram nativamente?",
+      "answer": "Integramos com mais de 15 sistemas: Bling, TinyERP, Olist, Shopify, WooCommerce, Magento, Google Analytics, Meta Ads, Google Ads, Klaviyo, entre outros. Se seu ERP não estiver na lista, desenvolvemos a integração customizada."
+    },
+    {
+      "question": "Quanto tempo leva para ter todos os dados integrados?",
+      "answer": "O setup completo da integração leva 30 dias. Na primeira semana você já tem visão consolidada dos principais dados (vendas, estoque, marketing). Nas semanas seguintes refinamos os dashboards e configuramos automações específicas."
+    },
+    {
+      "question": "Como funciona o assistente virtual com meus dados?",
+      "answer": "O assistente de IA é treinado especificamente com os dados do seu e-commerce. Você pode perguntar coisas como 'Qual produto devo reabastecer?' ou 'Como está a margem da categoria X?' e recebe respostas instantâneas baseadas nos seus dados reais."
+    },
+    {
+      "question": "Quais módulos especializados estão disponíveis?",
+      "answer": "Oferecemos módulos para: Gestão de Estoque Inteligente, Automação de Marketing, Análise de Margem por Produto, Precificação Dinâmica, Análise de Concorrência e Previsão de Demanda. Cada módulo é ativado conforme sua necessidade."
+    },
+    {
+      "question": "Existe faturamento mínimo para usar a plataforma?",
+      "answer": "Recomendamos para e-commerces com faturamento mensal de R$ 50k+. Abaixo disso, o investimento pode não se justificar. Para negócios menores, oferecemos soluções mais simples ou indicamos aguardar o crescimento natural."
+    },
+    {
+      "question": "Consigo migrar dados históricos para análise?",
+      "answer": "Sim! Importamos até 24 meses de histórico de vendas, estoque e marketing. Isso permite análises de sazonalidade, tendências e previsões mais precisas desde o primeiro dia de uso da plataforma."
+    },
+    {
+      "question": "Vocês oferecem suporte técnico e treinamento?",
+      "answer": "Incluímos treinamento completo da equipe, suporte técnico prioritário e reuniões mensais de otimização. Nosso objetivo é que você seja completamente autônomo na plataforma e extraia máximo valor dos seus dados."
+    }
+  ],
+  "agentes": [
+    {
+      "question": "O que é AEO e por que é importante para meu negócio?",
+      "answer": "AEO (AI Engine Optimization) é a otimização para buscadores de IA como ChatGPT, Claude e Gemini. Enquanto o SEO tradicional foca no Google, o AEO garante que sua empresa seja citada quando pessoas fazem perguntas para IAs. É o futuro da busca online."
+    },
+    {
+      "question": "Qual a diferença entre IA e atendimento humano no WhatsApp?",
+      "answer": "Nossa IA é treinada especificamente com os dados do seu negócio, respondendo como um especialista. Ela atende 24/7, nunca tem dias ruins e sempre oferece a melhor solução. Quando necessário, transfere para humanos de forma natural."
+    },
+    {
+      "question": "Como funciona o processo de treinamento da IA?",
+      "answer": "Coletamos todos os materiais do seu negócio (site, catálogos, FAQs, scripts de vendas) e treinamos a IA com esses dados. O processo leva 2-3 semanas e inclui testes rigorosos antes de colocar no ar."
+    },
+    {
+      "question": "Em quanto tempo o site e a IA ficam prontos?",
+      "answer": "Website fica pronto em 7-10 dias úteis. O assistente de WhatsApp leva 15-20 dias (incluindo treinamento e testes). Ambos são entregues com treinamento completo para sua equipe gerenciar."
+    },
+    {
+      "question": "Atendem todos os segmentos de negócio?",
+      "answer": "Sim! Já desenvolvemos soluções para saúde, educação, e-commerce, imobiliário, advocacia, consultorias e mais. Cada IA é personalizada para o vocabulário e necessidades específicas do seu mercado."
+    },
+    {
+      "question": "Preciso de conhecimento técnico para gerenciar?",
+      "answer": "Não! Entregamos tudo funcionando e ensinamos sua equipe a gerenciar. Para o site, você terá acesso a painel administrativo simples. Para a IA, ensinamos como treinar e otimizar as respostas de forma visual."
+    },
+    {
+      "question": "Qual o investimento para ter website + IA WhatsApp?",
+      "answer": "Website: R$ 999 (pagamento único). IA WhatsApp: investimento personalizado baseado na complexidade (média R$ 2-5k). Oferecemos pacotes combinados com desconto para quem contrata ambos os serviços."
+    }
+  ],
+  "consultoria": [
+    {
+      "question": "Como funciona exatamente a consultoria gratuita?",
+      "answer": "É uma conversa de 45-60 minutos onde fazemos um diagnóstico completo do seu negócio. Analisamos seus dados atuais, identificamos oportunidades de IA e apresentamos um plano personalizado. Você sai com insights valiosos, independente de contratar ou não."
+    },
+    {
+      "question": "Existe faturamento mínimo para consultoria personalizada?",
+      "answer": "Para projetos de consultoria customizada, trabalhamos com empresas de faturamento mínimo R$ 100k/mês. Isso garante que o investimento em estratégias avançadas de IA tenha retorno proporcional ao porte do negócio."
+    },
+    {
+      "question": "Quais são as 6 especialidades da consultoria AION?",
+      "answer": "1) Automação de Marketing com IA, 2) Otimização de Tráfego Pago, 3) Business Intelligence Avançado, 4) Implementação de Chatbots/Assistentes, 5) Análise Preditiva de Vendas, 6) Integração de Sistemas e APIs. Cada projeto combina múltiplas especialidades."
+    },
+    {
+      "question": "Quanto tempo dura um projeto de consultoria?",
+      "answer": "Projetos estratégicos duram 3-6 meses, incluindo diagnóstico, implementação e otimização. Projetos pontuais (automações específicas) podem ser resolvidos em 30-60 dias. Definimos cronograma detalhado na proposta."
+    },
+    {
+      "question": "Vocês garantem ROI mínimo nos projetos?",
+      "answer": "Sim! Para projetos de consultoria acima de R$ 10k, garantimos ROI mínimo de 3x em 6 meses, ou refinanciamos as otimizações necessárias. Nossa metodologia é baseada em resultados mensuráveis, não apenas implementação técnica."
+    },
+    {
+      "question": "Qual a abordagem de implementação da AION?",
+      "answer": "Seguimos metodologia própria: 1) Imersão nos dados, 2) Identificação de alavancas de crescimento, 3) Prototipagem rápida, 4) Implementação gradual, 5) Otimização contínua. Sempre priorizamos resultados rápidos antes de projetos complexos."
+    },
+    {
+      "question": "Posso começar com consultoria e migrar para produtos?",
+      "answer": "Perfeitamente! Muitos clientes começam com consultoria para mapear necessidades e depois migram para AION Vendas, E-Commerce ou Agentes de IA. Damos desconto na transição e aproveitamos todo o trabalho estratégico já realizado."
+    }
+  ]
+} 

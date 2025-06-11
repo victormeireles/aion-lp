@@ -1,0 +1,96 @@
+{
+    "produtos":{
+        "Produto de estratégia e vendas":{
+            "publico": "pequenas e médias empresas de servico b2c. Varejo fisico e varejo online é possível algumas coisas do produto, mas depende de integrações, com isso fica mais caro",
+            "valor": "R$499/mês",
+            "Descrição":"🧠 Contexto Geral – Produto AION \nAION é uma solução criada para ajudar pequenos e médios empresários do setor de serviços (com foco inicial na área da saúde) a crescer com mais controle, clareza e resultado, sem precisar depender de agências ou consultorias caras. \nO produto é composto por três módulos integrados, pensados para organizar, reter e escalar o negócio. \n🔹 Módulo 1 – Planejamento Estratégico e Organização Operacional \n🎯 Objetivo: \nCapacitar o empresário a criar seu próprio plano de crescimento com projeções financeiras, metas e ações estratégicas sem precisar de mentoria. \n📊 Funcionalidade: \nInterface baseada em planilha automatizada ou sistema interativo; \nSeparação entre faturamento de novos e recorrentes; \nPlanejamento por: \nVolume de clientes, \nTicket médio, \nCusto por lead, \nEficiência de conversão, \nNúmero de funcionários e produtividade, \nCustos variáveis e fixos. \nCálculo de margem bruta, CM, EBITDA; \nCampos explicativos com: \n“Como esse plano será diferente do histórico”; \n“O que você vai executar para atingir esse plano”. \n💡 Proposta de Valor: \nPermitir que o usuário construa uma visão estratégica e tática do seu negócio de forma simples, com foco em dados, sem depender de consultoria. \n🔹 Módulo 2 – Retenção e Reativação de Clientes \n🎯 Objetivo: \nAumentar o faturamento com a base atual de clientes, sem depender de tráfego pago. \n📦 Tipos de Campanha (automatizadas): \nPrograma de Reativação (ex: desconto para quem não compra há X meses); \nPrograma de Indicação (incentiva clientes a trazerem novos); \nPrograma de Cashback (estimula recorrência). \n🧭 Estrutura: \nCriar Campanha: define tipo, visual, oferta, regras; \nAtivar Clientes: dispara para a base via WhatsApp; \nRegistrar Pedidos: registra vendas manualmente ou via integração; \nDashboard: mede conversão, vendas, performance por campanha. \n💡 Proposta de Valor: \nFacilitar a ativação da base já existente com estratégias prontas, aumentando o faturamento com CAC zero. \n🔹 Módulo 3 – Aquisição de Novos Clientes com Tráfego Pago \n🎯 Objetivo: \nCapacitar o empresário a rodar suas primeiras campanhas de anúncios com segurança, sem depender de agência. \n🧠 Componentes: \nTutoriais via Typebot: \nPasso a passo para criar campanhas no Meta Ads (ex: tráfego + remarketing); \nPasso a passo para o Google Ads (ex: pesquisa com intenção local); \nCom estratégias já validadas e orientações práticas. \nDashboards de Acompanhamento: \nPainel Consolidado: visão geral de Meta + Google; \nMeta Ads Dashboard: engajamento, conversões, custo por lead; \nGoogle Ads Dashboard: desempenho por palavra-chave, impressões, conversões. \n💡 Proposta de Valor: \nDar autonomia ao empresário para criar campanhas eficientes com estratégias prontas e visão clara dos resultados. \n🔗 Integração Entre os Módulos \nOs três módulos funcionam de forma complementar e conectada: \nPlaneja com clareza para onde quer ir (Módulo 1), \nAtiva e retém a base atual com campanhas inteligentes (Módulo 2), \nAtrai novos clientes com tráfego pago eficiente (Módulo 3). \n🌟 Proposta de Valor Integrada \nAION é um sistema de gestão inteligente que ajuda o pequeno empresário a sair do caos e crescer com estratégia. Ele combina ferramentas simples, automações e orientação tática, permitindo que o dono do negócio organize sua operação, retenha clientes e escale com clareza — sem precisar ser especialista, sem agência e com foco total em resultado.",
+			"Objetivo":"encher a sua agenda",
+			"Módulos":{
+				"Planejamento Estratégico":{
+					"Por que":"Muitas vezes a pessoa não enxerga o crescimento porque ela não definiu quais os caminhos precisam ser percorridos para chegar no número desejado.",
+					"O que":"Ajudamos a construir, a partir do financeiro (DRE), um plano estratégico de, com base em um objetivo (meta), destrinchar no como vamos alcancar, para direcionar quais estratégias serão realizadas para chegar lá",
+					"Como":"Numa simples conversa no whatsapp com nossa IA, te guiamos a definir esse plano"
+				},
+				"Tráfego Pago":{
+					"Performance detalhada dos canais": "Dashboards específicos para acompanhar resultados de campanhas em Google Ads e Meta Ads.",
+                    "Otimização de Tráfego pago": "Sugestões claras para melhorar o desempenho dos anúncios e maximizar retornos, indicando investimentos que trazem mais clientes com menos gastos.",
+                    "Insights práticos": "Indica quais campanhas são vencedoras e onde realocar orçamento para melhor resultado.",
+					"Como":"Alem dos dashboards, te damos um insight por dia de como ajustar suas campanhas para melhorar seu resultado. Exemplo de mensagem: Hoje é dia de ajustar o investimento entre suas campanhas: \n\nPrincipais alterações: \n1. campanha A: de 10/dia -> 15/dia \n2. campanha B: de 20/dia -> 15/dia \n3. campanha C: de 20/dia -> 10/diaz\n 4. Outras campanhas: de 70/dia -> 80/dia \n\nPosso executar isso pra você?"
+				},
+				"Vendas":{
+					"O que":"Principal módulo de estratégia e vendas. Aqui temos ações que podemos fazer para gerar mais clientes, que são nossas campanhas",
+					"Como":"Você conecta suas vendas, conecta seu whatsapp comercial e fazemos todo o trabalho",
+					"O que fazemos":{
+						"Estratégia":"Construimos a estratégia da campanha com a empresa, tudo via conversa de whatsapp ou direto no sistema do AION. Ajudamos a entender qual campanha, qual desconto, se precisa de desconto, etc",
+						"Execução":"Assim que a campanha está definida, fazemos o disparo das mensagens automaticamente para todos os clientes, com mensagens personalizadas para cada cliente",
+						"Controle":"Caso o cliente não tenha as vendas em sistema, controlamos as vendas no nosso próprio sistema, com motor de desconto, totalmente conectado às campanhas do AION"
+					},
+					"Campanhas":{
+						"Reativação":"É a primeira que fazemos, quando temos os dados de venda e o cliente tem uma base relevante. Imagina um médico que faz acompanhamento semestral com um paciente. Por que você não envia uma mensagem um pouco antes só lembrando de fazer o atendimento? Ou se oferecermos um desconto para os clientes que já passou o prazo que deveriam ter retornado mas não retornaram?",
+						"Leads":"Quando o cliente não tem uma base relevante de clientes, é a primeira. Puxamos todos os contatos da conta do whatsapp, o cliente pode excluir os contatos que não quer enviar a mensagem",
+						"Indicação":"Fazemos o envio da campanha de indicação para os clientes. Quando o cliente indicado realiza uma compra, disparamos a mensagem para o cliente que indicou resgatar seu desconto e liberamos o desconto para ele",
+						"Cashback":"Fazemos a configuração da campanha, o motor de pontos, o disparo de mensagens de acumulo de pontos (voce ganhou X reais de cashback) e tambem mensagens de vencimento de pontos (seu cashback de X reais vence dia Y)"
+					}
+				}
+			}
+        },
+        "Produto de gestão varejo":{
+            "publico": "Pequenas e médias empresas de e-commerce. varejo fisico é possível algumas coisas do produto, mas depende de integrações, com isso fica mais caro",
+            "valor": "começamos ofertando a integração e organização de dados de ERP e plataformas de marketing em 30 dias com uma mentoria de 1h no final por R$499. Nessa mentoria já teremos os dados do cliente então daremos insights personalizados. No final dessa mentoria nós já avaliamos e ofertamos os demais modulos. O preço fica R$499/mês só com o módulo base (BI) e cada módulo um valor adicional",
+            "ERPs já integrados":["Bling","TinyERP","Olist"],
+            "Plataformas de marketing já integradas":["Google Analytics","Google Ads","Meta Ads"],
+            "Módulos":{
+                "Plano inicial de 30 dias":{
+                    "Por que":"Grande maioria dos clientes não têm dados certos e precisam deles pra tomar decisões",
+                    "Pra quem":"Empresas que buscam crescimento mas estão com dados desorganizados",
+                    "Produto":"Construção de Banco de Dados R$ 499",
+                    "Preço":"R$499 uma única vez",
+                    "Entregáveis":"Dados integrados: - Faturamento \n- Estoque \n- Cadastro \n- Google Ads \n- Meta Ads \n+ 1h de um mentor Aion"
+                },
+                "BI + Assistente":{
+                    "Preço":"R$499/mês",
+                    "Integração de Dados": "Conecta fontes de informação como ERP, Google Analytics, Google Ads e Meta Ads",
+                    "Centralização e organização dos dados": "de faturamento, lucratividade, estoque e desempenho de campanhas.",
+                    "Assistente Virtual": "Oferece respostas rápidas sobre indicadores estratégicos, permitindo decisões ágeis, como faturamento mensal, produtos mais lucrativos e insights de gestão."
+                },
+                "Marketing":{
+                    "Preço":"R$299/mês",
+                    "Performance detalhada dos canais": "Dashboards específicos para acompanhar resultados de campanhas em Google Ads e Meta Ads.",
+                    "Otimização de ROI": "Sugestões claras para melhorar o desempenho dos anúncios e maximizar retornos, indicando investimentos que trazem mais vendas com menos gastos.",
+                    "Insights práticos": "Indica quais campanhas são vencedoras e onde realocar orçamento para melhor resultado."
+                },
+                "Pricing":{
+                    "Preço":"R$299/mês",
+                    "Análise detalhada de precificação": "Identificação de quais produtos geram maior margem e quais precisam de ajuste de preço.",
+                    "Sugestões": "baseadas em dados reais para definição dos preços, visando otimizar lucro e competitividade."
+                },
+                "Abastecimento":{
+                    "Preço":"R$299/mês",
+                    "Gestão Inteligente de Estoque": "Sugere automaticamente quantidades e momentos ideais para reposição, evitando rupturas e excessos.",
+                    "Análise preditiva": "Usa histórico de vendas e dados estratégicos para planejar compras que potencializem o lucro."
+                },
+                "Metas":{
+                    "Preço":"R$299/mês",
+                    "Planejamento estratégico simplificado": "Facilita a criação e o acompanhamento das metas financeiras e operacionais, com alertas automáticos sobre coerência e viabilidade.",
+                    "Ferramenta interativa para planejamento": "Os usuários definem ações estratégicas futuras (marketing, comissão, etc.) e recebem alertas de possíveis impactos positivos ou negativos nas suas metas financeiras."
+                }
+            } 
+        },
+		"Servicos de IA":{
+			"Criação de websites":{
+				"O que":"criamos seu site com inteligencia artificial, temos alguns exemplos de sites bonitos e modernos criados com IA.",
+				"Diferenciais":"Otimizado para SEO e tambem para AEO (para seu site aparecer em buscas de IAs)",
+				"Preço":"R$999 uma única vez. Porém a hospedagem é por conta do cliente"
+			},
+			"Atendente de Whatsapp por IA":{
+				"O que":"Criamos uma IA que atua como sua atendente, recepcionista, comercial. Treinamos ela com seus dados. Ela vai responder como um ser humano, podendo fazer agendamentos, realizar pedidos ou transferir para um ser humano quando necessário",
+				"Preço":"A combinar"
+			}
+		},
+        "Consultoria Personalizada":{
+            "Preço":"A combinar",
+            "Entrega": "Consultoria personalizada com equipe com experiencia em virar mais de 10 empresas do prejuízo para o lucro, mentores do G4 educação em Finanças, Growth, Dados, Processos, Planejamento e Inteligência Artificial"
+        }
+    }
+}
+
