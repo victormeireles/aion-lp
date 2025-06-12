@@ -64,26 +64,50 @@ function createMobileMenu() {
             <span></span>
         </div>
 
+        <!-- Overlay do Menu Mobile -->
+        <div id="mobile-menu-overlay" class="mobile-menu-overlay"></div>
+
         <!-- Menu Mobile -->
         <div id="mobile-menu" class="mobile-menu">
+            <div class="mobile-menu-header">
+                <img src="assets/logos/aionLogoWhite.svg" alt="AION" class="mobile-menu-logo">
+            </div>
+            
             <ul class="mobile-menu-links">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="#solutions">Soluções</a></li>
-                ${config.navigation.main[0].dropdown.map(item => `
-                    <li style="padding-left: 1rem; border-left: 2px solid var(--color-purple);">
-                        <a href="${item.url}" style="font-size: 0.9rem; color: var(--color-gray-400);">${item.title}</a>
-                    </li>
-                `).join('')}
-                <li><a href="#ferramentas">Ferramentas de IA Gratuitas</a></li>
-                ${config.navigation.main[1].dropdown.map(item => `
-                    <li style="padding-left: 1rem; border-left: 2px solid var(--color-green);">
-                        <a href="${item.url}" target="_blank" style="font-size: 0.9rem; color: var(--color-gray-400);">${item.title}</a>
-                    </li>
-                `).join('')}
-                <li><a href="#cases">Cases</a></li>
-                <li><a href="#founders">Fundadores</a></li>
-                <li><a href="#contact">Contato</a></li>
+                <li><a href="index.html">🏠 Início</a></li>
+                
+                <li class="menu-dropdown">
+                    <a href="#solutions" class="dropdown-trigger">
+                        🚀 Soluções <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-content">
+                        ${config.navigation.main[0].dropdown.map(item => `
+                            <li><a href="${item.url}">• ${item.title}</a></li>
+                        `).join('')}
+                    </ul>
+                </li>
+                
+                <li class="menu-dropdown">
+                    <a href="#ferramentas" class="dropdown-trigger">
+                        🤖 Ferramentas de IA Gratuitas <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-content">
+                        ${config.navigation.main[1].dropdown.map(item => `
+                            <li><a href="${item.url}" target="_blank">• ${item.title}</a></li>
+                        `).join('')}
+                    </ul>
+                </li>
+                
+                <li><a href="#cases">📈 Cases</a></li>
+                <li><a href="#founders">👥 Fundadores</a></li>
+                <li><a href="#contact">📞 Contato</a></li>
             </ul>
+            
+            <div class="mobile-menu-cta">
+                <a href="${config.urls.whatsapp}" target="_blank">
+                    💬 Agendar Consultoria
+                </a>
+            </div>
         </div>
     `;
 }
@@ -155,26 +179,107 @@ function createWhatsAppButton() {
     `;
 }
 
+// Função para configurar dropdowns do menu mobile
+function setupMobileDropdowns(mobileMenu) {
+    if (!mobileMenu) return;
+    
+    const dropdownTriggers = mobileMenu.querySelectorAll('.dropdown-trigger');
+    
+    dropdownTriggers.forEach(trigger => {
+        // Remover eventos anteriores para evitar duplicação
+        trigger.removeEventListener('click', handleDropdownClick);
+        trigger.addEventListener('click', handleDropdownClick);
+    });
+}
+
+// Handler para clicks nos dropdowns
+function handleDropdownClick(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    console.log('Dropdown clicked!'); // Debug
+    
+    const trigger = e.currentTarget;
+    const parentDropdown = trigger.closest('.menu-dropdown');
+    const isActive = parentDropdown.classList.contains('active');
+    
+    // Fechar todos os outros dropdowns
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenu) {
+        mobileMenu.querySelectorAll('.menu-dropdown').forEach(dropdown => {
+            dropdown.classList.remove('active');
+        });
+    }
+    
+    // Alternar o dropdown atual
+    if (!isActive) {
+        parentDropdown.classList.add('active');
+        console.log('Dropdown opened!'); // Debug
+    } else {
+        console.log('Dropdown closed!'); // Debug
+    }
+}
+
 // Função para configurar event listeners após inserir o HTML
 function setupEventListeners() {
     // Hambúrguer e Menu Mobile
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
     
     if (hamburger && mobileMenu) {
-        hamburger.addEventListener('click', function() {
+        const toggleMenu = () => {
             hamburger.classList.toggle('active');
             mobileMenu.classList.toggle('active');
-        });
+            if (mobileMenuOverlay) {
+                mobileMenuOverlay.classList.toggle('active');
+            }
+            // Bloquear scroll do body quando menu aberto
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        };
 
-        // Fechar menu ao clicar em link
-        const mobileLinks = mobileMenu.querySelectorAll('a');
+        hamburger.addEventListener('click', toggleMenu);
+
+        // Fechar menu ao clicar no overlay
+        if (mobileMenuOverlay) {
+            mobileMenuOverlay.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                mobileMenuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        }
+
+        // Fechar menu ao clicar em link (exceto dropdown triggers)
+        const mobileLinks = mobileMenu.querySelectorAll('a:not(.dropdown-trigger)');
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
                 mobileMenu.classList.remove('active');
+                if (mobileMenuOverlay) {
+                    mobileMenuOverlay.classList.remove('active');
+                }
+                document.body.style.overflow = '';
             });
         });
+
+        // Fechar menu com tecla ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                if (mobileMenuOverlay) {
+                    mobileMenuOverlay.classList.remove('active');
+                }
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Inicializar dropdowns após menu ser criado
+        setTimeout(() => {
+            console.log('Setting up dropdowns from setupEventListeners...'); // Debug
+            setupMobileDropdowns(mobileMenu);
+        }, 200);
     }
 
     // Scroll Progress Bar e Header Visibility
@@ -264,6 +369,17 @@ function initSharedComponents() {
     const mobileMenuContainer = document.getElementById('shared-mobile-menu');
     if (mobileMenuContainer) {
         mobileMenuContainer.innerHTML = createMobileMenu();
+        
+        // Configurar dropdowns após inserir HTML
+        setTimeout(() => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu) {
+                console.log('Setting up mobile dropdowns...'); // Debug
+                setupMobileDropdowns(mobileMenu);
+            } else {
+                console.log('Mobile menu not found!'); // Debug
+            }
+        }, 200);
     }
 
     const footerContainer = document.getElementById('shared-footer');
