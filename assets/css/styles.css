@@ -92,7 +92,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0.6rem 3rem;
-    max-width: 1600px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -265,7 +265,7 @@ body {
 
 .hero-content {
     text-align: center;
-    max-width: 1000px;
+    max-width: 1400px;
     padding: 0 3rem;
     z-index: 10;
     position: relative;
@@ -391,6 +391,10 @@ body {
     margin: 0 auto;
 }
 
+.solutions-container, .faq-section .container, .founders-section .container {
+    z-index: 10;
+}
+
 .section-title {
     font-size: clamp(3rem, 6vw, 5rem);
     font-weight: 800;
@@ -428,7 +432,7 @@ body {
 /* Cases/Results Grid - Optimized */
 .cases-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -493,10 +497,17 @@ body {
 }
 
 .case-period {
-    color: var(--color-gray-400);
-    font-size: 0.9rem;
-    font-weight: 300;
+    color: var(--color-gray-300);
+    font-size: 0.85rem;
+    font-weight: 400;
     letter-spacing: -0.01em;
+    line-height: 1.4;
+    font-style: italic;
+    text-align: center;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-top: 0.5rem;
 }
 
 .case-body {
@@ -529,6 +540,88 @@ body {
     font-weight: 300;
     letter-spacing: -0.01em;
     line-height: 1.3;
+}
+
+/* Novos estilos para cases por tipo de solução */
+.case-type-badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+}
+
+.case-servicos .case-type-badge {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+}
+
+.case-ecommerce .case-type-badge {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+}
+
+.case-consultoria .case-type-badge {
+    background: linear-gradient(135deg, #a855f7, #9333ea);
+    color: white;
+}
+
+.case-company {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.3rem;
+    letter-spacing: -0.01em;
+}
+
+.case-location {
+    font-size: 0.85rem;
+    color: var(--color-gray-400);
+    font-weight: 400;
+}
+
+.case-description {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    border-left: 3px solid;
+}
+
+.case-servicos .case-description {
+    border-left-color: #22c55e;
+}
+
+.case-ecommerce .case-description {
+    border-left-color: #3b82f6;
+}
+
+.case-consultoria .case-description {
+    border-left-color: #a855f7;
+}
+
+.case-description p {
+    color: var(--color-gray-300);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+    font-style: italic;
+}
+
+/* Hover específico para cada tipo */
+.case-servicos:hover::before {
+    background: linear-gradient(90deg, #22c55e, #16a34a);
+}
+
+.case-ecommerce:hover::before {
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
+}
+
+.case-consultoria:hover::before {
+    background: linear-gradient(90deg, #a855f7, #9333ea);
 }
 
 /* About Cards - Glassmorphism */
@@ -578,6 +671,79 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    background: var(--background-dark);
+}
+
+.solutions-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.solutions-particles::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(2px 2px at 20px 30px, rgba(59, 130, 246, 0.5), transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(147, 51, 234, 0.5), transparent),
+        radial-gradient(1px 1px at 90px 40px, rgba(59, 130, 246, 0.4), transparent),
+        radial-gradient(1px 1px at 130px 80px, rgba(147, 51, 234, 0.4), transparent),
+        radial-gradient(2px 2px at 160px 30px, rgba(59, 130, 246, 0.5), transparent),
+        radial-gradient(1px 1px at 200px 50px, rgba(147, 51, 234, 0.4), transparent),
+        radial-gradient(2px 2px at 240px 90px, rgba(59, 130, 246, 0.5), transparent),
+        radial-gradient(1px 1px at 280px 40px, rgba(147, 51, 234, 0.4), transparent);
+    background-repeat: repeat;
+    background-size: 300px 200px;
+    animation: particlesFloat 20s linear infinite;
+    opacity: 0.8;
+    filter: brightness(1.2);
+}
+
+.solutions-particles::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(1px 1px at 50px 100px, rgba(59, 130, 246, 0.4), transparent),
+        radial-gradient(2px 2px at 120px 150px, rgba(147, 51, 234, 0.5), transparent),
+        radial-gradient(1px 1px at 180px 120px, rgba(59, 130, 246, 0.4), transparent),
+        radial-gradient(2px 2px at 220px 180px, rgba(147, 51, 234, 0.5), transparent),
+        radial-gradient(1px 1px at 260px 160px, rgba(59, 130, 246, 0.4), transparent),
+        radial-gradient(2px 2px at 300px 140px, rgba(147, 51, 234, 0.5), transparent);
+    background-repeat: repeat;
+    background-size: 350px 250px;
+    animation: particlesFloat 25s linear infinite reverse;
+    opacity: 0.6;
+    filter: brightness(1.2);
+}
+
+@keyframes particlesFloat {
+    0% { transform: translateX(0) translateY(0); }
+    25% { transform: translateX(-10px) translateY(-20px); }
+    50% { transform: translateX(10px) translateY(-40px); }
+    75% { transform: translateX(-5px) translateY(-60px); }
+    100% { transform: translateX(0) translateY(-80px); }
+}
+
+.solutions-section:hover .solutions-particles::before {
+    animation-duration: 15s;
+    opacity: 1;
+}
+
+.solutions-section:hover .solutions-particles::after {
+    animation-duration: 18s;
+    opacity: 0.8;
 }
 
 .solutions-section .section-title {
@@ -601,7 +767,7 @@ body {
 .solutions-section .section-subtitle {
     font-size: 1.2rem;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 0.5rem;
     color: rgba(255, 255, 255, 0.8);
     max-width: 800px;
     margin-left: auto;
@@ -630,10 +796,10 @@ body {
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
-    opacity: 0.9;
+        radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
+    opacity: 1;
     animation: pulse 8s ease-in-out infinite;
 }
 
@@ -645,15 +811,16 @@ body {
     right: 0;
     bottom: 0;
     background-image: 
-        radial-gradient(2px 2px at 20px 30px, rgba(59, 130, 246, 0.4), transparent),
-        radial-gradient(2px 2px at 40px 70px, rgba(37, 99, 235, 0.4), transparent),
-        radial-gradient(1px 1px at 90px 40px, rgba(59, 130, 246, 0.3), transparent),
-        radial-gradient(1px 1px at 130px 80px, rgba(37, 99, 235, 0.3), transparent);
+        radial-gradient(2px 2px at 20px 30px, rgba(59, 130, 246, 0.6), transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(37, 99, 235, 0.6), transparent),
+        radial-gradient(1px 1px at 90px 40px, rgba(59, 130, 246, 0.5), transparent),
+        radial-gradient(1px 1px at 130px 80px, rgba(37, 99, 235, 0.5), transparent);
     background-repeat: repeat;
     background-size: 200px 150px;
     animation: sparkle 25s linear infinite;
-    opacity: 0.3;
-    z-index: 1;
+    opacity: 0.5;
+    z-index: 3;
+    filter: brightness(1.1);
 }
 
 @keyframes sparkle {
@@ -679,13 +846,14 @@ body {
 /* Solutions Container */
 .solutions-container {
     position: relative;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    z-index: 10;
 }
 
 /* Central Element */
@@ -840,16 +1008,16 @@ body {
     50% { transform: translateY(-10px) rotate(2deg); }
 }
 
-/* Solutions Orbital Layout - Centralized */
+/* Solutions Orbital Layout - Three Cards in Same Row */
 .solutions-orbital {
-    position: relative;
     width: 100%;
-    max-width: 1200px;
-    height: 750px;
-    margin: 2rem auto;
+    max-width: 1400px;
+    margin: 0.5rem auto;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 1rem 2rem;
 }
 
 .solution-orbit-item {
@@ -862,15 +1030,16 @@ body {
     backdrop-filter: blur(10px);
     transition: all 0.4s ease;
     opacity: 1;
-    position: absolute;
+    position: static;
     overflow: hidden;
     box-shadow: 
         0 8px 32px rgba(0, 0, 0, 0.4),
         inset 0 1px 0 rgba(255, 255, 255, 0.03);
     display: flex;
     flex-direction: column;
-    width: 420px;
-    min-height: 220px;
+    width: 100%;
+    flex: 1;
+    height: 520px;
     z-index: 5;
 }
 
@@ -916,13 +1085,7 @@ body {
     transform-origin: top;
 }
 
-/* Conexão Consultoria AION (inferior direita para centro) */
-.solution-orbit-item:nth-child(4)::after {
-    top: 50%;
-    left: 50%;
-    transform: translateY(-20px) translateX(-20px) rotate(-45deg);
-    transform-origin: top;
-}
+
 
 /* Efeito hover nas conexões */
 .solution-orbit-item:hover::after {
@@ -1020,36 +1183,17 @@ body {
 
 
 
-/* AION Vendas - MÁXIMO DESTAQUE */
-/* AION Vendas - Topo Esquerda */
-.solution-orbit-item:nth-child(1) { 
-    top: -50px;
-    left: -120px;
-    animation: campanhasEntrance 0.8s ease-out 0.1s forwards;
-}
-
-/* AION E-Commerce - Topo Direita */
-.solution-orbit-item:nth-child(2) { 
-    top: -50px;
-    right: -120px;
-    animation: trafegoEntrance 0.8s ease-out 0.2s forwards;
-}
-
-/* Soluções de IA - Baixo Esquerda */
+/* Cards em grid simples */
+.solution-orbit-item:nth-child(1),
+.solution-orbit-item:nth-child(2),
 .solution-orbit-item:nth-child(3) { 
-    bottom: -50px;
-    left: -120px;
-    animation: sitesEntrance 0.6s ease-out 0.6s forwards;
-    opacity: 0;
+    position: static;
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 1;
 }
 
 /* Consultoria AION - Baixo Direita */
-.solution-orbit-item:nth-child(4) { 
-    bottom: -50px;
-    right: -120px;
-    animation: atendenteEntrance 0.6s ease-out 0.7s forwards;
-    opacity: 0;
-}
+
 
 
 
@@ -1754,14 +1898,6 @@ body {
         display: flex;
     }
 
-    .hero {
-        position: relative;
-        background: linear-gradient(135deg, 
-            rgba(0, 0, 0, 0.9) 0%, 
-            rgba(20, 20, 30, 0.95) 30%, 
-            rgba(0, 0, 0, 0.9) 100%);
-    }
-
     .hero::before {
         content: '';
         position: absolute;
@@ -1882,11 +2018,17 @@ body {
 
     .btn-primary,
     .btn-secondary {
-        width: 100%;
-        max-width: 300px;
+        width: auto;
+        max-width: 280px;
+        min-width: 220px;
         text-align: center;
+        padding: 1rem 1.5rem;
+        font-size: 0.9rem;
         box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
         backdrop-filter: blur(10px);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .btn-primary {
@@ -1923,6 +2065,24 @@ body {
 
     .metric-value {
         font-size: 1.25rem !important;
+    }
+
+    .case-type-badge {
+        font-size: 0.7rem;
+        padding: 0.25rem 0.7rem;
+    }
+
+    .case-company {
+        font-size: 1rem;
+    }
+
+    .case-description {
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .case-description p {
+        font-size: 0.85rem;
     }
 
     .founders-grid {
@@ -1967,11 +2127,40 @@ body {
     #founders.section {
         padding: 4rem 0;
         overflow-x: hidden;
+        min-height: auto;
     }
 
     .founders-credibility {
         margin: 2rem 1rem !important;
         padding: 1.5rem !important;
+    }
+
+    .founders-particles::before {
+        opacity: 0.6;
+        animation-duration: 25s;
+        filter: brightness(1.1);
+    }
+
+    .founders-particles::after {
+        opacity: 0.45;
+        animation-duration: 30s;
+        filter: brightness(1.1);
+    }
+
+    .faq-section {
+        min-height: auto;
+    }
+
+    .faq-particles::before {
+        opacity: 0.6;
+        animation-duration: 25s;
+        filter: brightness(1.1);
+    }
+
+    .faq-particles::after {
+        opacity: 0.45;
+        animation-duration: 30s;
+        filter: brightness(1.1);
     }
 
     .solutions-section {
@@ -1981,6 +2170,30 @@ body {
         display: flex;
         flex-direction: column;
         overflow: visible;
+    }
+
+    .solutions-particles::before {
+        opacity: 0.6;
+        animation-duration: 25s;
+        filter: brightness(1.1);
+    }
+
+    .solutions-particles::after {
+        opacity: 0.45;
+        animation-duration: 30s;
+        filter: brightness(1.1);
+    }
+
+    .solution-orbit-item {
+        height: 480px;
+    }
+
+    .solution-title {
+        font-size: 1.3rem;
+    }
+
+    .solution-subtitle {
+        font-size: 0.8rem;
     }
 
     .solutions-section .section-title {
@@ -2055,47 +2268,25 @@ body {
     }
 
     .solutions-orbital {
-        position: static !important;
-        display: flex !important;
         flex-direction: column !important;
-        gap: 0 !important;
-        margin: 0 !important;
-        height: auto !important;
-        min-height: auto !important;
-        max-width: 100% !important;
-        width: 100% !important;
+        gap: 1.5rem !important;
         padding: 1rem !important;
+        margin: 0.5rem auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
         order: 4 !important;
-        overflow: visible !important;
-        box-sizing: border-box !important;
     }
 
     .solution-orbit-item {
         position: static !important;
-        top: auto !important;
-        left: auto !important;
-        right: auto !important;
-        bottom: auto !important;
-        margin: 0 0 1.5rem 0 !important;
+        margin: 0 !important;
         max-width: 100% !important;
         width: 100% !important;
+        height: 400px !important;
         transform: none !important;
-        overflow: visible !important;
-        box-sizing: border-box !important;
-        display: flex !important;
-        flex-direction: column !important;
-        background: linear-gradient(135deg, 
-            rgba(255, 255, 255, 0.02) 0%, 
-            rgba(255, 255, 255, 0.01) 100%) !important;
-        border: 1px solid rgba(255, 255, 255, 0.08) !important;
-        border-radius: 12px !important;
-        padding: 1rem !important;
-        backdrop-filter: blur(10px) !important;
     }
 
-    .solution-orbit-item:last-child {
-        margin-bottom: 2rem !important;
-    }
+
     
     .solution-orbit-item::after {
         display: none !important;
@@ -2104,8 +2295,6 @@ body {
     .solution-orbit-item:nth-child(1) { animation-delay: 0.1s; }
     .solution-orbit-item:nth-child(2) { animation-delay: 0.2s; }
     .solution-orbit-item:nth-child(3) { animation-delay: 0.3s; }
-    .solution-orbit-item:nth-child(4) { animation-delay: 0.4s; }
-    .solution-orbit-item:nth-child(5) { animation-delay: 0.5s; }
 
     @keyframes fadeInUp {
         from {
@@ -2215,7 +2404,7 @@ body {
 }
 
 .solution-expanded-content {
-    max-width: 1200px;
+    max-width: 1400px;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -2630,36 +2819,136 @@ body {
 
 /* Imagens específicas das soluções - ocupando toda área principal */
 .solution-orbit-item:nth-child(1) .solution-main-area {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../images/solutions/aion-campanhas.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../images/solutions/servicos.jpg');
 }
 
 .solution-orbit-item:nth-child(2) .solution-main-area {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../images/solutions/aion-ecommerce.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../images/solutions/ecommerce.jpg');
 }
 
 .solution-orbit-item:nth-child(3) .solution-main-area {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../images/solutions/ai-agents.png');
-}
-
-.solution-orbit-item:nth-child(4) .solution-main-area {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../images/solutions/aion-consulting.jpg');
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../images/solutions/grandes-empresas.jpg');
 }
 
 
 
-.solution-main-title {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: white;
-    margin: 0;
+
+
+/* Header dos Cards de Soluções */
+.solution-header {
     text-align: center;
-    letter-spacing: -0.01em;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+}
+
+.solution-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.02em;
     line-height: 1.2;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
-    background: rgba(0, 0, 0, 0.2);
-    padding: 0.6rem 1rem;
-    border-radius: 6px;
-    backdrop-filter: blur(10px);
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.95) 0%,
+        rgba(255, 255, 255, 0.8) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+.solution-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        rgba(59, 130, 246, 0.8) 0%, 
+        rgba(147, 51, 234, 0.8) 100%);
+    border-radius: 1px;
+}
+
+.solution-subtitle {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0;
+    letter-spacing: 0.01em;
+    line-height: 1.4;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+    font-style: italic;
+}
+
+/* Magic Card Effect */
+.solution-orbit-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.solution-orbit-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: conic-gradient(
+        from 0deg,
+        transparent,
+        rgba(59, 130, 246, 0.6),
+        rgba(147, 51, 234, 0.6),
+        rgba(59, 130, 246, 0.6),
+        transparent
+    );
+    border-radius: inherit;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.6s ease;
+    animation: magic-card-rotate 8s linear infinite;
+    filter: blur(1px);
+}
+
+.solution-orbit-item:hover::before {
+    opacity: 1;
+}
+
+.solution-orbit-item::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background: rgba(17, 17, 17, 0.98);
+    border-radius: calc(16px - 2px);
+    z-index: -1;
+}
+
+@keyframes magic-card-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Sobrescrever hover antigo para Magic Card */
+.solution-orbit-item:hover {
+    transform: translateY(-6px) !important;
+    background: none !important;
+    border-color: transparent !important;
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(59, 130, 246, 0.2) !important;
+    backdrop-filter: none !important;
+    transition: transform 0.4s ease, box-shadow 0.4s ease !important;
+}
+
+/* Remover linhas de hover que não fazem mais sentido */
+.solution-orbit-item:hover::after {
+    display: none !important;
 }
 
 .solution-features-area {
@@ -2715,8 +3004,7 @@ body {
     transition: all 0.3s ease;
     letter-spacing: -0.01em;
     line-height: 1.3;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .solution-feature-item:hover {
@@ -2724,57 +3012,27 @@ body {
     transform: translateX(2px);
 }
 
-/* Remove bordas dos elementos nas extremidades - Cards normais (4 features) */
-.solution-feature-item:nth-child(2),
-.solution-feature-item:nth-child(4) {
+/* Bordas específicas conforme layout */
+/* Itens ímpares (1º, 3º, 5º) - remover borda esquerda */
+.solution-feature-item:nth-child(odd) {
+    border-left: none;
+}
+
+/* Itens pares (2º, 4º, 6º) - remover borda direita */
+.solution-feature-item:nth-child(even) {
     border-right: none;
 }
 
-.solution-feature-item:nth-child(3),
-.solution-feature-item:nth-child(4) {
+/* Primeiro e segundo item - remover borda superior */
+.solution-feature-item:nth-child(1),
+.solution-feature-item:nth-child(2) {
+    border-top: none;
+}
+
+/* Último e penúltimo item - remover borda inferior */
+.solution-feature-item:nth-child(5),
+.solution-feature-item:nth-child(6) {
     border-bottom: none;
-}
-
-/* Bordas especiais para AION Vendas (6 features em 3x2) */
-.solution-orbit-item:nth-child(1) .solution-feature-item:nth-child(2),
-.solution-orbit-item:nth-child(1) .solution-feature-item:nth-child(4),
-.solution-orbit-item:nth-child(1) .solution-feature-item:nth-child(6) {
-    border-right: none;
-}
-
-.solution-orbit-item:nth-child(1) .solution-feature-item:nth-child(5),
-.solution-orbit-item:nth-child(1) .solution-feature-item:nth-child(6) {
-    border-bottom: none;
-}
-
-/* Garantir que itens 3 e 4 tenham borda-bottom para linha entre 2ª e 3ª fileira */
-.solution-orbit-item:nth-child(1) .solution-feature-item:nth-child(3),
-.solution-orbit-item:nth-child(1) .solution-feature-item:nth-child(4) {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Bordas especiais para AION E-Commerce (6 features em 3x2) */
-.solution-orbit-item:nth-child(2) .solution-feature-item:nth-child(2),
-.solution-orbit-item:nth-child(2) .solution-feature-item:nth-child(4),
-.solution-orbit-item:nth-child(2) .solution-feature-item:nth-child(6) {
-    border-right: none;
-}
-
-.solution-orbit-item:nth-child(2) .solution-feature-item:nth-child(5),
-.solution-orbit-item:nth-child(2) .solution-feature-item:nth-child(6) {
-    border-bottom: none;
-}
-
-/* Garantir que itens 3 e 4 tenham borda-bottom para linha entre 2ª e 3ª fileira no AION E-Commerce */
-.solution-orbit-item:nth-child(2) .solution-feature-item:nth-child(3),
-.solution-orbit-item:nth-child(2) .solution-feature-item:nth-child(4) {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Adicionar borda superior na terceira fileira do AION E-Commerce */
-.solution-orbit-item:nth-child(2) .solution-feature-item:nth-child(5),
-.solution-orbit-item:nth-child(2) .solution-feature-item:nth-child(6) {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .solution-feature-item::before {
@@ -2793,71 +3051,65 @@ body {
 
 /* AION Vendas */
 .solution-orbit-item:nth-child(1) .solution-feature-item:nth-child(1)::before {
-    content: 'gps_fixed';
+    content: 'psychology';
 }
 .solution-orbit-item:nth-child(1) .solution-feature-item:nth-child(2)::before {
-    content: 'send';
+    content: 'autorenew';
 }
 .solution-orbit-item:nth-child(1) .solution-feature-item:nth-child(3)::before {
-    content: 'analytics';
+    content: 'contact_phone';
 }
 .solution-orbit-item:nth-child(1) .solution-feature-item:nth-child(4)::before {
-    content: 'refresh';
+    content: 'web';
 }
 .solution-orbit-item:nth-child(1) .solution-feature-item:nth-child(5)::before {
     content: 'trending_up';
 }
 .solution-orbit-item:nth-child(1) .solution-feature-item:nth-child(6)::before {
-    content: 'chat_bubble';
+    content: 'whatsapp';
 }
 
-/* AION E-Commerce */
+/* E-Commerce */
 .solution-orbit-item:nth-child(2) .solution-feature-item:nth-child(1)::before {
-    content: 'hub';
+    content: 'analytics';
 }
 .solution-orbit-item:nth-child(2) .solution-feature-item:nth-child(2)::before {
     content: 'support_agent';
 }
 .solution-orbit-item:nth-child(2) .solution-feature-item:nth-child(3)::before {
-    content: 'flag';
+    content: 'inventory';
 }
 .solution-orbit-item:nth-child(2) .solution-feature-item:nth-child(4)::before {
-    content: 'local_shipping';
+    content: 'show_chart';
 }
 .solution-orbit-item:nth-child(2) .solution-feature-item:nth-child(5)::before {
-    content: 'ads_click';
+    content: 'campaign';
 }
 .solution-orbit-item:nth-child(2) .solution-feature-item:nth-child(6)::before {
     content: 'sell';
 }
 
-/* Soluções de IA (posição 3) */
+/* Grandes Empresas (posição 3) */
 .solution-orbit-item:nth-child(3) .solution-feature-item:nth-child(1)::before {
-    content: 'schedule';
+    content: 'business_center';
 }
 .solution-orbit-item:nth-child(3) .solution-feature-item:nth-child(2)::before {
-    content: 'psychology';
+    content: 'transform';
 }
 .solution-orbit-item:nth-child(3) .solution-feature-item:nth-child(3)::before {
-    content: 'web_asset';
+    content: 'corporate_fare';
 }
 .solution-orbit-item:nth-child(3) .solution-feature-item:nth-child(4)::before {
-    content: 'savings';
+    content: 'fact_check';
+}
+.solution-orbit-item:nth-child(3) .solution-feature-item:nth-child(5)::before {
+    content: 'engineering';
+}
+.solution-orbit-item:nth-child(3) .solution-feature-item:nth-child(6)::before {
+    content: 'support';
 }
 
-/* Consultoria AION (posição 4) */
-.solution-orbit-item:nth-child(4) .solution-feature-item:nth-child(1)::before {
-    content: 'data_exploration';
-}
-.solution-orbit-item:nth-child(4) .solution-feature-item:nth-child(2)::before {
-    content: 'insights';
-}
-.solution-orbit-item:nth-child(4) .solution-feature-item:nth-child(3)::before {
-    content: 'troubleshoot';
-}
-.solution-orbit-item:nth-child(4) .solution-feature-item:nth-child(4)::before {
-    content: 'checklist_rtl';
-}
+
 
 /* Solution Card CTAs */
 .solution-card-cta {
@@ -3022,6 +3274,38 @@ body {
         font-size: 0.9rem;
         max-width: 100%;
         box-sizing: border-box;
+    }
+    
+    /* Textos mais curtos para CTAs no mobile */
+    .section-cta-text {
+        font-size: 0.85rem !important;
+        line-height: 1.3;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    /* Textos específicos para mobile - mais concisos */
+    .section-cta .section-cta-text:nth-of-type(1) {
+        /* Para "Alcance resultados similares em seu negócio" */
+        font-size: 0.8rem !important;
+    }
+    
+    /* Ajustes para o botão de contato principal */
+    .contact-main-cta {
+        padding: 1.5rem 2rem;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    
+    .cta-text {
+        font-size: 1.1rem !important;
+        line-height: 1.2;
+    }
+    
+    /* Ocultar subtítulo no mobile */
+    .cta-subtitle {
+        display: none !important;
     }
 }
 
@@ -3468,7 +3752,7 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
     position: relative;
@@ -3972,39 +4256,7 @@ body {
     50% { transform: translateY(-10px) rotate(2deg); }
 }
 
-/* Solutions Orbital Layout - Centralized */
-.solutions-orbital {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    height: 750px;
-    margin: 2rem auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.solution-orbit-item {
-    background: linear-gradient(135deg, 
-        rgba(255, 255, 255, 0.02) 0%, 
-        rgba(255, 255, 255, 0.01) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 12px;
-    padding: 1rem;
-    backdrop-filter: blur(10px);
-    transition: all 0.4s ease;
-    opacity: 1;
-    position: absolute;
-    overflow: hidden;
-    box-shadow: 
-        0 8px 32px rgba(0, 0, 0, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.03);
-    display: flex;
-    flex-direction: column;
-    width: 420px;
-    min-height: 220px;
-    z-index: 5;
-}
+/* Solutions Orbital Layout - Centralized - Definição removida */
 
 /* Linhas de conexão radiais do centro para cada módulo */
 .solution-orbit-item::after {
@@ -4048,13 +4300,7 @@ body {
     transform-origin: top;
 }
 
-/* Conexão Consultoria AION (inferior direita para centro) */
-.solution-orbit-item:nth-child(4)::after {
-    top: 50%;
-    left: 50%;
-    transform: translateY(-20px) translateX(-20px) rotate(-45deg);
-    transform-origin: top;
-}
+
 
 /* Efeito hover nas conexões */
 .solution-orbit-item:hover::after {
@@ -4152,35 +4398,14 @@ body {
 
 
 
-/* AION Vendas - MÁXIMO DESTAQUE */
-/* AION Vendas - Topo Esquerda */
-.solution-orbit-item:nth-child(1) { 
-    top: -50px;
-    left: -120px;
-    animation: campanhasEntrance 0.8s ease-out 0.1s forwards;
-}
-
-/* AION E-Commerce - Topo Direita */
-.solution-orbit-item:nth-child(2) { 
-    top: -50px;
-    right: -120px;
-    animation: trafegoEntrance 0.8s ease-out 0.2s forwards;
-}
-
-/* Soluções de IA - Baixo Esquerda */
-.solution-orbit-item:nth-child(3) { 
-    bottom: -50px;
-    left: -120px;
-    animation: sitesEntrance 0.6s ease-out 0.6s forwards;
-    opacity: 0;
-}
-
-/* Consultoria AION - Baixo Direita */
-.solution-orbit-item:nth-child(4) { 
-    bottom: -50px;
-    right: -120px;
-    animation: atendenteEntrance 0.6s ease-out 0.7s forwards;
-    opacity: 0;
+/* Cards posicionados usando flexbox para ficarem na mesma linha */
+.solution-orbit-item:nth-child(1),
+.solution-orbit-item:nth-child(2), 
+.solution-orbit-item:nth-child(3) {
+    position: static;
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 1;
+    flex: 1;
 }
 
 
@@ -4228,16 +4453,7 @@ body {
     }
 }
 
-@keyframes atendenteEntrance {
-    0% {
-        opacity: 0;
-        transform: translateY(50px) scale(0.9);
-    }
-    100% {
-        opacity: 0.8;
-        transform: translateY(0) scale(1);
-    }
-}
+
 
 @keyframes ecommerceEntrance {
     0% {
@@ -4255,8 +4471,7 @@ body {
 /* Hover unificado para todos os cards - suave e consistente */
 .solution-orbit-item:nth-child(1):hover,
 .solution-orbit-item:nth-child(2):hover,
-.solution-orbit-item:nth-child(3):hover,
-.solution-orbit-item:nth-child(4):hover {
+.solution-orbit-item:nth-child(3):hover {
     border-color: rgba(59, 130, 246, 0.8);
     box-shadow: 
         0 20px 40px rgba(0, 0, 0, 0.4),
@@ -4399,4 +4614,459 @@ body {
     object-fit: cover;
 }
 
+/* Controle de exibição desktop vs mobile para CTAs */
+.mobile-text {
+    display: none;
+}
+
+.desktop-text {
+    display: inline;
+}
+
+@media (max-width: 768px) {
+    .mobile-text {
+        display: inline;
+    }
+    
+    .desktop-text {
+        display: none;
+    }
+}
+
+/* Aplicar o mesmo background da seção de soluções nas seções de fundadores e FAQ */
+
+/* Seção de Fundadores com Background de Partículas */
+#founders.section {
+    position: relative;
+    background: var(--background-dark);
+    padding: 6rem 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.founders-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.founders-particles::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(2px 2px at 20px 30px, rgba(59, 130, 246, 0.5), transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(147, 51, 234, 0.5), transparent),
+        radial-gradient(1px 1px at 90px 40px, rgba(59, 130, 246, 0.4), transparent),
+        radial-gradient(1px 1px at 130px 80px, rgba(147, 51, 234, 0.4), transparent),
+        radial-gradient(2px 2px at 160px 30px, rgba(59, 130, 246, 0.5), transparent),
+        radial-gradient(1px 1px at 200px 50px, rgba(147, 51, 234, 0.4), transparent),
+        radial-gradient(2px 2px at 240px 90px, rgba(59, 130, 246, 0.5), transparent),
+        radial-gradient(1px 1px at 280px 40px, rgba(147, 51, 234, 0.4), transparent);
+    background-repeat: repeat;
+    background-size: 300px 200px;
+    animation: particlesFloat 20s linear infinite;
+    opacity: 0.8;
+    filter: brightness(1.2);
+}
+
+.founders-particles::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(1px 1px at 50px 100px, rgba(59, 130, 246, 0.4), transparent),
+        radial-gradient(2px 2px at 120px 150px, rgba(147, 51, 234, 0.5), transparent),
+        radial-gradient(1px 1px at 180px 120px, rgba(59, 130, 246, 0.4), transparent),
+        radial-gradient(2px 2px at 220px 180px, rgba(147, 51, 234, 0.5), transparent),
+        radial-gradient(1px 1px at 260px 160px, rgba(59, 130, 246, 0.4), transparent),
+        radial-gradient(2px 2px at 300px 140px, rgba(147, 51, 234, 0.5), transparent);
+    background-repeat: repeat;
+    background-size: 350px 250px;
+    animation: particlesFloat 25s linear infinite reverse;
+    opacity: 0.6;
+    filter: brightness(1.2);
+}
+
+#founders.section:hover .founders-particles::before {
+    animation-duration: 15s;
+    opacity: 1;
+}
+
+#founders.section:hover .founders-particles::after {
+    animation-duration: 18s;
+    opacity: 0.8;
+}
+
+#founders.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
+    opacity: 1;
+    animation: pulse 8s ease-in-out infinite;
+}
+
+#founders.section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, rgba(59, 130, 246, 0.6), transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(37, 99, 235, 0.6), transparent),
+        radial-gradient(1px 1px at 90px 40px, rgba(59, 130, 246, 0.5), transparent),
+        radial-gradient(1px 1px at 130px 80px, rgba(37, 99, 235, 0.5), transparent);
+    background-repeat: repeat;
+    background-size: 200px 150px;
+    animation: sparkle 25s linear infinite;
+    opacity: 0.5;
+    z-index: 3;
+    filter: brightness(1.1);
+}
+
+/* Seção FAQ com Background de Partículas */
+.faq-section {
+    position: relative;
+    background: var(--background-dark);
+    padding: 6rem 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.faq-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.faq-particles::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(2px 2px at 20px 30px, rgba(59, 130, 246, 0.5), transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(147, 51, 234, 0.5), transparent),
+        radial-gradient(1px 1px at 90px 40px, rgba(59, 130, 246, 0.4), transparent),
+        radial-gradient(1px 1px at 130px 80px, rgba(147, 51, 234, 0.4), transparent),
+        radial-gradient(2px 2px at 160px 30px, rgba(59, 130, 246, 0.5), transparent),
+        radial-gradient(1px 1px at 200px 50px, rgba(147, 51, 234, 0.4), transparent),
+        radial-gradient(2px 2px at 240px 90px, rgba(59, 130, 246, 0.5), transparent),
+        radial-gradient(1px 1px at 280px 40px, rgba(147, 51, 234, 0.4), transparent);
+    background-repeat: repeat;
+    background-size: 300px 200px;
+    animation: particlesFloat 20s linear infinite;
+    opacity: 0.8;
+    filter: brightness(1.2);
+}
+
+.faq-particles::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(1px 1px at 50px 100px, rgba(59, 130, 246, 0.4), transparent),
+        radial-gradient(2px 2px at 120px 150px, rgba(147, 51, 234, 0.5), transparent),
+        radial-gradient(1px 1px at 180px 120px, rgba(59, 130, 246, 0.4), transparent),
+        radial-gradient(2px 2px at 220px 180px, rgba(147, 51, 234, 0.5), transparent),
+        radial-gradient(1px 1px at 260px 160px, rgba(59, 130, 246, 0.4), transparent),
+        radial-gradient(2px 2px at 300px 140px, rgba(147, 51, 234, 0.5), transparent);
+    background-repeat: repeat;
+    background-size: 350px 250px;
+    animation: particlesFloat 25s linear infinite reverse;
+    opacity: 0.6;
+    filter: brightness(1.2);
+}
+
+.faq-section:hover .faq-particles::before {
+    animation-duration: 15s;
+    opacity: 1;
+}
+
+.faq-section:hover .faq-particles::after {
+    animation-duration: 18s;
+    opacity: 0.8;
+}
+
+.faq-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
+    opacity: 1;
+    animation: pulse 8s ease-in-out infinite;
+}
+
+.faq-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, rgba(59, 130, 246, 0.6), transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(37, 99, 235, 0.6), transparent),
+        radial-gradient(1px 1px at 90px 40px, rgba(59, 130, 246, 0.5), transparent),
+        radial-gradient(1px 1px at 130px 80px, rgba(37, 99, 235, 0.5), transparent);
+    background-repeat: repeat;
+    background-size: 200px 150px;
+    animation: sparkle 25s linear infinite;
+    opacity: 0.5;
+    z-index: 3;
+    filter: brightness(1.1);
+}
+
+/* Garantir que o conteúdo fique acima dos efeitos */
+.founders-grid,
+.founders-credibility,
+.faq-container {
+    position: relative;
+    z-index: 10;
+}
+
+/* Estilos para as novas seções de fundadores */
+
+/* Conexão dos fundadores com pequenos negócios */
+.founder-connection {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(59, 130, 246, 0.1);
+    border-left: 3px solid var(--color-blue);
+    border-radius: 8px;
+    font-style: italic;
+    color: var(--color-gray-300);
+}
+
+.founder-connection strong {
+    color: var(--color-blue);
+    font-style: normal;
+}
+
+/* Seção de foco em pequenos negócios */
+.founders-focus {
+    margin: 3rem 0;
+    padding: 2.5rem;
+    background: var(--surface-glass);
+    border: 1px solid var(--border-glass);
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.founders-focus::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(147, 51, 234, 0.1));
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.focus-content h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--color-blue), var(--color-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.focus-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--color-gray-300);
+    margin-bottom: 1rem;
+}
+
+.focus-description strong {
+    color: var(--color-blue);
+    font-weight: 600;
+}
+
+.focus-guarantee {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-top: 1rem;
+}
+
+.focus-guarantee strong {
+    color: var(--color-blue);
+}
+
+/* Seção de garantias */
+.founders-guarantees {
+    margin: 3rem 0;
+    position: relative;
+    z-index: 10;
+}
+
+.guarantee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.guarantee-item {
+    background: var(--surface-glass);
+    border: 1px solid var(--border-glass);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.guarantee-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(147, 51, 234, 0.05));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.guarantee-item:hover::before {
+    opacity: 1;
+}
+
+.guarantee-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-blue);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+}
+
+.guarantee-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--color-blue), var(--color-purple));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.guarantee-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.guarantee-item h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.guarantee-item p {
+    color: var(--color-gray-300);
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsivo para mobile */
+@media (max-width: 768px) {
+    .founder-connection {
+        margin-top: 1rem;
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .founders-focus {
+        margin: 2rem 1rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .focus-content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .focus-description {
+        font-size: 1rem;
+    }
+
+    .focus-guarantee {
+        font-size: 1.1rem;
+    }
+
+    .guarantee-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .guarantee-item {
+        padding: 1.5rem;
+    }
+
+    .guarantee-icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 1rem;
+    }
+
+    .guarantee-icon i {
+        font-size: 1.2rem;
+    }
+
+    .guarantee-item h4 {
+        font-size: 1.1rem;
+    }
+}
  

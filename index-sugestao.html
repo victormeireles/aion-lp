@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AION - Transforme seu Negócio com IA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Estilos Modernos e Elegantes */
+        .elegance-banner {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+            text-align: center;
+            padding: 12px;
+            font-weight: 500;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .elegance-banner .highlight {
+            color: #00d4ff;
+            font-weight: 600;
+        }
+        
+        .segmentation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+        
+        .segment-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .segment-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #00d4ff, #00ff88);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .segment-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(0,212,255,0.3);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .segment-card:hover::before {
+            opacity: 1;
+        }
+        
+        .segment-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #00d4ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .segment-icon img {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            object-fit: cover;
+            transition: all 0.3s ease;
+            filter: brightness(0.9);
+        }
+        
+        .segment-card:hover .segment-icon img {
+            filter: brightness(1.1);
+            transform: scale(1.05);
+        }
+        
+        .segment-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            color: white;
+        }
+        
+        .segment-subtitle {
+            color: #a0a0a0;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+        
+        .segment-benefits {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+            text-align: left;
+        }
+        
+        .segment-benefits li {
+            color: #e0e0e0;
+            margin-bottom: 0.8rem;
+            font-weight: 400;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .segment-benefits li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #00d4ff;
+            font-weight: 600;
+        }
+        
+        .segment-cta {
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+        
+        .segment-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,212,255,0.3);
+            background: linear-gradient(135deg, #00ff88, #00cc66);
+        }
+        
+        .modern-section {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            padding: 5rem 0;
+        }
+        
+        .premium-badge {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .metric-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .metric-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #00d4ff;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .metric-label {
+            color: #a0a0a0;
+            font-size: 0.9rem;
+        }
+        
+        .offer-highlight {
+            background: rgba(0,212,255,0.1);
+            border: 1px solid rgba(0,212,255,0.3);
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        
+        .offer-text {
+            color: #00d4ff;
+            font-weight: 500;
+        }
+        
+        .cta-primary {
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+            color: white;
+            padding: 18px 35px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-block;
+            margin: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0,212,255,0.4);
+        }
+        
+        .features-box {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .features-list {
+            color: white;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+        
+        .case-testimonial {
+            font-style: italic;
+            color: #e0e0e0;
+            font-size: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .final-cta-section {
+            background: linear-gradient(135deg, #0f0f23, #1a1a2e);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .urgency-text {
+            color: #00d4ff;
+            font-size: 1.1rem;
+            margin: 1rem 0;
+        }
+        
+        .cta-final {
+            background: linear-gradient(135deg, #00d4ff, #00ff88);
+            color: white;
+            padding: 20px 45px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            display: inline-block;
+            margin: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-final:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0,212,255,0.4);
+        }
+        
+        @media (max-width: 768px) {
+            .segmentation-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                margin: 2rem 0;
+            }
+            
+            .segment-card {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- ============================================
+         COMPONENTES COMPARTILHADOS 
+         ============================================ -->
+    
+    <!-- Container para Header + Barra de Progresso -->
+    <div id="shared-header"></div>
+    
+    <!-- Container para Menu Mobile + Hambúrguer -->
+    <div id="shared-mobile-menu"></div>
+
+    <!-- ============================================
+         NOVA HERO SECTION OTIMIZADA
+         ============================================ -->
+
+    <!-- Hero Section Reformulada -->
+    <section id="home" class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="assets/videos/home-hero-section.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <img src="assets/logos/aionLogoWhite.svg" alt="AION" class="hero-logo">
+            <h1 class="hero-title">TRANSFORME SEU NEGÓCIO COM IA</h1>
+            <p class="hero-subtitle">Metodologia Comprovada que Gerou Mais de R$ 3 Bilhões em Resultados</p>
+            
+            <div class="offer-highlight">
+                <div class="offer-text hero-subtitle">Vagas Limitadas para 2025</div>
+            </div>
+            
+            <div class="hero-buttons">
+                <a href="https://www.aionsolution.com.br/request_consulting?type=u" target="_blank" class="btn-primary">
+                    Agendar Consultoria Estratégica
+                </a>
+                <a href="#segmentacao" class="btn-secondary">Explorar Soluções</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO DE SEGMENTAÇÃO IMEDIATA
+         ============================================ -->
+
+    <section id="segmentacao" class="section">
+        <div class="container">
+            <h2 class="section-title">Escolha Sua Categoria e Veja Resultados Específicos</h2>
+            <p class="section-subtitle">Cada tipo de empresa tem necessidades únicas. Descubra a solução perfeita para SEU negócio:</p>
+            
+            <div class="segmentation-grid">
+                <!-- Empresas de Serviços -->
+                <div class="segment-card">
+                    <div class="segment-icon">
+                        <img src="assets/images/servicos.jpg" alt="Empresas de Serviços">
+                    </div>
+                    <h3 class="segment-title">Empresas de Serviços</h3>
+                    <p class="segment-subtitle">Médicos, Clínicas, Escritórios, Restaurantes</p>
+                    
+                    <ul class="segment-benefits">
+                        <li>✅ Mais leads qualificados</li>
+                        <li>✅ Agenda organizada automaticamente</li>
+                        <li>✅ Aumento de produtividade</li>
+                        <li>✅ Automação completa de vendas</li>
+                    </ul>
+                    
+                    <div class="offer-highlight">
+                        <div class="offer-text">R$ 499/mês • Promoção Especial</div>
+                    </div>
+                    
+                    <a href="#servicos-detalhes" class="segment-cta">Ver Solução Completa</a>
+                </div>
+
+                <!-- E-commerce -->
+                <div class="segment-card">
+                    <div class="segment-icon">
+                        <img src="assets/images/ecommerce.jpg" alt="Lojas Online">
+                    </div>
+                    <h3 class="segment-title">Lojas Online</h3>
+                    <p class="segment-subtitle">E-commerce, Marketplace, Vendas Digitais</p>
+                    
+                    <ul class="segment-benefits">
+                        <li>✅ Dados centralizados e organizados</li>
+                        <li>✅ BI integrado e automático</li>
+                        <li>✅ Insights para otimizar vendas</li>
+                        <li>✅ Controle inteligente de estoque</li>
+                    </ul>
+                    
+                    <div class="offer-highlight">
+                        <div class="offer-text">R$ 499/mês • Promoção Especial</div>
+                    </div>
+                    
+                    <a href="#ecommerce-detalhes" class="segment-cta">Ver Solução Completa</a>
+                </div>
+
+                <!-- Grandes Empresas -->
+                <div class="segment-card">
+                    <div class="segment-icon">
+                        <img src="assets/images/grandes-empresas.jpg" alt="Grandes Empresas">
+                    </div>
+                    <h3 class="segment-title">Grandes Empresas</h3>
+                    <p class="segment-subtitle">+R$ 200k/mês - Soluções Customizadas</p>
+                    
+                    <ul class="segment-benefits">
+                        <li>✅ Análise completa do negócio</li>
+                        <li>✅ Estratégia personalizada</li>
+                        <li>✅ Transformação digital guiada</li>
+                        <li>✅ Consultoria executiva exclusiva</li>
+                    </ul>
+                    
+                    <div class="offer-highlight">
+                        <div class="offer-text">Diagnóstico Estratégico Gratuito</div>
+                    </div>
+                    
+                    <a href="#grandes-detalhes" class="segment-cta">Solicitar Diagnóstico</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO DETALHADA - EMPRESAS DE SERVIÇOS
+         ============================================ -->
+
+    <section id="servicos-detalhes" class="modern-section">
+        <div class="container">
+            <h2 class="section-title">AION Vendas: Otimize Sua Empresa de Serviços</h2>
+            <p class="section-subtitle">Sistema completo que automatiza vendas e organiza seus processos comerciais</p>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <span class="metric-number">100%</span>
+                    <div class="metric-label">Leads Organizados</div>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-number">24/7</span>
+                    <div class="metric-label">Automação Funcionando</div>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-number">7 dias</span>
+                    <div class="metric-label">Setup Completo</div>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-number">60 dias</span>
+                    <div class="metric-label">Garantia Total</div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin: 3rem 0;">
+                <div class="premium-badge">
+                    Solução Completa Incluída
+                </div>
+                
+                <div class="features-box">
+                    <div class="features-list">
+                        <strong>Setup completo em 7 dias</strong> - Sistema funcionando na primeira semana<br>
+                        <strong>Treinamento da equipe incluído</strong> - Seus colaboradores dominando a ferramenta<br>
+                        <strong>Integração com WhatsApp Business</strong> - Leads direto no seu celular<br>
+                        <strong>Relatórios automáticos</strong> - KPIs importantes todo dia no WhatsApp<br>
+                        <strong>Suporte prioritário 24/7</strong> - Sempre que precisar, estamos aqui<br>
+                        <strong>Garantia de 60 dias</strong> - Não gostou? Devolvemos seu dinheiro<br>
+                    </div>
+                </div>
+                
+                <div class="offer-highlight">
+                    <div class="offer-text">Promoção Especial: R$ 499/mês nos primeiros 6 meses</div>
+                </div>
+                
+                <a href="https://www.aionsolution.com.br/request_consulting?type=u" target="_blank" class="cta-primary">
+                    Agendar Consultoria Estratégica
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO DETALHADA - E-COMMERCE
+         ============================================ -->
+
+    <section id="ecommerce-detalhes" class="section">
+        <div class="container">
+            <h2 class="section-title">AION E-Commerce: BI Completo Para Sua Loja</h2>
+            <p class="section-subtitle">Dashboard inteligente que integra todos os dados e revela oportunidades de crescimento</p>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <span class="metric-number">100%</span>
+                    <div class="metric-label">Dados Integrados</div>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-number">Real Time</span>
+                    <div class="metric-label">Relatórios Automáticos</div>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-number">7 dias</span>
+                    <div class="metric-label">Setup Completo</div>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-number">24/7</span>
+                    <div class="metric-label">Suporte Incluído</div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin: 3rem 0;">
+                <h3 style="color: #00ff88; font-size: 1.5rem; margin-bottom: 1rem;">
+                    📊 Transformação completa do seu e-commerce:
+                </h3>
+                <div style="background: rgba(0,212,255,0.1); border: 1px solid #00d4ff; border-radius: 12px; padding: 2rem; margin: 2rem 0;">
+                    <div style="color: white; font-size: 1.1rem; line-height: 1.8;">
+                        ✅ <strong>BI integrado</strong> - Todos marketplaces + loja própria em um só lugar<br>
+                        ✅ <strong>Previsão de estoque</strong> - IA antecipa demanda e evita ruptura<br>
+                        ✅ <strong>Análise de margem</strong> - Identifica produtos mais lucrativos<br>
+                        ✅ <strong>Otimização de anúncios</strong> - ROI automático no Facebook/Google<br>
+                        ✅ <strong>Alertas inteligentes</strong> - Oportunidades direto no WhatsApp<br>
+                        ✅ <strong>Precificação dinâmica</strong> - Preços ideais baseados em concorrência<br>
+                    </div>
+                </div>
+                
+                <div class="timer">
+                    <div class="timer-text">💎 BÔNUS LIMITADO: Consultoria de precificação gratuita (valor R$ 5.000)</div>
+                </div>
+                
+                <a href="https://www.aionsolution.com.br/request_consulting?type=u" target="_blank" 
+                   style="background: linear-gradient(45deg, #00d4ff, #0066ff); color: white; padding: 20px 40px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 1.2rem; display: inline-block; margin: 1rem;">
+                    📈 QUERO MULTIPLICAR MEU E-COMMERCE
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO DETALHADA - GRANDES EMPRESAS
+         ============================================ -->
+
+    <section id="grandes-detalhes" class="section" style="background: linear-gradient(135deg, #2d1b69, #11998e);">
+        <div class="container">
+            <h2 class="section-title">Consultoria Premium: ROI Garantido em Contrato</h2>
+            <p class="section-subtitle">Para empresas que faturam +R$ 200k/mês e querem transformação digital completa</p>
+            
+            <div class="roi-metrics">
+                <div class="roi-metric">
+                    <span class="roi-number">100%</span>
+                    <div class="roi-label">Análise Personalizada</div>
+                </div>
+                <div class="roi-metric">
+                    <span class="roi-number">Grátis</span>
+                    <div class="roi-label">Diagnóstico Inicial</div>
+                </div>
+                <div class="roi-metric">
+                    <span class="roi-number">90 dias</span>
+                    <div class="roi-label">Implementação Assistida</div>
+                </div>
+                <div class="roi-metric">
+                    <span class="roi-number">24/7</span>
+                    <div class="roi-label">Suporte Executivo</div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin: 3rem 0;">
+                <h3 style="color: #ffd700; font-size: 1.5rem; margin-bottom: 1rem;">
+                    👑 Consultoria Executiva Exclusiva:
+                </h3>
+                <div style="background: rgba(255,215,0,0.1); border: 1px solid #ffd700; border-radius: 12px; padding: 2rem; margin: 2rem 0;">
+                    <div style="color: white; font-size: 1.1rem; line-height: 1.8;">
+                        ✅ <strong>Diagnóstico completo</strong> - Análise profunda de todos os processos<br>
+                        ✅ <strong>Estratégia personalizada</strong> - Plano exclusivo para seu negócio<br>
+                        ✅ <strong>Implementação assistida</strong> - Nossa equipe faz junto com você<br>
+                        ✅ <strong>Automação de processos</strong> - IA em toda cadeia operacional<br>
+                        ✅ <strong>ROI garantido</strong> - Se não atingir, devolvemos o investimento<br>
+                        ✅ <strong>Acesso aos fundadores</strong> - Gustavo e Victor dedicados ao seu projeto<br>
+                    </div>
+                </div>
+                
+                <div class="guarantee-badge">
+                    🏆 GARANTIA TOTAL: 60 DIAS OU SEU DINHEIRO DE VOLTA
+                </div>
+                
+                <a href="https://www.aionsolution.com.br/request_consulting?type=u" target="_blank" 
+                   style="background: linear-gradient(45deg, #ffd700, #ffed4e); color: #1a1a2e; padding: 20px 40px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 1.2rem; display: inline-block; margin: 1rem;">
+                    👑 SOLICITAR DIAGNÓSTICO GRATUITO
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CASES SEGMENTADOS POR PÚBLICO
+         ============================================ -->
+
+    <section id="cases-segmentados" class="section">
+        <div class="container">
+            <h2 class="section-title">Casos Reais de Sucesso Por Categoria</h2>
+            <p class="section-subtitle">Veja empresas similares à sua que transformaram resultados com AION</p>
+            
+            <div class="segmentation-grid">
+                <!-- Case Serviços -->
+                <div class="segment-card">
+                    <h3 style="color: #00ff88;">🏢 Empresa de Serviços</h3>
+                    <div style="color: #a0a0a0; margin: 1rem 0;">Consultoria Jurídica - São Paulo</div>
+                    <div style="color: white; font-size: 1.1rem; margin: 1rem 0;">
+                        <strong>"AION organizou completamente nosso processo comercial"</strong>
+                    </div>
+                    <div class="roi-metrics" style="margin: 1.5rem 0;">
+                        <div class="roi-metric">
+                            <span class="roi-number" style="font-size: 1.5rem;">100%</span>
+                            <div class="roi-label">Leads Organizados</div>
+                        </div>
+                        <div class="roi-metric">
+                            <span class="roi-number" style="font-size: 1.5rem;">Tempo</span>
+                            <div class="roi-label">Economizado Diário</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case E-commerce -->
+                <div class="segment-card">
+                    <h3 style="color: #00d4ff;">🛒 E-commerce</h3>
+                    <div style="color: #a0a0a0; margin: 1rem 0;">Loja de Roupas Online - Rio de Janeiro</div>
+                    <div style="color: white; font-size: 1.1rem; margin: 1rem 0;">
+                        <strong>"BI da AION centralizou todos nossos dados em um só lugar"</strong>
+                    </div>
+                    <div class="roi-metrics" style="margin: 1.5rem 0;">
+                        <div class="roi-metric">
+                            <span class="roi-number" style="font-size: 1.5rem;">100%</span>
+                            <div class="roi-label">Dados Integrados</div>
+                        </div>
+                        <div class="roi-metric">
+                            <span class="roi-number" style="font-size: 1.5rem;">Insights</span>
+                            <div class="roi-label">Automáticos Diários</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Grande Empresa -->
+                <div class="segment-card">
+                    <h3 style="color: #ffd700;">🏭 Grande Empresa</h3>
+                    <div style="color: #a0a0a0; margin: 1rem 0;">Indústria Farmacêutica - Nacional</div>
+                    <div style="color: white; font-size: 1.1rem; margin: 1rem 0;">
+                        <strong>"Consultoria AION transformou nossa operação digital"</strong>
+                    </div>
+                    <div class="roi-metrics" style="margin: 1.5rem 0;">
+                        <div class="roi-metric">
+                            <span class="roi-number" style="font-size: 1.5rem;">100%</span>
+                            <div class="roi-label">Processos Otimizados</div>
+                        </div>
+                        <div class="roi-metric">
+                            <span class="roi-number" style="font-size: 1.5rem;">Eficiência</span>
+                            <div class="roi-label">Operacional Máxima</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FAQ ESTRATÉGICO FOCADO EM ROI
+         ============================================ -->
+
+    <section class="section faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Perguntas Sobre ROI e Resultados</h2>
+                <p class="section-subtitle">As dúvidas mais comuns sobre investimento e retorno</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Em quanto tempo vou ver retorno do meu investimento?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Empresas de Serviços:</strong> Organização completa em 7 dias, resultados de eficiência em 30 dias.<br>
+                        <strong>E-commerce:</strong> BI funcionando em 7 dias, insights valiosos desde o primeiro relatório.<br>
+                        <strong>Grandes Empresas:</strong> Diagnóstico em 30 dias, implementação completa em 90 dias.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Qual a garantia de que vou ter resultados?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oferecemos <strong>garantia total de 60 dias</strong>. Se não estiver satisfeito com a solução, devolvemos 100% do valor investido. Para grandes empresas, garantimos satisfação completa com a consultoria ou reembolso total.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quanto custa cada solução e qual o ROI esperado?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>AION Vendas:</strong> R$ 499/mês → Automação completa + economia de tempo<br>
+                        <strong>AION E-Commerce:</strong> R$ 499/mês → BI integrado + insights valiosos<br>
+                        <strong>Consultoria Premium:</strong> Investimento personalizado → Análise completa + estratégia executiva</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Por que vocês conseguem garantir esses resultados?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nossos fundadores <strong>viraram 8 empresas</strong> do prejuízo ao lucro, gerando +R$ 3 bilhões em resultados. Não somos apenas desenvolvedores de IA, somos executivos com histórico comprovado de transformação de negócios.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>E se minha empresa for muito específica ou diferente?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Já trabalhamos com <strong>dezenas de segmentos diferentes</strong>: saúde, educação, jurídico, varejo, indústria, tecnologia. Nossa metodologia se adapta a qualquer negócio. Na consultoria gratuita, analisamos sua especificidade.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Qual o primeiro passo para começar?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Consultoria gratuita de 60 minutos</strong> onde analisamos seu negócio e recomendamos a melhor solução. Você sai com insights valiosos mesmo que não feche nada conosco. É nossa forma de demonstrar competência.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO FINAL DE CONVERSÃO COM URGÊNCIA
+         ============================================ -->
+
+    <section class="final-cta-section">
+        <div class="container">
+            <h2 class="section-title">Pronto para Transformar seu Negócio?</h2>
+            <p class="section-subtitle">Consultoria estratégica personalizada para o seu segmento</p>
+            
+            <div class="premium-badge">
+                Incluído na Consultoria Gratuita
+            </div>
+            
+            <div class="features-box">
+                <div class="features-list" style="text-align: left;">
+                    <strong>Consultoria estratégica</strong> - Análise completa do seu negócio<br>
+                    <strong>Plano de ação personalizado</strong> - Estratégia exclusiva para seu segmento<br>
+                    <strong>Recomendação de solução</strong> - A melhor opção para suas necessidades<br>
+                    <strong>Setup prioritário</strong> - Implementação em 7 dias<br>
+                    <strong>Suporte dedicado</strong> - Acompanhamento pessoal<br>
+                    <strong>Garantia total</strong> - 60 dias de proteção completa<br>
+                </div>
+            </div>
+            
+            <div class="urgency-text">
+                Vagas limitadas para atendimento personalizado
+            </div>
+            
+            <a href="https://www.aionsolution.com.br/request_consulting?type=u" target="_blank" class="cta-final">
+                Agendar Consultoria Estratégica
+            </a>
+            
+            <div style="color: #a0a0a0; font-size: 0.9rem; margin-top: 1rem;">
+                Consultoria gratuita e sem compromisso. Você decide se quer continuar.
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         COMPONENTES COMPARTILHADOS 
+         ============================================ -->
+    
+    <!-- Container para Footer -->
+    <div id="shared-footer"></div>
+    
+    <!-- Container para Botão WhatsApp -->
+    <div id="shared-whatsapp"></div>
+
+    <!-- ============================================
+         SCRIPTS
+         ============================================ -->
+    
+    <!-- Configuração -->
+    <script src="assets/js/components/config.js"></script>
+    
+    <!-- Componentes Compartilhados -->
+    <script src="assets/js/components/shared-components.js"></script>
+    
+    <!-- Scripts específicos da página -->
+    <script src="assets/js/script.js"></script>
+    
+    <!-- Script para FAQ -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const faqItem = this.parentElement;
+                    const faqAnswer = faqItem.querySelector('.faq-answer');
+                    const chevron = this.querySelector('.fas');
+                    
+                    // Toggle active state
+                    faqItem.classList.toggle('active');
+                    
+                    // Rotate chevron
+                    if (faqItem.classList.contains('active')) {
+                        chevron.style.transform = 'rotate(180deg)';
+                        faqAnswer.style.maxHeight = faqAnswer.scrollHeight + 'px';
+                    } else {
+                        chevron.style.transform = 'rotate(0deg)';
+                        faqAnswer.style.maxHeight = '0';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

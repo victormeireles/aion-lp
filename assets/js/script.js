@@ -52,17 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (heroVideo) {
-        if (isMobileDevice()) {
-            heroVideo.addEventListener('canplay', function() {
-                setTimeout(() => {
-                    if (heroVideo && !heroVideo.paused) {
-                        heroVideo.pause();
-                        heroVideo.style.opacity = '0.2';
-                    }
-                }, 3000);
-            });
-        }
-
         heroVideo.addEventListener('loadedmetadata', function() {
             heroVideo.playbackRate = 0.7;
         });
