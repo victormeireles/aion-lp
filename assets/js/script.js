@@ -414,45 +414,69 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // FAQ Functionality
     function initFAQ() {
+        console.log('Inicializando FAQ...');
         const faqItems = document.querySelectorAll('.faq-item');
+        console.log('FAQ items encontrados:', faqItems.length);
         
-        faqItems.forEach(item => {
+        faqItems.forEach((item, index) => {
             const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            const icon = question ? question.querySelector('i') : null;
             
-            question.addEventListener('click', () => {
-                const answer = item.querySelector('.faq-answer');
-                const icon = question.querySelector('i');
-                const isActive = item.classList.contains('active');
-                
-                // Close all other FAQ items
-                faqItems.forEach(otherItem => {
-                    if (otherItem !== item) {
-                        otherItem.classList.remove('active');
-                        otherItem.querySelector('.faq-answer').style.maxHeight = null;
-                        otherItem.querySelector('.faq-question i').classList.remove('fa-chevron-up');
-                        otherItem.querySelector('.faq-question i').classList.add('fa-chevron-down');
+            console.log(`FAQ item ${index}:`, { question: !!question, answer: !!answer, icon: !!icon });
+            
+            if (question && answer) {
+                question.addEventListener('click', () => {
+                    console.log(`FAQ item ${index} clicado`);
+                    const isOpen = item.classList.contains('active');
+                    
+                    // Fechar todos os outros FAQs
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                            const otherAnswer = otherItem.querySelector('.faq-answer');
+                            const otherIcon = otherItem.querySelector('.faq-question i');
+                            if (otherAnswer) otherAnswer.style.maxHeight = null;
+                            if (otherIcon) {
+                                otherIcon.classList.remove('fa-chevron-up');
+                                otherIcon.classList.add('fa-chevron-down');
+                            }
+                        }
+                    });
+                    
+                    // Toggle do item atual
+                    if (isOpen) {
+                        console.log('Fechando FAQ');
+                        item.classList.remove('active');
+                        answer.style.maxHeight = null;
+                        if (icon) {
+                            icon.classList.remove('fa-chevron-up');
+                            icon.classList.add('fa-chevron-down');
+                        }
+                    } else {
+                        console.log('Abrindo FAQ');
+                        item.classList.add('active');
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        if (icon) {
+                            icon.classList.remove('fa-chevron-down');
+                            icon.classList.add('fa-chevron-up');
+                        }
                     }
                 });
-                
-                // Toggle current item
-                if (isActive) {
-                    item.classList.remove('active');
-                    answer.style.maxHeight = null;
-                    icon.classList.remove('fa-chevron-up');
-                    icon.classList.add('fa-chevron-down');
-                } else {
-                    item.classList.add('active');
-                    answer.style.maxHeight = answer.scrollHeight + 'px';
-                    icon.classList.remove('fa-chevron-down');
-                    icon.classList.add('fa-chevron-up');
-                }
-            });
+            }
         });
     }
 
     // Initialize FAQ when DOM is loaded
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', function() {
         initFAQ();
     });
+
+    // Também inicializar se a página já estiver carregada
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initFAQ);
+    } else {
+        initFAQ();
+    }
 
 }); 

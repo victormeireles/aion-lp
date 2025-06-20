@@ -25,7 +25,7 @@ function createHeader() {
                         if (item.dropdown) {
                             return `
                                 <li class="nav-item">
-                                    <a href="#${item.id}">${item.title}</a>
+                                    <a href="${item.url || '#' + item.id}">${item.title}</a>
                                     <div class="dropdown-menu">
                                         ${item.dropdown.map(dropItem => `
                                             <a href="${dropItem.url}" ${dropItem.external ? 'target="_blank"' : ''} class="dropdown-item">
@@ -37,7 +37,7 @@ function createHeader() {
                                 </li>
                             `;
                         } else {
-                            return `<li><a href="#${item.id}">${item.title}</a></li>`;
+                            return `<li><a href="${item.url || '#' + item.id}">${item.title}</a></li>`;
                         }
                     }).join('')}
                 </ul>
@@ -74,38 +74,29 @@ function createMobileMenu() {
             </div>
             
             <ul class="mobile-menu-links">
-                <li><a href="index.html">🏠 Início</a></li>
-                
-                <li class="menu-dropdown">
-                    <a href="#solutions" class="dropdown-trigger">
-                        🚀 Soluções <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <ul class="dropdown-content">
-                        ${config.navigation.main[0].dropdown.map(item => `
-                            <li><a href="${item.url}">• ${item.title}</a></li>
-                        `).join('')}
-                    </ul>
-                </li>
-                
-                <li class="menu-dropdown">
-                    <a href="#ferramentas" class="dropdown-trigger">
-                        🤖 Ferramentas de IA Gratuitas <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <ul class="dropdown-content">
-                        ${config.navigation.main[1].dropdown.map(item => `
-                            <li><a href="${item.url}" target="_blank">• ${item.title}</a></li>
-                        `).join('')}
-                    </ul>
-                </li>
-                
-                <li><a href="#cases">📈 Cases</a></li>
-                <li><a href="#founders">👥 Fundadores</a></li>
-                <li><a href="#contact">📞 Contato</a></li>
+                ${config.navigation.main.map(item => {
+                    if (item.dropdown) {
+                        return `
+                            <li class="menu-dropdown">
+                                <a href="${item.url || '#' + item.id}" class="dropdown-trigger">
+                                    ${item.title} <i class="fas fa-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-content">
+                                    ${item.dropdown.map(dropItem => `
+                                        <li><a href="${dropItem.url}" ${dropItem.external ? 'target="_blank"' : ''}>• ${dropItem.title}</a></li>
+                                    `).join('')}
+                                </ul>
+                            </li>
+                        `;
+                    } else {
+                        return `<li><a href="${item.url || '#' + item.id}">${item.title}</a></li>`;
+                    }
+                }).join('')}
             </ul>
             
             <div class="mobile-menu-cta">
                 <a href="${config.urls.whatsapp}" target="_blank">
-                    💬 Agendar Consultoria
+                    Agendar Consultoria
                 </a>
             </div>
         </div>

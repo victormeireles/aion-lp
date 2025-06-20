@@ -16,6 +16,42 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <script>
+        // Configuração específica para página de serviços
+        // Sobrescreve configuração padrão para adaptar menu aos conteúdos desta página
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.AION_CONFIG) {
+                // Adapta navegação para página de serviços - Menu simplificado
+                window.AION_CONFIG.navigation.main = [
+                    {
+                        title: "Início",
+                        id: "inicio",
+                        url: "index.html"
+                    },
+                    {
+                        title: "Método",
+                        id: "metodo"
+                    },
+                    {
+                        title: "Como Funciona",
+                        id: "how-works"
+                    },
+                    {
+                        title: "Cases",
+                        id: "cases"
+                    },
+                    {
+                        title: "Preços",
+                        id: "precos"
+                    },
+                    {
+                        title: "Contato",
+                        id: "contact"
+                    }
+                ];
+            }
+        });
+    </script>
     <!-- ============================================
          COMPONENTES COMPARTILHADOS 
          ============================================ -->
@@ -162,7 +198,7 @@
                                     <p>Problemas comuns em empresas de serviços</p>
                                 </div>
                                 <div class="bridge-header-spacer"></div>
-                                <div class="after-header">
+                                <div class="after-header desktop-only">
                                     <h3>Com AION</h3>
                                     <p>Resultados alcançados com nossa metodologia</p>
                                 </div>
@@ -201,6 +237,12 @@
                                             <img src="assets/images/aion-campanhas.png" alt="Transformação AION" class="bridge-img">
                                             <div class="bridge-glow"></div>
                                         </div>
+                                    </div>
+                                    
+                                    <!-- Header "Com AION" para mobile (aparece após a imagem) -->
+                                    <div class="after-header mobile-only">
+                                        <h3>Com AION</h3>
+                                        <p>Resultados alcançados com nossa metodologia</p>
                                     </div>
                                 </div>
                                 
@@ -678,6 +720,21 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Pronto para Transformar sua Empresa de Serviços?</h2>
+            <p class="section-subtitle">Agende uma consultoria gratuita e descubra como aplicar o método AION no seu negócio em até 30 dias.</p>
+            
+            <div class="contact-cta-container">
+                <a href="https://www.aionsolution.com.br/request_consulting?type=u" target="_blank" class="contact-main-cta">
+                    <span class="cta-text">Agendar Consultoria Gratuita</span>
+                    <span class="cta-subtitle">Diagnóstico completo do seu negócio</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- FAQ Section -->
     <section class="section faq-section">
         <div class="faq-particles"></div>
@@ -747,21 +804,6 @@
                         <p>Somos os únicos que combinam IA, estratégia de negócios e experiência prática de quem virou empresas reais. Nossos fundadores transformaram gigantes como Dafiti e C&A. Não fazemos apenas tecnologia, fazemos transformação de resultados com metodologia comprovada.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Pronto para Transformar sua Empresa de Serviços?</h2>
-            <p class="section-subtitle">Agende uma consultoria gratuita e descubra como aplicar o método AION no seu negócio em até 30 dias.</p>
-            
-            <div class="contact-cta-container">
-                <a href="https://www.aionsolution.com.br/request_consulting?type=u" target="_blank" class="contact-main-cta">
-                    <span class="cta-text">Agendar Consultoria Gratuita</span>
-                    <span class="cta-subtitle">Diagnóstico completo do seu negócio</span>
-                </a>
             </div>
         </div>
     </section>
