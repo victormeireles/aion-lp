@@ -1,0 +1,294 @@
+/* ============================================
+   FOUNDERS SECTION
+   ============================================ */
+
+   #founders.section {
+    position: relative;
+    background: var(--background-dark);
+    padding: 6rem 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.founders-section .container {
+    z-index: 10;
+}
+
+/* Background Particle Effects */
+.founders-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.founders-particles::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(2px 2px at 20px 30px, rgba(59, 130, 246, 0.5), transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(147, 51, 234, 0.5), transparent),
+        radial-gradient(1px 1px at 90px 40px, rgba(59, 130, 246, 0.4), transparent);
+    background-repeat: repeat;
+    background-size: 300px 200px;
+    animation: particlesFloat 20s linear infinite;
+    opacity: 0.8;
+}
+
+.founders-particles::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(1px 1px at 50px 100px, rgba(59, 130, 246, 0.4), transparent),
+        radial-gradient(2px 2px at 120px 150px, rgba(147, 51, 234, 0.5), transparent);
+    background-repeat: repeat;
+    background-size: 350px 250px;
+    animation: particlesFloat 25s linear infinite reverse;
+    opacity: 0.6;
+}
+
+#founders.section:hover .founders-particles::before,
+#founders.section:hover .founders-particles::after {
+    animation-duration: 15s;
+    opacity: 1;
+}
+
+#founders.section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.2) 0%, transparent 50%);
+    opacity: 1;
+    animation: pulse 8s ease-in-out infinite;
+}
+
+/* Founders Grid and Cards */
+.founders-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.founder-card {
+    background: var(--surface-glass);
+    border: 1px solid var(--border-glass);
+    border-radius: 20px;
+    padding: 2.5rem;
+    backdrop-filter: blur(20px);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 0;
+    transform: translateY(2rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.founder-card:hover {
+    transform: translateY(-12px);
+    background: var(--surface-glass-strong);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.founder-image {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    border: 3px solid var(--border-glass);
+    transition: all 0.3s ease;
+}
+
+.founder-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.founder-card:hover .founder-image {
+    border-color: var(--color-blue);
+    transform: scale(1.05);
+}
+
+.founder-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    letter-spacing: -0.02em;
+}
+
+.founder-title {
+    color: var(--color-blue);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.01em;
+}
+
+.founder-description {
+    color: var(--color-gray-400);
+    line-height: 1.5;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+    font-size: 0.95rem;
+}
+
+.founder-connection {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(59, 130, 246, 0.1);
+    border-left: 3px solid var(--color-blue);
+    border-radius: 8px;
+    font-style: italic;
+    color: var(--color-gray-300);
+}
+
+.founder-connection strong {
+    color: var(--color-blue);
+    font-style: normal;
+}
+
+/* Founders Focus Section */
+.founders-focus {
+    margin: 3rem 0;
+    padding: 2.5rem;
+    background: var(--surface-glass);
+    border: 1px solid var(--border-glass);
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.focus-content h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--color-blue), var(--color-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.focus-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--color-gray-300);
+    margin-bottom: 1rem;
+}
+
+.focus-description strong {
+    color: var(--color-blue);
+    font-weight: 600;
+}
+
+.focus-guarantee {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-top: 1rem;
+}
+
+.focus-guarantee strong {
+    color: var(--color-blue);
+}
+
+/* Founders Credibility */
+.founders-credibility {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--surface-glass);
+    border: 1px solid var(--border-glass);
+    border-radius: 16px;
+    backdrop-filter: blur(20px);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(2rem);
+}
+
+.credibility-text {
+    font-size: 1.1rem;
+    color: var(--color-gray-400);
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    line-height: 1.4;
+}
+
+.credibility-text strong {
+    color: var(--color-white);
+    font-weight: 600;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    #founders.section {
+        padding: 4rem 0;
+        min-height: auto;
+    }
+
+    .founders-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+        margin: 2rem 0 0 0;
+        padding: 0 1rem;
+        width: 100%;
+    }
+
+    .founder-card {
+        padding: 1.5rem;
+        width: 100%;
+    }
+    
+    .founder-image {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .founder-connection {
+        font-size: 0.9rem;
+    }
+    
+    .founders-focus {
+        margin: 2rem 1rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .focus-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .focus-description {
+        font-size: 1rem;
+    }
+
+    .focus-guarantee {
+        font-size: 1.1rem;
+    }
+
+    .founders-credibility {
+        margin: 2rem 1rem !important;
+        padding: 1.5rem !important;
+    }
+}

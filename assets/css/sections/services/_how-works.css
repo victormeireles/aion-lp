@@ -1,0 +1,362 @@
+/* --- Transformation Journey (90 Days) --- */
+.how-works-section .transformation-journey {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+.how-works-section .journey-timeline {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.how-works-section .timeline-progress {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+}
+
+.how-works-section .progress-line {
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #ef4444 0%, #f59e0b 25%, #22c55e 50%, #3b82f6 100%);
+    border-radius: 2px;
+}
+
+.how-works-section .progress-dots {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+	align-items: center;
+}
+
+.how-works-section .progress-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--surface-glass);
+    border: 3px solid var(--color-gray-600);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.how-works-section .progress-dot.active {
+    border-color: var(--color-blue);
+    background: var(--color-blue);
+	box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+.how-works-section .progress-dot::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+}
+.how-works-section .progress-dot.active::before {
+    border-color: var(--color-blue);
+    animation: dotPulse 2s infinite;
+}
+
+.how-works-section .journey-phases {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.how-works-section .journey-phase {
+	display: grid;
+	grid-template-columns: 1fr 400px;
+	gap: 4rem;
+	align-items: stretch;
+	opacity: 0;
+	transform: translateY(40px);
+	animation: phaseEnter 0.8s ease-out forwards;
+}
+
+.how-works-section .journey-phase:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.how-works-section .journey-phase:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.how-works-section .journey-phase:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.how-works-section .journey-phase:nth-child(even) {
+    grid-template-columns: 1fr;
+}
+
+.how-works-section .journey-phase:nth-child(even) .phase-visual {
+    order: -1;
+}
+
+.how-works-section .phase-content {
+    background: var(--surface-glass-strong);
+    border: 1px solid var(--border-glass);
+    border-radius: 24px;
+    padding: 3rem;
+    backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+}
+.how-works-section .phase-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, transparent 50%, rgba(147, 51, 234, 0.05) 100%);
+    pointer-events: none;
+}
+
+.how-works-section .phase-header {
+	margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+}
+.how-works-section .phase-timing {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 1rem;
+}
+.how-works-section .phase-days {
+    background: var(--color-blue);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.how-works-section .phase-days::before {
+    content: '⏱️';
+    font-size: 0.8rem;
+}
+.how-works-section .phase-badge {
+    padding: 0.4rem 1rem;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.how-works-section .phase-badge.setup {
+	background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+.how-works-section .phase-badge.campaigns {
+	background: linear-gradient(135deg, #FF6B6B, #EE5A52);
+	color: white;
+}
+.how-works-section .phase-badge.growth {
+    background: linear-gradient(135deg, #4A90E2, #357ABD);
+    color: white;
+}
+.how-works-section .phase-content h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--color-blue), var(--color-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.how-works-section .phase-description {
+    color: var(--color-gray-300);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+.how-works-section .phase-details {
+    position: relative;
+    z-index: 2;
+}
+.how-works-section .phase-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+.how-works-section .action-item {
+	display: flex;
+	align-items: flex-start;
+	gap: 1rem;
+	padding: 1.5rem;
+	background: var(--surface-glass);
+	border: 1px solid var(--border-glass);
+	border-radius: 16px;
+	transition: all 0.3s ease;
+	position: relative;
+	overflow: hidden;
+}
+.how-works-section .action-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--color-blue);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+.how-works-section .action-item i {
+    color: var(--color-blue);
+    font-size: 1.5rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+}
+.how-works-section .action-content strong {
+    color: var(--color-white);
+    font-size: 1rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.how-works-section .action-content p {
+    color: var(--color-gray-400);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+.how-works-section .phase-results {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+}
+.how-works-section .phase-results::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+    animation: resultShimmer 3s infinite;
+}
+.how-works-section .result-metric {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1e40af;
+    margin-bottom: 4px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+.how-works-section .result-metric .metric-number {
+	font-size: 2rem;
+    font-weight: 900;
+    color: var(--color-blue);
+    display: block;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+.how-works-section .result-metric .metric-label {
+	line-height: 1.3;
+	margin-top: 0.5rem;
+	text-transform: uppercase;
+    letter-spacing: 0.5px;
+	color: #666;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.how-works-section .result-testimonial {
+	flex: 1;
+    position: relative;
+    z-index: 2;
+}
+.how-works-section .result-testimonial p {
+	font-style: italic;
+    color: var(--color-gray-200);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+.how-works-section .result-testimonial span {
+	color: var(--color-blue);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.how-works-section .phase-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.how-works-section .phase-visual .bridge-img {
+	width: 100%;
+    height: auto;
+    max-width: 350px;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3), 0 0 80px rgba(59, 130, 246, 0.2);
+    transition: all 0.8s ease;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    animation: bridgeImageEnter 1.2s ease-out forwards;
+    animation-delay: 0.8s;
+}
+@media (max-width: 768px) {
+    .how-works-section .journey-phases {
+        gap: 4rem;
+    }
+	.how-works-section .journey-phase {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+	.how-works-section .phase-content {
+        padding: 2rem;
+    }
+	.how-works-section .phase-content h3 {
+        font-size: 1.5rem;
+    }
+	.how-works-section .phase-description {
+        font-size: 1rem;
+    }
+	.how-works-section .action-item {
+        padding: 1rem;
+    }
+	.how-works-section .action-item i {
+        margin-top: 0;
+    }
+	.how-works-section .phase-results {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+	.how-works-section .metric-number {
+        font-size: 1.5rem;
+    }
+	.how-works-section .journey-phase:nth-child(even) .phase-visual {
+        order: 0;
+    }
+	.how-works-section .phase-timing {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}

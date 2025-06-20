@@ -1,0 +1,30 @@
+
+/* Base */
+@import url('base/_variables.css');
+@import url('base/_base.css');
+
+/* Utils */
+@import url('utils/_helpers.css');
+@import url('utils/_animations.css');
+
+/* Layout */
+@import url('layout/_header.css');
+@import url('layout/_mobile-menu.css');
+@import url('layout/_footer.css');
+
+/* Components */
+@import url('components/_buttons.css');
+@import url('components/_cards.css');
+@import url('components/_forms.css');
+@import url('components/_particles.css');
+
+/* Sections */
+@import url('sections/_hero.css');
+@import url('sections/_solutions.css');
+@import url('sections/_cases.css');
+@import url('sections/_founders.css');
+@import url('sections/_faq.css');
+@import url('sections/_method.css');
+@import url('sections/_pricing.css');
+@import url('sections/services/_how-works.css');
+

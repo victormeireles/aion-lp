@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AION - Serviços</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="icon" type="image/png" href="assets/images/aion-favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Estilos -->
+    <!-- <link rel="stylesheet" href="assets/css/styles.css"> -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- ============================================
+         COMPONENTES COMPARTILHADOS 
+         ============================================ -->
+    
+    <!-- Container para Header + Barra de Progresso -->
+    <div id="shared-header"></div>
+    
+    <!-- Container para Menu Mobile + Hambúrguer -->
+    <div id="shared-mobile-menu"></div>
+
+    <!-- ============================================
+         CONTEÚDO OTIMIZADO DA PÁGINA SERVIÇOS
+         ============================================ -->
+
+    <!-- Hero Section -->
+	<section id="home" class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="assets/videos/home-hero-section-services.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <img src="assets/logos/aionLogoWhite.svg" alt="AION" class="hero-logo">
+
+			<!-- Badges de Serviços Premium - Carrossel -->
+            <div class="service-badges">
+                <div class="badge-carousel">
+                    <div class="badge-track">
+                        <!-- Primeiro conjunto -->
+                        <div class="service-badge">
+                            <i class="material-icons">local_hospital</i>
+                            <span>Médicos</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">medical_services</i>
+                            <span>Dentistas</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">restaurant</i>
+                            <span>Nutricionistas</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">balance</i>
+                            <span>Advogados</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">restaurant</i>
+                            <span>Restaurantes</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">fitness_center</i>
+                            <span>Academias</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">psychology</i>
+                            <span>Psicólogos</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">spa</i>
+                            <span>Estética</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">campaign</i>
+                            <span>Agências</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">business_center</i>
+                            <span>Consultorias</span>
+                        </div>
+                        
+                        <!-- Segundo conjunto (duplicado para scroll infinito) -->
+                        <div class="service-badge">
+                            <i class="material-icons">local_hospital</i>
+                            <span>Médicos</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">medical_services</i>
+                            <span>Dentistas</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">restaurant</i>
+                            <span>Nutricionistas</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">balance</i>
+                            <span>Advogados</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">restaurant</i>
+                            <span>Restaurantes</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">fitness_center</i>
+                            <span>Academias</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">psychology</i>
+                            <span>Psicólogos</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">spa</i>
+                            <span>Estética</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">campaign</i>
+                            <span>Agências</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">business_center</i>
+                            <span>Consultorias</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="hero-title">LOTE SUA AGENDA <br />COM O AION</h1>
+            <p class="hero-subtitle">Faça o que você sabe fazer <br />e deixe as vendas conosco.</p>
+            <div class="hero-buttons">
+                <a href="https://www.aionsolution.com.br/request_consulting?type=u" class="btn-primary">Agendar Consultoria Gratuita</a>
+                <a href="#solutions" class="btn-secondary">Conhecer o Método</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Método AION Section -->
+    <section id="metodo" class="method-section particles-section">
+        <div class="particles"></div>
+        <div class="container">
+            <div class="method-header">
+                <h2 class="section-title">A Transformação do seu Negócio</h2>
+                <h2 class="section-title">com o Método AION</h2>
+            </div>
+            
+            <!-- Transformação -->
+            <div class="transformation-wrapper">
+                <div class="transformation-content">
+                    
+                    <div class="transformation-bridge-layout">
+                        <div class="transformation-grid-3col">
+                            <!-- Headers das 3 colunas -->
+                            <div class="transformation-headers">
+                                <div class="before-header">
+                                    <h3>Situação Atual</h3>
+                                    <p>Problemas comuns em empresas de serviços</p>
+                                </div>
+                                <div class="bridge-header-spacer"></div>
+                                <div class="after-header">
+                                    <h3>Com AION</h3>
+                                    <p>Resultados alcançados com nossa metodologia</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Conteúdo das 3 colunas -->
+                            <div class="transformation-content-grid">
+                                <!-- Coluna ANTES -->
+                                <div class="before-column">
+                                    <div class="transformation-item">
+                                        <i class="material-icons status-icon problem">trending_down</i>
+                                        <span>Dependência exclusiva de boca-a-boca</span>
+                                    </div>
+                                    <div class="transformation-item">
+                                        <i class="material-icons status-icon problem">person</i>
+                                        <span>Atendimento manual que perde vendas</span>
+                                    </div>
+                                    <div class="transformation-item">
+                                        <i class="material-icons status-icon problem">help_outline</i>
+                                        <span>Preços por insegurança</span>
+                                    </div>
+                                    <div class="transformation-item">
+                                        <i class="material-icons status-icon problem">shuffle</i>
+                                        <span>Gestão no improviso</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Coluna CENTRAL (Imagem AION) -->
+                                <div class="bridge-column">
+                                    <div class="bridge-content">
+                                        <div class="bridge-header">
+                                            <div class="aion-bridge-badge">AION</div>
+                                            <p>A ponte para o sucesso</p>
+                                        </div>
+                                        <div class="aion-bridge-image">
+                                            <img src="assets/images/aion-campanhas.png" alt="Transformação AION" class="bridge-img">
+                                            <div class="bridge-glow"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Coluna DEPOIS -->
+                                <div class="after-column">
+                                    <div class="transformation-item">
+                                        <i class="material-icons status-icon success">trending_up</i>
+                                        <span>Agenda cheia com previsibilidade</span>
+                                    </div>
+                                    <div class="transformation-item">
+                                        <i class="material-icons status-icon success">auto_awesome</i>
+                                        <span>Atendimento ultra humanizado com IA</span>
+                                    </div>
+                                    <div class="transformation-item">
+                                        <i class="material-icons status-icon success">insights</i>
+                                        <span>Precificação estratégica</span>
+                                    </div>
+                                    <div class="transformation-item">
+                                        <i class="material-icons status-icon success">analytics</i>
+                                        <span>Decisões baseadas em dados</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4 Pilares -->
+            <div class="pillars-wrapper">
+                <div class="pillars-header">
+                    <h3 class="pillars-title">Os 4 Pilares do Método</h3>
+                    <p class="pillars-subtitle">Fundamentos para o crescimento sustentável</p>
+                </div>
+                <div class="pillars-grid">
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <i class="material-icons">auto_awesome</i>
+                        </div>
+                        <div class="pillar-content">
+                            <h4>Atendimento com IA</h4>
+                            <p>Automação humanizada para otimizar tempo e conversão</p>
+                        </div>
+                    </div>
+                    
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <i class="material-icons">trending_up</i>
+                        </div>
+                        <div class="pillar-content">
+                            <h4>Estratégias de Vendas</h4>
+                            <p>Criamos e executamos campanhas de retenção, indicação e fidelidade com nossa Inteligência Artificial</p>
+                        </div>
+                    </div>
+                    
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <i class="material-icons">campaign</i>
+                        </div>
+                        <div class="pillar-content">
+                            <h4>Aquisição Digital</h4>
+                            <p>Campanhas que geram desejo e atraem clientes qualificados</p>
+                        </div>
+                    </div>
+                    
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <i class="material-icons">trending_up</i>
+                        </div>
+                        <div class="pillar-content">
+                            <h4>Precificação Estratégica</h4>
+                            <p>Aumente valor percebido e ticket médio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona Section -->
+    <section id="how-works" class="section how-works-section">
+        <div class="container">
+            <h2 class="section-title">Sua Transformação em 90 Dias</h2>
+            <p class="section-subtitle">Do caos à previsibilidade: resultados garantidos em 3 fases</p>
+            
+            <div class="transformation-journey">
+                <!-- Progress Timeline -->
+                <div class="journey-timeline">
+                    <div class="timeline-progress">
+                        <div class="progress-line"></div>
+                        <div class="progress-dots">
+                            <div class="progress-dot active" data-phase="1"></div>
+                            <div class="progress-dot" data-phase="2"></div>
+                            <div class="progress-dot" data-phase="3"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Journey Phases -->
+                <div class="journey-phases">
+                    <!-- Fase 1: Setup Inteligente -->
+                    <div class="journey-phase" data-phase="1">
+                        <div class="phase-content">
+                            <div class="phase-header">
+                                <div class="phase-timing">
+                                    <span class="phase-days">Dias 1-30</span>
+                                    <div class="phase-badge setup">Setup Inteligente</div>
+                                </div>
+                                <h3>Diagnóstico e Configuração Premium</h3>
+                                <p class="phase-description">Seu negócio é mapeado completamente e o sistema é configurado com sua identidade</p>
+                            </div>
+                            
+                            <div class="phase-details">
+                                <div class="phase-actions">
+                                    <div class="action-item">
+                                        <i class="material-icons">psychology</i>
+                                        <div class="action-content">
+                                            <strong>IA Personalizada Treinada</strong>
+                                            <p>Recepcionista virtual com seu tom de voz e conhecimento</p>
+                                        </div>
+                                    </div>
+                                    <div class="action-item">
+                                        <i class="material-icons">assessment</i>
+                                        <div class="action-content">
+                                            <strong>Análise Financeira Profunda</strong>
+                                            <p>DRE detalhada + histórico + projeções automáticas</p>
+                                        </div>
+                                    </div>
+                                    <div class="action-item">
+                                        <i class="material-icons">campaign</i>
+                                        <div class="action-content">
+                                            <strong>Primeiras Campanhas de Vendas</strong>
+                                            <p>Primeiros disparos para leads no WhatsApp e campanhas de reativação de clientes perdidos</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="phase-results">
+                                    <div class="result-metric">
+                                        <span class="metric-number">+20%</span>
+                                        <span class="metric-label">Conversão WhatsApp</span>
+                                    </div>
+                                    <div class="result-testimonial">
+                                        <p>"A secretária virtual da Aion é a melhor que já vi. Sensacional para automatizar atendimento a clientes e liberar minha secretária para virar uma vendedora via WhatsApp. E olha que já pesquisei muita solução por aí!"</p>
+                                        <span>- Dr. Alexandre Comandule</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="phase-visual">
+							<img src="assets/images/whatsapp.jpeg" alt="Whatsapp AION" class="bridge-img">
+                        </div>
+                    </div>
+
+                    <!-- Fase 2: Reativação Automática -->
+                    <div class="journey-phase" data-phase="2">
+                        <div class="phase-content">
+                            <div class="phase-header">
+                                <div class="phase-timing">
+                                    <span class="phase-days">Dias 31-60</span>
+                                    <div class="phase-badge campaigns">Estratégias de Retenção</div>
+                                </div>
+                                <h3>Receita Multiplicada com Base Existente</h3>
+                                <p class="phase-description">Suas bases dormindo geram receita automática enquanto você atende</p>
+                            </div>
+                            
+                            <div class="phase-details">
+                                <div class="phase-actions">
+                                    <div class="action-item">
+                                        <i class="material-icons">refresh</i>
+                                        <div class="action-content">
+                                            <strong>Reativação Automatizada</strong>
+                                            <p>Clientes antigos voltando por campanhas inteligentes</p>
+                                        </div>
+                                    </div>
+                                    <div class="action-item">
+                                        <i class="material-icons">group_add</i>
+                                        <div class="action-content">
+                                            <strong>Programa de Indicações</strong>
+                                            <p>Clientes satisfeitos trazendo novos clientes</p>
+                                        </div>
+                                    </div>
+                                    <div class="action-item">
+                                        <i class="material-icons">trending_up</i>
+                                        <div class="action-content">
+                                            <strong>Primeira Otimização de Preços</strong>
+                                            <p>Aumento estratégico da margem de lucro</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="phase-results">
+                                    <div class="result-metric">
+                                        <span class="metric-number">+40%</span>
+                                        <span class="metric-label">Clientes recuperados</span>
+                                    </div>
+                                    <div class="result-testimonial">
+                                        <p>"Em 30 dias, 40% da minha base inativa voltou a agendar. ROI fantástico!"</p>
+                                        <span>- Dr. Roberto Lima</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="phase-visual">
+							<img src="assets/images/campaign-funnel.jpeg" alt="Funil de Campanhas" class="bridge-img">
+                        </div>
+                    </div>
+
+                    <!-- Fase 3: Crescimento Escalável -->
+                    <div class="journey-phase" data-phase="3">
+                        <div class="phase-content">
+                            <div class="phase-header">
+                                <div class="phase-timing">
+                                    <span class="phase-days">Dias 61-90</span>
+                                    <div class="phase-badge growth">Crescimento Escalável</div>
+                                </div>
+                                <h3>Negócio Previsível e Escalável</h3>
+                                <p class="phase-description">Agenda cheia com 3 meses de antecedência e margem de lucro otimizada</p>
+                            </div>
+                            
+                            <div class="phase-details">
+                                <div class="phase-actions">
+                                    <div class="action-item">
+                                        <i class="material-icons">insights</i>
+                                        <div class="action-content">
+                                            <strong>Aquisição Digital Estratégica</strong>
+                                            <p>Insights personalizados direto no seu WhatsApp para adquirir mais clientes no marketing digital sem você se preocupar</p>
+                                        </div>
+                                    </div>
+                                    <div class="action-item">
+                                        <i class="material-icons">analytics</i>
+                                        <div class="action-content">
+                                            <strong>Métricas Avançadas</strong>
+                                            <p>Decisões baseadas em dados precisos e preditivos</p>
+                                        </div>
+                                    </div>
+                                    <div class="action-item">
+                                        <i class="material-icons">event_available</i>
+                                        <div class="action-content">
+                                            <strong>Agenda 95% Ocupada</strong>
+                                            <p>Otimização completa da capacidade de atendimento</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="phase-results">
+                                    <div class="result-metric">
+                                        <span class="metric-number">+50%</span>
+                                        <span class="metric-label">Lucro Líquido</span>
+                                    </div>
+                                    <div class="result-testimonial">
+                                        <p>"Transformei minha clínica num negócio previsível. Trabalho menos e ganho mais!"</p>
+                                        <span>- Dra. Patricia Rocha</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="phase-visual">
+							<img src="assets/images/dashboard-reativacao.png" alt="Dashboard AION" class="bridge-img">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Cases Section -->
+    <section id="cases" class="section">
+        <div class="container">
+            <h2 class="section-title">Cases de Sucesso em Serviços</h2>
+            <p class="section-subtitle">Transformações reais em empresas de serviços que aplicaram o método AION</p>
+            
+            <div class="cases-grid">
+                <!-- Case Nutricionista -->
+                <div class="case-card case-servicos">
+                    <div class="case-header">
+                        <div class="case-logo">
+                            <div class="case-type-badge">Nutricionista</div>
+                            <div class="case-company">Fernanda Mangabeira</div>
+                            <div class="case-location">São Paulo</div>
+                        </div>
+                        <span class="case-period">"O AION automatizou completamente meu atendimento. Além disso, a metodologia AION é impressionante! Tenho um faturamento adicional garantido com estratégias de vendas que nunca sonhei em implementar!"</span>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-description">
+                            <p>Estratégia de vendas, mensagens automáticas e recepcionista de IA implementados</p>
+                        </div>
+                        <div class="case-metrics">
+                            <div class="metric">
+                                <span class="metric-value">+R$ 1.200/dia</span>
+                                <span class="metric-label">Faturamento Adicional</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">1 mês</span>
+                                <span class="metric-label">Tempo para Resultados</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Clínica Médica -->
+                <div class="case-card case-servicos">
+                    <div class="case-header">
+                        <div class="case-logo">
+                            <div class="case-type-badge">Clínica Médica</div>
+                            <div class="case-company">Dr. Ricardo Santos</div>
+                            <div class="case-location">Rio de Janeiro</div>
+                        </div>
+                        <span class="case-period">"Antes do AION, dependia apenas de indicações. Agora tenho agenda preenchida com 3 meses de antecedência e margem de lucro que nunca imaginei ser possível em uma clínica."</span>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-description">
+                            <p>Campanhas de reativação, precificação inteligente e automação de agendamentos</p>
+                        </div>
+                        <div class="case-metrics">
+                            <div class="metric">
+                                <span class="metric-value">300%</span>
+                                <span class="metric-label">Aumento no Faturamento</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">+40%</span>
+                                <span class="metric-label">Margem de Lucro</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Escritório de Advocacia -->
+                <div class="case-card case-servicos">
+                    <div class="case-header">
+                        <div class="case-logo">
+                            <div class="case-type-badge">Advocacia</div>
+                            <div class="case-company">Escritório Silva & Associados</div>
+                            <div class="case-location">Belo Horizonte</div>
+                        </div>
+                        <span class="case-period">"O método AION transformou nossa captação de clientes. Saímos de um escritório que dependia de indicações para uma operação estruturada com fluxo constante de novos casos."</span>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-description">
+                            <p>Estratégia digital, automação de atendimento e campanhas de tráfego pago</p>
+                        </div>
+                        <div class="case-metrics">
+                            <div class="metric">
+                                <span class="metric-value">+150%</span>
+                                <span class="metric-label">Novos Clientes/Mês</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">2 meses</span>
+                                <span class="metric-label">Payback do Investimento</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Seção Cases -->
+            <div class="section-cta-container">
+                <a href="https://www.aionsolution.com.br/request_consulting?type=u" target="_blank" class="section-cta">
+                    <span class="section-cta-text">
+                        <span class="desktop-text">Alcance resultados similares em seu negócio</span>
+                        <span class="mobile-text">Alcance resultados similares</span>
+                    </span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Módulos e Preços Section -->
+    <section id="precos" class="section pricing-section particles-section">
+        <div class="particles"></div>
+        <div class="container">
+            <h2 class="section-title">Módulos AION para Serviços</h2>
+            <p class="section-subtitle">Escolha a solução ideal para seu negócio</p>
+            
+            <!-- 3 Módulos em Grid -->
+            <div class="pricing-grid-3">
+				<!-- Módulo 3: AION Vendas -->
+				<div class="pricing-card-premium featured-module">
+					<div class="pricing-header-premium">
+						<span class="pricing-badge">RECOMENDADO</span>
+						<h3>Metodologia AION para Vendas</h3>
+						<div class="price-display">
+							<span class="price-main">R$ 499</span>
+							<span class="price-period">/mês</span>
+						</div>
+						<p class="price-description">Ecossistema <strong>completo</strong> para crescimento</p>
+					</div>
+					
+					<div class="pricing-features-premium">
+						<div class="feature-category">
+							<div class="features-list">
+								<span class="feature-item"><i class="material-icons">analytics</i> Planejamento Estratégico</span>
+								<span class="feature-item"><i class="material-icons">rocket_launch</i> Sistema de Vendas Completo</span>
+								<span class="feature-item"><i class="material-icons">campaign</i> Tráfego Pago Unificado</span>
+								<span class="feature-item"><i class="material-icons">support_agent</i> Suporte Premium</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="pricing-cta-premium">
+						<a href="https://www.aionsolution.com.br/request_consulting?type=u" class="cta-button-premium">
+							<span class="cta-text">Começar Transformação</span>
+						</a>
+					</div>
+				</div>
+
+                <!-- Módulo 1: Assistente IA -->
+                <div class="pricing-card-premium">
+                    <div class="pricing-header-premium">
+                        <span class="pricing-badge">IA HUMANIZADA</span>
+                        <h3>Atendente de IA <br /> humanizada</h3>
+                        <div class="price-display">
+                            <span class="price-main">R$ 999</span>
+                            <span class="price-period">/mês</span>
+                        </div>
+                        <p class="price-description">Atendimento <strong>24/7</strong> com conversão inteligente</p>
+                    </div>
+                    
+                    <div class="pricing-features-premium">
+                        <div class="feature-category">
+                            <div class="features-list">
+                                <span class="feature-item"><i class="material-icons">auto_awesome</i> IA treinada com seus dados</span>
+                                <span class="feature-item"><i class="material-icons">chat</i> WhatsApp Business integrado</span>
+                                <span class="feature-item"><i class="material-icons">support_agent</i> Atendimento de IA humanizado</span>
+                                <span class="feature-item"><i class="material-icons">analytics</i> Relatórios de conversão</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-cta-premium">
+                        <a href="https://www.aionsolution.com.br/request_consulting?type=u" class="cta-button-premium">
+                            <span class="cta-text">Contratar IA</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Módulo 2: AION Sites -->
+                <div class="pricing-card-premium">
+                    <div class="pricing-header-premium">
+                        <span class="pricing-badge">SITE PROFISSIONAL</span>
+                        <h3>Criação de Sites <br /> com IA</h3>
+                        <div class="price-display">
+                            <span class="price-main">R$ 999</span>
+                            <span class="price-period">uma vez</span>
+                        </div>
+                        <p class="price-description">Site que <strong>converte</strong> visitantes em clientes</p>
+                    </div>
+                    
+                    <div class="pricing-features-premium">
+                        <div class="feature-category">
+                            <div class="features-list">
+                                <span class="feature-item"><i class="material-icons">web</i> Design profissional</span>
+                                <span class="feature-item"><i class="material-icons">phone_android</i> 100% responsivo</span>
+                                <span class="feature-item"><i class="material-icons">speed</i> Otimizado para conversão</span>
+                                <span class="feature-item"><i class="material-icons">search</i> SEO incluído</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-cta-premium">
+                        <a href="https://www.aionsolution.com.br/request_consulting?type=u" class="cta-button-premium">
+                            <span class="cta-text">Criar Site</span>
+                        </a>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section">
+        <div class="faq-particles"></div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Perguntas Frequentes</h2>
+                <p class="section-subtitle">Tire suas dúvidas sobre AION para empresas de serviços</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>O método AION funciona para qualquer tipo de serviço?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim! Nossa metodologia foi adaptada para funcionar em diversos segmentos: saúde, advocacia, consultoria, restaurantes, beleza, fitness e muito mais. O método se ajusta às particularidades de cada negócio, mantendo os pilares fundamentais de crescimento.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quanto tempo demora para ver os primeiros resultados?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Os primeiros resultados aparecem em 30 dias com a automação do WhatsApp e campanhas de reativação. Em 60-90 dias você já vê impacto significativo na receita e margem de lucro. O método é desenhado para gerar resultados rápidos e sustentáveis.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Preciso ter conhecimento técnico para usar o AION?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Não! O sistema foi criado para ser simples e intuitivo. Tudo funciona via WhatsApp e interfaces amigáveis. Nossa equipe faz todo o setup inicial e treinamento. Você só precisa focar em aplicar as estratégias no seu negócio.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Como funciona a automação do WhatsApp?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Criamos uma IA personalizada com a linguagem do seu negócio que atende clientes 24/7, agenda consultas, responde dúvidas frequentes e qualifica leads. Quando necessário, transfere para um humano. É como ter um atendente dedicado trabalhando sempre.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Posso cancelar a qualquer momento?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, não temos fidelidade. O AION é uma assinatura mensal de R$ 499 que pode ser cancelada a qualquer momento. Nossa confiança está nos resultados que entregamos, não em contratos de longo prazo.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Qual o diferencial do AION em relação a outras soluções?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Somos os únicos que combinam IA, estratégia de negócios e experiência prática de quem virou empresas reais. Nossos fundadores transformaram gigantes como Dafiti e C&A. Não fazemos apenas tecnologia, fazemos transformação de resultados com metodologia comprovada.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Pronto para Transformar sua Empresa de Serviços?</h2>
+            <p class="section-subtitle">Agende uma consultoria gratuita e descubra como aplicar o método AION no seu negócio em até 30 dias.</p>
+            
+            <div class="contact-cta-container">
+                <a href="https://www.aionsolution.com.br/request_consulting?type=u" target="_blank" class="contact-main-cta">
+                    <span class="cta-text">Agendar Consultoria Gratuita</span>
+                    <span class="cta-subtitle">Diagnóstico completo do seu negócio</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         COMPONENTES COMPARTILHADOS 
+         ============================================ -->
+    
+    <!-- Container para Footer -->
+    <div id="shared-footer"></div>
+    
+    <!-- Container para Botão WhatsApp -->
+    <div id="shared-whatsapp"></div>
+
+    <!-- ============================================
+         SCRIPTS
+         ============================================ -->
+    
+    <!-- Configuração -->
+    <script src="assets/js/components/config.js"></script>
+    
+    <!-- Componentes Compartilhados -->
+    <script src="assets/js/components/shared-components.js"></script>
+    
+    <!-- Scripts específicos da página -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,406 @@
+/* ============================================
+   SOLUTIONS SECTION
+   ============================================ */
+
+   .solutions-section {
+    position: relative;
+    overflow: hidden;
+    padding: 40px 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: var(--background-dark);
+}
+
+.solutions-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.solutions-particles::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(2px 2px at 20px 30px, rgba(59, 130, 246, 0.5), transparent), radial-gradient(2px 2px at 40px 70px, rgba(147, 51, 234, 0.5), transparent), radial-gradient(1px 1px at 90px 40px, rgba(59, 130, 246, 0.4), transparent), radial-gradient(1px 1px at 130px 80px, rgba(147, 51, 234, 0.4), transparent), radial-gradient(2px 2px at 160px 30px, rgba(59, 130, 246, 0.5), transparent), radial-gradient(1px 1px at 200px 50px, rgba(147, 51, 234, 0.4), transparent), radial-gradient(2px 2px at 240px 90px, rgba(59, 130, 246, 0.5), transparent), radial-gradient(1px 1px at 280px 40px, rgba(147, 51, 234, 0.4), transparent);
+    background-repeat: repeat;
+    background-size: 300px 200px;
+    animation: particlesFloat 20s linear infinite;
+    opacity: 0.8;
+    filter: brightness(1.2);
+}
+
+.solutions-particles::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(1px 1px at 50px 100px, rgba(59, 130, 246, 0.4), transparent), radial-gradient(2px 2px at 120px 150px, rgba(147, 51, 234, 0.5), transparent);
+    background-repeat: repeat;
+    background-size: 350px 250px;
+    animation: particlesFloat 25s linear infinite reverse;
+    opacity: 0.6;
+}
+
+.solutions-section:hover .solutions-particles::before {
+    animation-duration: 15s;
+    opacity: 1;
+}
+
+.solutions-section:hover .solutions-particles::after {
+    animation-duration: 18s;
+    opacity: 0.8;
+}
+
+.solutions-section .section-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, 
+        #ffffff 0%, 
+        rgba(59, 130, 246, 0.9) 50%, 
+        #ffffff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    z-index: 20;
+    animation: titleGlow 4s ease-in-out infinite alternate;
+    text-shadow: 0 0 50px rgba(139, 69, 255, 0.3);
+}
+
+.solutions-section .section-subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 20;
+    line-height: 1.6;
+}
+
+.solutions-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
+    opacity: 1;
+    animation: pulse 8s ease-in-out infinite;
+}
+
+.solutions-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(2px 2px at 20px 30px, rgba(59, 130, 246, 0.6), transparent), radial-gradient(2px 2px at 40px 70px, rgba(37, 99, 235, 0.6), transparent), radial-gradient(1px 1px at 90px 40px, rgba(59, 130, 246, 0.5), transparent), radial-gradient(1px 1px at 130px 80px, rgba(37, 99, 235, 0.5), transparent);
+    background-repeat: repeat;
+    background-size: 200px 150px;
+    animation: sparkle 25s linear infinite;
+    opacity: 0.5;
+    z-index: 3;
+    filter: brightness(1.1);
+}
+
+.solutions-container {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    z-index: 10;
+}
+
+/* Solutions Orbital Layout */
+.solutions-orbital {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0.5rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 1rem 2rem;
+}
+
+/* Specific styles for solution cards are in components/_cards.css */
+/* This file contains the container and layout for the solutions section */
+
+.solution-header {
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+}
+
+.solution-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+.solution-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.8) 0%, rgba(147, 51, 234, 0.8) 100%);
+    border-radius: 1px;
+}
+
+.solution-subtitle {
+    font-size: 0.8rem;
+    color: var(--color-gray-400);
+}
+
+.solution-main-area {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    border-radius: 8px 8px 0 0;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    min-height: 200px;
+    justify-content: flex-end;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.solution-orbit-item:nth-child(1) .solution-main-area {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../../images/solutions/servicos.jpg');
+}
+
+.solution-orbit-item:nth-child(2) .solution-main-area {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../../images/solutions/ecommerce.jpg');
+}
+
+.solution-orbit-item:nth-child(3) .solution-main-area {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../../images/solutions/grandes-empresas.jpg');
+}
+
+.solution-features-area {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 8px 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.solution-features-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.solution-feature-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.7rem;
+    color: rgba(59, 130, 246, 0.95);
+    padding: 0.6rem;
+    transition: all 0.3s ease;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.solution-feature-item:hover {
+    color: white;
+    transform: translateX(2px);
+}
+
+.solution-feature-item:nth-child(odd) {
+    border-left: none;
+}
+.solution-feature-item:nth-child(even) {
+    border-right: none;
+}
+.solution-feature-item:nth-child(5), .solution-feature-item:nth-child(6) {
+    border-bottom: none;
+}
+
+/* Ícones específicos por tipo de solução */
+.solution-feature-item::before {
+    font-family: 'Material Icons';
+    content: 'radio_button_unchecked';
+    color: rgba(59, 130, 246, 0.95);
+    margin-right: 0.5rem;
+    font-size: 1rem;
+    width: 18px;
+    text-align: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+/* AION Vendas */
+.solution-orbit-item:nth-child(1) .solution-feature-item:nth-child(1)::before {
+    content: 'psychology';
+}
+.solution-orbit-item:nth-child(1) .solution-feature-item:nth-child(2)::before {
+    content: 'autorenew';
+}
+.solution-orbit-item:nth-child(1) .solution-feature-item:nth-child(3)::before {
+    content: 'contact_phone';
+}
+.solution-orbit-item:nth-child(1) .solution-feature-item:nth-child(4)::before {
+    content: 'web';
+}
+.solution-orbit-item:nth-child(1) .solution-feature-item:nth-child(5)::before {
+    content: 'trending_up';
+}
+.solution-orbit-item:nth-child(1) .solution-feature-item:nth-child(6)::before {
+    content: 'support_agent';
+}
+
+/* E-Commerce */
+.solution-orbit-item:nth-child(2) .solution-feature-item:nth-child(1)::before {
+    content: 'analytics';
+}
+.solution-orbit-item:nth-child(2) .solution-feature-item:nth-child(2)::before {
+    content: 'support_agent';
+}
+.solution-orbit-item:nth-child(2) .solution-feature-item:nth-child(3)::before {
+    content: 'inventory';
+}
+.solution-orbit-item:nth-child(2) .solution-feature-item:nth-child(4)::before {
+    content: 'show_chart';
+}
+.solution-orbit-item:nth-child(2) .solution-feature-item:nth-child(5)::before {
+    content: 'campaign';
+}
+.solution-orbit-item:nth-child(2) .solution-feature-item:nth-child(6)::before {
+    content: 'sell';
+}
+
+/* Grandes Empresas (posição 3) */
+.solution-orbit-item:nth-child(3) .solution-feature-item:nth-child(1)::before {
+    content: 'business_center';
+}
+.solution-orbit-item:nth-child(3) .solution-feature-item:nth-child(2)::before {
+    content: 'transform';
+}
+.solution-orbit-item:nth-child(3) .solution-feature-item:nth-child(3)::before {
+    content: 'corporate_fare';
+}
+.solution-orbit-item:nth-child(3) .solution-feature-item:nth-child(4)::before {
+    content: 'fact_check';
+}
+.solution-orbit-item:nth-child(3) .solution-feature-item:nth-child(5)::before {
+    content: 'engineering';
+}
+.solution-orbit-item:nth-child(3) .solution-feature-item:nth-child(6)::before {
+    content: 'groups';
+}
+
+.solution-card-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.25rem;
+    margin: 1rem 0.75rem 0.75rem;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%);
+    color: rgba(59, 130, 246, 0.95);
+    text-decoration: none;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    letter-spacing: -0.01em;
+    gap: 0.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.solution-card-cta:hover {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(37, 99, 235, 0.1) 100%);
+    color: rgba(59, 130, 246, 1);
+    border-color: rgba(59, 130, 246, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .solutions-section {
+        padding: 2rem 0 4rem 0;
+        min-height: auto;
+    }
+
+    .solutions-section .section-title {
+        font-size: 1.7rem !important;
+        line-height: 1.4 !important;
+        margin: 0 1rem 1rem 1rem !important;
+    }
+
+    .solutions-section .section-subtitle {
+        margin-bottom: 2rem !important;
+        padding: 0 1rem;
+    }
+
+    .solutions-container {
+        padding: 0 !important;
+    }
+
+    .solutions-orbital {
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+        padding: 1rem !important;
+    }
+
+    .solution-orbit-item {
+        height: auto !important;
+    }
+
+    .solution-card-cta {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+    }
+}
