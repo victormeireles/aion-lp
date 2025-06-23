@@ -329,6 +329,10 @@
         grid-template-columns: 1fr;
         gap: 3rem;
     }
+    
+    .how-works-section .journey-phase:nth-child(even) {
+        grid-template-columns: 1fr;
+    }
 	.how-works-section .phase-content {
         padding: 2rem;
     }
