@@ -207,15 +207,15 @@
 }
 
 .solution-orbit-item:nth-child(1) .solution-main-area {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../../images/solutions/servicos.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../../images/solutions/servicos.webp');
 }
 
 .solution-orbit-item:nth-child(2) .solution-main-area {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../../images/solutions/ecommerce.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../../images/solutions/ecommerce.webp');
 }
 
 .solution-orbit-item:nth-child(3) .solution-main-area {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../../images/solutions/grandes-empresas.jpg');
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../../images/solutions/grandes-empresas.webp');
 }
 
 .solution-features-area {

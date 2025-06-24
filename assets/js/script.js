@@ -197,44 +197,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function createExpandedSolutionView(title, subtitle, href) {
-        const expandedHTML = `
-            <div class="solution-expanded-overlay">
-                <div class="solution-expanded-container">
-                    <button class="solution-close-btn">&times;</button>
-                    
-                    <div class="solution-expanded-content">
-                        <div class="solution-expanded-left">
-                            <h2 class="solution-expanded-title">${title}</h2>
-                            <p class="solution-expanded-subtitle">${subtitle}</p>
-                            
-                            <div class="solution-features">
-                                ${getSolutionFeatures(title)}
-                            </div>
-                            
-                            <div class="solution-benefits">
-                                <h3>Principais Benefícios:</h3>
-                                ${getSolutionBenefits(title)}
-                            </div>
-                            
-                            <a href="${href}" class="solution-expanded-cta">
-                                Quero essa solução
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                        
-                        <div class="solution-expanded-right">
-                            <div class="brasil-expanded-container">
-                                <img src="assets/images/brasil.png" alt="Brasil AION" class="brasil-expanded-image">
-                                <img src="assets/logos/aionLogoWhite.svg" alt="AION" class="aion-logo-expanded">
-                                <div class="solution-glow-effect"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        const expandedHtml = `
+            <div class="brasil-expanded-content">
+                <p>Atendemos clientes em todo o Brasil, de pequenas a grandes empresas.</p>
+                
             </div>
         `;
         
-        document.body.insertAdjacentHTML('beforeend', expandedHTML);
+        const rangeLabel = document.querySelector('.range-label');
+        const rangeValue = document.querySelector('.range-value');
+        
+        document.body.insertAdjacentHTML('beforeend', expandedHtml);
         
         // Add close functionality
         const closeBtn = document.querySelector('.solution-close-btn');

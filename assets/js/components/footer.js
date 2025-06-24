@@ -31,17 +31,37 @@ export class FooterComponent {
             return '<p>Nenhuma pergunta frequente disponível para esta página.</p>';
         }
 
-        return faqItems.map((item, index) => `
-            <div class="faq-item" data-index="${index}">
+        const faqSchemaItems = faqItems.map(item => `{
+            "@type": "Question",
+            "name": "${item.question}",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "${item.answer}"
+            }
+        }`).join(',');
+
+        const faqItemsHTML = faqItems.map((item, index) => `
+            <div class="faq-item" itemprop="mainEntity" itemscope itemtype="http://schema.org/Question">
                 <div class="faq-question">
-                    <h3>${item.question}</h3>
+                    <h3 itemprop="name">${item.question}</h3>
                     <i class="fas fa-chevron-down"></i>
                 </div>
-                <div class="faq-answer">
-                    <p>${item.answer}</p>
+                <div class="faq-answer" itemprop="acceptedAnswer" itemscope itemtype="http://schema.org/Answer">
+                    <p itemprop="text">${item.answer}</p>
                 </div>
             </div>
         `).join('');
+
+        return `
+            <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [${faqSchemaItems}]
+            }
+            </script>
+            ${faqItemsHTML}
+        `;
     }
 
     getFooterHTML() {
@@ -67,7 +87,7 @@ export class FooterComponent {
                 <div class="container">
                     <div class="footer-content">
                         <div class="footer-brand">
-                            <img src="assets/images/logo.png" alt="${this.config.company.shortName}" class="footer-logo">
+                            <img src="assets/logos/aionLogoWhite.svg" alt="${this.config.company.shortName}" class="footer-logo">
                             <p>${this.config.company.tagline}</p>
                             <div class="footer-social">
                                 <a href="${this.config.social.instagram}" target="_blank" rel="noopener noreferrer">
@@ -101,7 +121,7 @@ export class FooterComponent {
                             <div class="footer-section">
                                 <h4>Contato</h4>
                                 <a href="${this.config.consulting.free}" target="_blank">Consultoria Gratuita</a>
-                                <a href="${this.config.company.whatsapp.url}" target="_blank">WhatsApp</a>
+                                <a href="${this.config.company.whatsapp.url}" target="_blank" aria-label="Fale conosco pelo WhatsApp">WhatsApp</a>
                                 <a href="mailto:${this.config.company.email}">E-mail</a>
                             </div>
                         </div>

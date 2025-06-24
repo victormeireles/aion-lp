@@ -210,6 +210,8 @@
     transform: translateX(4px);
 }
 
+.mobile-text { display: none; }
+
 /* Mobile Responsive Buttons */
 @media (max-width: 768px) {
     .nav-cta {
