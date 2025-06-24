@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 // Configurações centralizadas da aplicação AION
 window.AION_CONFIG = {
     // Informações da empresa
@@ -35,68 +37,31 @@ window.AION_CONFIG = {
                 id: "solutions",
                 dropdown: [
                     {
-                        title: "AION Vendas",
-                        description: "Automatize campanhas, otimize anúncios e lote sua agenda",
-                        url: "campanhas.html"
+                        title: "Para Empresas de Serviços",
+                        description: "Otimize sua operação e atendimento.",
+                        url: "servicos.html"
                     },
                     {
-                        title: "Agentes de IA",
-                        description: "WhatsApp automático e sites inteligentes",
-                        url: "agentes.html"
-                    },
-                    {
-                        title: "Consultoria AION",
-                        description: "Estratégias baseadas em dados e IA",
-                        url: "consultoria.html"
-                    },
-                    {
-                        title: "AION E-Commerce",
-                        description: "Decisões baseadas em dados",
+                        title: "Para E-commerces",
+                        description: "Transforme dados em lucro e eficiência.",
                         url: "ecommerce.html"
                     }
                 ]
             },
             {
-                title: "Ferramentas de IA Gratuitas",
-                id: "ferramentas",
-                dropdown: [
-                    {
-                        title: "📊 Resumo Meta Ads por IA",
-                        description: "Performance das campanhas no seu email diariamente",
-                        url: "https://typebot.co/resumo-meta-ads-por-email",
-                        external: true
-                    },
-                    {
-                        title: "🚀 Criador de Campanhas",
-                        description: "Primeiras campanhas Meta Ads e Google Ads",
-                        url: "https://typebot.co/criador-de-campanhas-meta-ads",
-                        external: true
-                    },
-                    {
-                        title: "👥 Campanha de Indicação",
-                        description: "Transforme clientes em embaixadores da marca",
-                        url: "https://typebot.co/campanha-de-indicacao",
-                        external: true
-                    },
-                    {
-                        title: "🔄 Reativação de Clientes",
-                        description: "Desperte clientes antigos com campanhas inteligentes",
-                        url: "https://typebot.co/reativacao-de-clientes",
-                        external: true
-                    }
-                ]
+                title: "Consultoria",
+                id: "consultoria",
+                url: "servicos.html#consultoria"
             },
             {
                 title: "Cases",
-                id: "cases"
+                id: "cases",
+                url: "index.html#cases"
             },
             {
                 title: "Fundadores",
-                id: "founders"
-            },
-            {
-                title: "Contato",
-                id: "contact"
+                id: "fundadores",
+                url: "index.html#fundadores"
             }
         ]
     },
@@ -107,19 +72,17 @@ window.AION_CONFIG = {
             {
                 title: "Soluções",
                 links: [
-                    { title: "AION Vendas", url: "campanhas.html" },
-                    { title: "AION E-Commerce", url: "ecommerce.html" },
-                    { title: "Soluções de IA", url: "agentes.html" },
-                    { title: "Consultoria", url: "consultoria.html" }
+                    { title: "Para Empresas de Serviços", url: "servicos.html" },
+                    { title: "Para E-commerces", url: "ecommerce.html" },
+                    { title: "Consultoria Estratégica", url: "servicos.html#consultoria" },
                 ]
             },
             {
                 title: "Empresa",
                 links: [
-                    { title: "Sobre Nós", url: "#about" },
-                    { title: "Fundadores", url: "#founders" },
-                    { title: "Cases", url: "#cases" },
-                    { title: "Política de Privacidade", url: "/politica-privacidade" }
+                    { title: "Sobre Nós", url: "index.html#fundadores" },
+                    { title: "Cases", url: "index.html#cases" },
+                    { title: "Política de Privacidade", url: "#" }
                 ]
             },
             {
@@ -131,5 +94,120 @@ window.AION_CONFIG = {
                 ]
             }
         ]
+    }
+};
+
+// Configuração de navegação e rodapé
+const navLinks = [
+    { 
+        title: "Soluções", 
+        isDropdown: true,
+        dropdownLinks: [
+            { title: "Para Empresas de Serviços", url: "servicos.html", description: "Otimize sua operação e atendimento." },
+            { title: "Para E-commerces", url: "ecommerce.html", description: "Transforme dados em lucro e eficiência." }
+        ]
+    },
+    { title: "Consultoria", url: "servicos.html#consultoria" },
+    { title: "Cases", url: "index.html#cases" },
+    { title: "Fundadores", url: "index.html#fundadores" }
+];
+
+const footerSections = {
+    services: {
+        title: "Soluções",
+        links: [
+            { title: "Para Empresas de Serviços", url: "servicos.html" },
+            { title: "Para E-commerces", url: "ecommerce.html" },
+            { title: "Consultoria Estratégica", url: "servicos.html#consultoria" },
+        ]
+    },
+    company: {
+        title: "Institucional",
+        links: [
+            { title: "Home", url: "index.html" },
+            { title: "Sobre Nós", url: "index.html#fundadores" },
+            { title: "Cases", url: "index.html#cases" }
+        ]
+    },
+    legal: {
+        title: "Legal",
+        links: [
+            { title: "Política de Privacidade", url: "#" },
+            { title: "Termos de Uso", url: "#" }
+        ]
+    }
+};
+
+const socialLinks = {
+    linkedin: "https://www.linkedin.com/company/aion-solution/",
+    instagram: "https://www.instagram.com/aion.solution/"
+};
+
+
+// Dados para componentes dinâmicos (SEO, Testemunhos, FAQ)
+const testimonials = [
+    {
+        name: "Victor Meireles",
+        role: "Fundador da AION",
+        image: "assets/images/victorMeireles.webp",
+        social: {
+            linkedin: "https://www.linkedin.com/in/victor-meireles-desenvolvedor/"
+        },
+        quote: "Nosso objetivo na AION é transformar a complexidade dos dados em decisões simples e inteligentes para os nossos clientes. Usamos IA não como uma 'solução mágica', mas como uma ferramenta poderosa para gerar resultados reais e mensuráveis."
+    },
+    {
+        name: "Gustavo Martins",
+        role: "Fundador da AION",
+        image: "assets/images/gustavoMartins.webp",
+        social: {
+            linkedin: "https://www.linkedin.com/in/gustavo-martins-de-oliveira-959334139/"
+        },
+        quote: "Acreditamos que a verdadeira inovação vem da aplicação prática da tecnologia. Na AION, construímos soluções que se integram perfeitamente às operações dos clientes, otimizando processos e liberando tempo para que eles foquem no que realmente importa: o crescimento do negócio."
+    }
+];
+
+
+const faqData = [
+    {
+        "question": "Como a AION garante a segurança dos meus dados?",
+        "answer": "A segurança é nossa prioridade máxima. Utilizamos criptografia de ponta para dados em trânsito e em repouso, seguimos as melhores práticas de segurança da informação e estamos em conformidade com a LGPD. Seus dados são processados em ambientes seguros e com acesso restrito."
+    },
+    {
+        "question": "Preciso ter conhecimento técnico para usar as soluções da AION?",
+        "answer": "Não. Nossas soluções são desenhadas para serem intuitivas e fáceis de usar. Fornecemos dashboards e interfaces amigáveis que apresentam os insights de forma clara. Além disso, oferecemos treinamento e suporte para garantir que sua equipe aproveite ao máximo a plataforma."
+    },
+    {
+        "question": "A solução da AION se integra com os sistemas que já uso?",
+        "answer": "Sim. Nossa plataforma é projetada para ser flexível e se integrar com uma vasta gama de sistemas, como ERPs (Bling, Tiny), plataformas de marketing (Google Ads, Meta Ads) e outras ferramentas de mercado. A integração é um passo fundamental do nosso processo de onboarding."
+    },
+    {
+        "question": "Quanto tempo leva para ver os primeiros resultados?",
+        "answer": "No nosso plano de organização de dados para e-commerce, você já tem uma base de dados centralizada e os primeiros dashboards em até 30 dias. Para soluções de IA mais complexas, como otimização de atendimento, os resultados iniciais podem ser percebidos nas primeiras semanas de uso."
+    },
+    {
+        "question": "O que diferencia a AION de outras empresas de dados e IA?",
+        "answer": "Nosso principal diferencial é o foco em resultados de negócio. Não entregamos apenas tecnologia, entregamos uma solução completa que inclui consultoria, implementação e acompanhamento. Somos parceiros na jornada de transformação digital dos nossos clientes, garantindo que o investimento em IA se traduza em crescimento real."
+    }
+];
+
+
+const seoData = {
+    "default": {
+        title: "AION - Inteligência Artificial para Empresas de Serviço",
+        description: "Transforme seus dados em lucro. A AION oferece soluções de IA para otimizar atendimento, vendas e operações em empresas de serviço.",
+        keywords: "Inteligência Artificial, IA para serviços, automação de atendimento, otimização de vendas, análise de dados, AION",
+        ogImage: "assets/images/solutions/servicos.webp"
+    },
+    "servicos.html": {
+        title: "AION | Soluções de IA para Empresas de Serviço",
+        description: "Automatize seu atendimento com assistentes de IA, otimize suas vendas com campanhas inteligentes e transforme sua operação. Conheça as soluções da AION para serviços.",
+        keywords: "assistente de IA, vendas com IA, automação para serviços, IA para agendamento, gestão de clientes",
+        ogImage: "assets/images/solutions/servicos.webp"
+    },
+    "ecommerce.html": {
+        title: "AION | Inteligência de Dados para E-commerce",
+        description: "Organize seus dados em 30 dias e ative módulos de IA para otimizar marketing, estoque e pricing. Transforme a gestão do seu e-commerce com a AION.",
+        keywords: "BI para e-commerce, dados para e-commerce, IA para e-commerce, otimização de estoque, pricing inteligente",
+        ogImage: "assets/images/solutions/aion-ecommerce.webp"
     }
 }; 

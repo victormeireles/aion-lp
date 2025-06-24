@@ -124,6 +124,16 @@ export class FooterComponent {
                                 <a href="${this.config.company.whatsapp.url}" target="_blank" aria-label="Fale conosco pelo WhatsApp">WhatsApp</a>
                                 <a href="mailto:${this.config.company.email}">E-mail</a>
                             </div>
+
+                            <div class="footer-section">
+                                <h4>Compartilhe</h4>
+                                <div class="footer-sharing">
+                                    <a href="#" class="share-facebook" aria-label="Compartilhar no Facebook"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="share-twitter" aria-label="Compartilhar no Twitter"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="share-linkedin" aria-label="Compartilhar no LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="share-whatsapp" aria-label="Compartilhar no WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
@@ -146,6 +156,7 @@ export class FooterComponent {
         
         container.innerHTML = this.getFooterHTML();
         this.initializeFAQAccordion();
+        this.initializeSharingButtons();
     }
 
     initializeFAQAccordion() {
@@ -181,6 +192,40 @@ export class FooterComponent {
                     icon.style.transform = 'rotate(180deg)';
                 }
             });
+        });
+    }
+
+    initializeSharingButtons() {
+        const pageUrl = encodeURIComponent(window.location.href);
+        const pageTitle = encodeURIComponent(document.title);
+        const shareText = `Confira isso: ${pageTitle}`;
+
+        const shareLinks = {
+            facebook: `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`,
+            twitter: `https://twitter.com/intent/tweet?url=${pageUrl}&text=${shareText}`,
+            linkedin: `https://www.linkedin.com/shareArticle?mini=true&url=${pageUrl}&title=${pageTitle}`,
+            whatsapp: `https://api.whatsapp.com/send?text=${shareText}%20${pageUrl}`
+        };
+
+        const openShareWindow = (url) => {
+            window.open(url, 'sharer', 'toolbar=0,status=0,width=580,height=325');
+        };
+
+        document.querySelector('.share-facebook')?.addEventListener('click', (e) => {
+            e.preventDefault();
+            openShareWindow(shareLinks.facebook);
+        });
+        document.querySelector('.share-twitter')?.addEventListener('click', (e) => {
+            e.preventDefault();
+            openShareWindow(shareLinks.twitter);
+        });
+        document.querySelector('.share-linkedin')?.addEventListener('click', (e) => {
+            e.preventDefault();
+            openShareWindow(shareLinks.linkedin);
+        });
+        document.querySelector('.share-whatsapp')?.addEventListener('click', (e) => {
+            e.preventDefault();
+            openShareWindow(shareLinks.whatsapp);
         });
     }
 

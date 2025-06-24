@@ -26,5 +26,4 @@
 @import url('sections/_method.css');
 @import url('sections/_pricing.css');
 @import url('sections/services/_how-works.css');
-@import "sections/_ecommerce.css";
-
+@import url('sections/_ecommerce.css');

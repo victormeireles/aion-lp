@@ -218,4 +218,15 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Disponibilizar globalmente para debug
-window.AIONApp = AIONApp; 
+window.AIONApp = AIONApp;
+
+// Ativar o item do menu correspondente à página atual
+const path = window.location.pathname;
+if (path.includes('servicos.html')) {
+    setActiveMenuItem('servicos.html');
+} else if (path.includes('ecommerce.html')) {
+    setActiveMenuItem('ecommerce.html');
+} else {
+    // Página inicial ou outra
+    // Nenhuma ação específica necessária para o 'Home', pois não está no menu principal
+} 

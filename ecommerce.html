@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>AION E-commerce - Organize Dados e Multiplique Vendas</title>
+    <meta name="description" content="Solução AION para e-commerce: organize dados em 30 dias, integre ERP e marketing, otimize ROI e aumente lucro com BI inteligente.">
+    <meta name="keywords" content="E-commerce, BI, Organização de Dados, ROI Marketing, Gestão de Estoque, Precificação Inteligente, ERP, Google Ads, Meta Ads">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.aionsolution.com.br/ecommerce.html">
+    <meta property="og:title" content="AION E-commerce - Organize Dados e Multiplique Vendas">
+    <meta property="og:description" content="Solução AION para e-commerce: organize dados em 30 dias, integre ERP e marketing, otimize ROI e aumente lucro com BI inteligente.">
+    <meta property="og:image" content="https://www.aionsolution.com.br/assets/images/solutions/ecommerce.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.aionsolution.com.br/ecommerce.html">
+    <meta property="twitter:title" content="AION E-commerce - Organize Dados e Multiplique Vendas">
+    <meta property="twitter:description" content="Solução AION para e-commerce: organize dados em 30 dias, integre ERP e marketing, otimize ROI e aumente lucro com BI inteligente.">
+    <meta property="twitter:image" content="https://www.aionsolution.com.br/assets/images/solutions/ecommerce.webp">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="icon" type="image/webp" href="assets/images/aion-favicon.webp">
+    <link rel="apple-touch-icon" href="assets/images/aion-favicon.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Estilos -->
+    <!-- <link rel="stylesheet" href="assets/css/styles.css"> -->
+    <link rel="stylesheet" href="assets/css/main-ecommerce.css" onerror="console.error('Erro ao carregar main-ecommerce.css')">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <script>
+        // Configuração específica para página de serviços
+        // Sobrescreve configuração padrão para adaptar menu aos conteúdos desta página
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.AION_CONFIG) {
+                // Adapta navegação para página de serviços - Menu simplificado
+                window.AION_CONFIG.navigation.main = [
+                    {
+                        title: "Início",
+                        id: "inicio",
+                        url: "index.html"
+                    },
+                    {
+                        title: "Método",
+                        id: "metodo"
+                    },
+                    {
+                        title: "Como Funciona",
+                        id: "how-works"
+                    },
+                    {
+                        title: "Cases",
+                        id: "cases"
+                    },
+                    {
+                        title: "Preços",
+                        id: "precos"
+                    },
+                    {
+                        title: "Contato",
+                        id: "contact"
+                    }
+                ];
+            }
+        });
+    </script>
+    <!-- ============================================
+         COMPONENTES COMPARTILHADOS 
+         ============================================ -->
+    
+    <!-- Container para Header + Barra de Progresso -->
+    <div id="shared-header"></div>
+    
+    <!-- Container para Menu Mobile + Hambúrguer -->
+    <div id="shared-mobile-menu"></div>
+
+    <!-- ============================================
+         CONTEÚDO OTIMIZADO DA PÁGINA SERVIÇOS
+         ============================================ -->
+
+    <!-- Hero Section -->
+	<section id="home" class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="assets/videos/home-hero-section-services.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <img src="assets/logos/aionLogoWhite.svg" alt="AION" class="hero-logo">
+
+			<!-- Badges de Serviços Premium - Carrossel -->
+            <div class="service-badges">
+                <div class="badge-carousel">
+                    <div class="badge-track">
+                        <!-- Primeiro conjunto -->
+                        <div class="service-badge">
+                            <i class="material-icons">checkroom</i>
+                            <span>Moda</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">devices</i>
+                            <span>Eletrônicos</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">home</i>
+                            <span>Casa & Decoração</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">spa</i>
+                            <span>Beleza</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">fitness_center</i>
+                            <span>Esportes</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">toys</i>
+                            <span>Infantil</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">restaurant</i>
+                            <span>Alimentação</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">pets</i>
+                            <span>Pet Shop</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">build</i>
+                            <span>Ferramentas</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">local_pharmacy</i>
+                            <span>Farmácia</span>
+                        </div>
+                        
+                        <!-- Segundo conjunto (duplicado para scroll infinito) -->
+                        <div class="service-badge">
+                            <i class="material-icons">checkroom</i>
+                            <span>Moda</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">devices</i>
+                            <span>Eletrônicos</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">home</i>
+                            <span>Casa & Decoração</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">spa</i>
+                            <span>Beleza</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">fitness_center</i>
+                            <span>Esportes</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">toys</i>
+                            <span>Infantil</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">restaurant</i>
+                            <span>Alimentação</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">pets</i>
+                            <span>Pet Shop</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">build</i>
+                            <span>Ferramentas</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">local_pharmacy</i>
+                            <span>Farmácia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="hero-title">ORGANIZE SEUS DADOS <br />E MULTIPLIQUE VENDAS</h1>
+            <p class="hero-subtitle">Dados organizados em 30 dias <br />+ BI inteligente = Lucro garantido</p>
+            <div class="hero-buttons">
+                <a href="https://www.aionsolution.com.br/request_consulting?type=u" class="btn-primary">Organizar Meus Dados</a>
+                <a href="#metodo" class="btn-secondary">Ver Como Funciona</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Método AION Section -->
+    <section id="metodo" class="method-section particles-section">
+        <div class="particles"></div>
+        <div class="container">
+            <div class="method-header">
+                <h2 class="section-title">O que o AION faz pelo seu E-commerce</h2>
+            </div>
+            
+            <!-- Transformação -->
+            <div class="transformation-wrapper">
+                <div class="transformation-content">
+                    
+                    <div class="transformation-bridge-layout">
+                        <div class="transformation-grid-3col">
+                            <!-- Headers das 3 colunas -->
+                            <div class="transformation-headers">
+                                <div class="before-header">
+                                    <h3>Sua Situação Atual</h3>
+                                    <p>Como a maioria dos e-commerces</p>
+                                </div>
+                                <div class="bridge-header-spacer"></div>
+                                <div class="after-header desktop-only">
+                                    <h3>Com a solução AION</h3>
+                                    <p>Dados organizados e decisões inteligentes</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Conteúdo das 3 colunas -->
+                            <div class="transformation-content-grid">
+                                <!-- Coluna ANTES -->
+                                <div class="before-column">
+                                    <div class="transformation-item">
+                                        <i class="material-icons status-icon problem">scatter_plot</i>
+                                        <span>Dados espalhados em várias ferramentas</span>
+                                    </div>
+                                    <div class="transformation-item">
+                                        <i class="material-icons status-icon problem">trending_down</i>
+                                        <span>ROI baixo dos anúncios</span>
+                                    </div>
+                                    <div class="transformation-item">
+                                        <i class="material-icons status-icon problem">help_outline</i>
+                                        <span>Não sabe qual produto dá mais lucro</span>
+                                    </div>
+                                    <div class="transformation-item">
+                                        <i class="material-icons status-icon problem">inventory_2</i>
+                                        <span>Estoque que não gira</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Coluna CENTRAL (Imagem AION) -->
+                                <div class="bridge-column">
+                                    <div class="bridge-content">
+                                        <div class="bridge-header">
+                                            <div class="aion-bridge-badge">AION</div>
+                                            <p>A ponte para organizar seus dados</p>
+                                        </div>
+                                        <div class="aion-bridge-image">
+                                            <img src="assets/images/solutions/ecommerce.webp" alt="Solução AION para organização de dados de e-commerce" class="bridge-img" loading="lazy">
+                                            <div class="bridge-glow"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Header "Com AION" para mobile (aparece após a imagem) -->
+                                    <div class="after-header mobile-only">
+                                        <h3>Com a solução AION</h3>
+                                        <p>Dados organizados e decisões inteligentes</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Coluna DEPOIS -->
+                                <div class="after-column">
+                                    <div class="transformation-item">
+                                        <i class="material-icons status-icon success">dashboard</i>
+                                        <span>Dados centralizados em 1 lugar</span>
+                                    </div>
+                                    <div class="transformation-item">
+                                        <i class="material-icons status-icon success">trending_up</i>
+                                        <span>ROI otimizado com insights de IA</span>
+                                    </div>
+                                    <div class="transformation-item">
+                                        <i class="material-icons status-icon success">analytics</i>
+                                        <span>Foco nos produtos mais rentáveis</span>
+                                    </div>
+                                    <div class="transformation-item">
+                                        <i class="material-icons status-icon success">smart_toy</i>
+                                        <span>Abastecimento inteligente</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- As 3 Soluções AION -->
+            <div class="pillars-wrapper">
+                <div class="pillars-header">
+                    <h3 class="pillars-title">Os 4 Pilares do AION para E-commerce</h3>
+                    <p class="pillars-subtitle">Fundamentos para organizar dados e multiplicar vendas</p>
+                </div>
+                <div class="pillars-grid">
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <i class="material-icons">integration_instructions</i>
+                        </div>
+                        <div class="pillar-content">
+                            <p class="pillar-title"><strong>Integração e Organização de Dados</strong></p>
+                            <p>Conectamos ERP (Bling, TinyERP, Olist), Google Ads, Meta Ads e organizamos tudo em 30 dias.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <i class="material-icons">psychology</i>
+                        </div>
+                        <div class="pillar-content">
+                            <p class="pillar-title"><strong>BI + Assistente Virtual</strong></p>
+                            <p>Dashboards inteligentes + assistente que responde suas dúvidas sobre faturamento e performance.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <i class="material-icons">campaign</i>
+                        </div>
+                        <div class="pillar-content">
+                            <p class="pillar-title"><strong>Otimização de Marketing</strong></p>
+                            <p>Insights práticos para melhorar ROI dos anúncios e identificar campanhas vencedoras.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <i class="material-icons">inventory</i>
+                        </div>
+                        <div class="pillar-content">
+                            <p class="pillar-title"><strong>Gestão Inteligente</strong></p>
+                            <p>Precificação baseada em dados + abastecimento preditivo para maximizar lucro.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA Seção Método -->
+                <div class="section-cta-container">
+                    <a href="https://www.aionsolution.com.br/request_consulting?type=u" target="_blank" class="section-cta">
+                        <span class="section-cta-text">
+                            <span class="desktop-text">Quero organizar meus dados e multiplicar vendas</span>
+                            <span class="mobile-text">Organizar dados e vender mais</span>
+                        </span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona Section -->
+    <section id="how-works" class="section how-works-section">
+        <div class="container">
+            <h2 class="section-title">Sua Transformação em 30 Dias</h2>
+            <p class="section-subtitle">Do caos de dados à clareza total: organização garantida em 1 mês</p>
+            
+            <div class="transformation-journey">
+                <!-- Progress Timeline -->
+                <div class="journey-timeline">
+                    <div class="timeline-progress">
+                        <div class="progress-line"></div>
+                        <div class="progress-dots">
+                            <div class="progress-dot active" data-phase="1"></div>
+                            <div class="progress-dot" data-phase="2"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Journey Phases -->
+                <div class="journey-phases">
+                    <!-- Fase 1: Organização Inicial -->
+                    <div class="journey-phase" data-phase="1">
+                        <div class="phase-content">
+                            <div class="phase-header">
+                                <div class="phase-timing">
+                                    <span class="phase-days">Dias 1-30</span>
+                                    <div class="phase-badge setup">Comece Aqui</div>
+                                </div>
+                                <h3>Organização Completa de Dados por R$ 499</h3>
+                                <p class="phase-description">Em 30 dias organizamos todos os seus dados e entregamos 1h de mentoria com insights personalizados sobre seu e-commerce.</p>
+                            </div>
+                            
+                            <div class="phase-details">
+                                <div class="phase-actions">
+                                    <div class="action-item">
+                                        <i class="material-icons">integration_instructions</i>
+                                        <div class="action-content">
+                                            <strong>Integração com ERP e Marketing</strong>
+                                            <p>Conectamos seus sistemas (Bling, Tiny, Olist, Google, Meta) para centralizar a informação.</p>
+                                        </div>
+                                    </div>
+                                    <div class="action-item">
+                                        <i class="material-icons">dashboard</i>
+                                        <div class="action-content">
+                                            <strong>Organização de Dados</strong>
+                                            <p>Estruturamos seus dados de faturamento, estoque e clientes para uma visão clara.</p>
+                                        </div>
+                                    </div>
+                                    <div class="action-item">
+                                        <i class="material-icons">school</i>
+                                        <div class="action-content">
+                                            <strong>Mentoria de Insights</strong>
+                                            <p>Um especialista AION apresenta as primeiras análises e oportunidades do seu negócio.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="phase-visual">
+                            <img src="assets/images/solutions/aion-30d-home.webp" alt="Organização de dados para e-commerce" class="bridge-img" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Fase 2: Evolução Contínua -->
+                    <div class="journey-phase" data-phase="2">
+                        <div class="phase-content">
+                            <div class="phase-header">
+                                <div class="phase-timing">
+                                    <span class="phase-days">Após 30 dias</span>
+                                    <div class="phase-badge growth">Evolução Contínua</div>
+                                </div>
+                                <h3>Seu E-commerce Otimizado com IA</h3>
+                                <p class="phase-description">Com a base de dados organizada, ativamos as alavancas de crescimento para escalar seu lucro de forma inteligente e contínua.</p>
+                            </div>
+                            
+                            <div class="phase-details">
+                                <div class="phase-actions">
+                                    <div class="action-item">
+                                        <i class="material-icons">analytics</i>
+                                        <div class="action-content">
+                                            <strong>BI e Dashboards Interativos</strong>
+                                            <p>Acesse relatórios visuais e converse com uma IA para entender a fundo sua performance de vendas, clientes e produtos.</p>
+                                        </div>
+                                    </div>
+                                    <div class="action-item">
+                                        <i class="material-icons">campaign</i>
+                                        <div class="action-content">
+                                            <strong>Otimização de Anúncios</strong>
+                                            <p>Receba insights diários para maximizar o ROI, descobrindo quais campanhas e produtos geram mais lucro.</p>
+                                        </div>
+                                    </div>
+                                    <div class="action-item">
+                                        <i class="material-icons">price_check</i>
+                                        <div class="action-content">
+                                            <strong>Precificação e Estoque Inteligente</strong>
+                                            <p>Ajuste preços com base em dados de margem e receba sugestões de compra para nunca perder vendas.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="phase-visual">
+                            <img src="assets/images/solutions/aion-ecommerce-home.webp" alt="Dashboard de acompanhamento de performance em tempo real" class="bridge-img" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA Seção Como Funciona -->
+                <div class="section-cta-container">
+                    <a href="https://www.aionsolution.com.br/request_consulting?type=u" target="_blank" class="section-cta">
+                        <span class="section-cta-text">
+                            <span class="desktop-text">Começar com organização de dados</span>
+                            <span class="mobile-text">Começar organização</span>
+                        </span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Cases Section -->
+    <section id="cases" class="section">
+        <div class="container">
+            <h2 class="section-title">Cases de Sucesso em E-commerce</h2>
+            <p class="section-subtitle">Transformações reais de dados desorganizados para crescimento escalável</p>
+            
+            <div class="cases-grid">
+                <!-- Case Urbane -->
+                <div class="case-card case-ecommerce">
+                    <div class="case-header">
+                        <div class="case-logo">
+                            <div class="case-type-badge">E-commerce Moda</div>
+                            <div class="case-company">Urbane</div>
+                            <div class="case-location">Paulo Maiiera - CEO</div>
+                        </div>
+                        <span class="case-period">"O AION não só ajudou a identificar problemas críticos em nossas margens, mas também sugeriu ações estratégicas que nos fizeram crescer cinco vezes mais em apenas um ano!"</span>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-description">
+                            <p>Centralização de dados, insights automáticos e otimização de precificação para crescimento</p>
+                        </div>
+                        <div class="case-metrics">
+                            <div class="metric">
+                                <span class="metric-value">R$ 1M/mês</span>
+                                <span class="metric-label">Faturamento Atual</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">5x</span>
+                                <span class="metric-label">Crescimento em 1 ano</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case EMS -->
+                <div class="case-card case-ecommerce">
+                    <div class="case-header">
+                        <div class="case-logo">
+                            <div class="case-type-badge">Marketplace</div>
+                            <div class="case-company">EMS</div>
+                            <div class="case-location">Fábio Moreira - Diretor de Growth</div>
+                        </div>
+                        <span class="case-period">"Com o AION, transformamos nosso marketplace em um canal de vendas milionário, tudo isso em tempo recorde. Eles organizaram nossos dados e nos deram clareza estratégica que nunca tínhamos antes!"</span>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-description">
+                            <p>Organização de dados e construção de BI para marketplace farmacêutico</p>
+                        </div>
+                        <div class="case-metrics">
+                            <div class="metric">
+                                <span class="metric-value">R$ 1B/ano</span>
+                                <span class="metric-label">Faturamento E-commerce</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">30 dias</span>
+                                <span class="metric-label">Para Organizar Dados</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Doctor Shoes -->
+                <div class="case-card case-ecommerce">
+                    <div class="case-header">
+                        <div class="case-logo">
+                            <div class="case-type-badge">E-commerce Calçados</div>
+                            <div class="case-company">Doctor Shoes</div>
+                            <div class="case-location">Guilherme Donadelli - Fundador</div>
+                        </div>
+                        <span class="case-period">"Nossa operação foi transformada. Com o AION, ajustamos precificação e estoque, o que nos permitiu aumentar nossa margem bruta e crescer de forma sustentável."</span>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-description">
+                            <p>Otimização de precificação e gestão inteligente de estoque</p>
+                        </div>
+                        <div class="case-metrics">
+                            <div class="metric">
+                                <span class="metric-value">+35%</span>
+                                <span class="metric-label">Margem Bruta</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">-20%</span>
+                                <span class="metric-label">Estoque Parado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Seção Cases -->
+            <div class="section-cta-container">
+                <a href="https://www.aionsolution.com.br/request_consulting?type=u" target="_blank" class="section-cta">
+                    <span class="section-cta-text">
+                        <span class="desktop-text">Alcance resultados similares em seu e-commerce</span>
+                        <span class="mobile-text">Alcance resultados similares</span>
+                    </span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Módulos e Preços Section -->
+    <section id="precos" class="section pricing-section particles-section">
+        <div class="particles"></div>
+        <div class="container">
+            <h2 class="section-title">Uma Jornada de Crescimento para seu E-commerce</h2>
+            <p class="section-subtitle">Comece com a base de dados organizada e evolua com inteligência artificial.</p>
+            
+            <div class="pricing-evolution-grid">
+                
+                <!-- Passo 1: Organização de Dados -->
+                <div class="pricing-card-premium featured-module">
+                    <div class="pricing-header-premium">
+                        <span class="pricing-badge">COMECE AQUI</span>
+                        <h3>Organização de Dados em 30 Dias</h3>
+                        <div class="price-display">
+                            <div class="price-wrapper">
+                                <span class="price-main">R$ 499</span>
+                            </div>
+                            <span class="price-period">pagamento único</span>
+                        </div>
+                        <p class="price-description">A base sólida para o crescimento do seu e-commerce.</p>
+                    </div>
+                    
+                    <div class="pricing-features-premium">
+                        <div class="features-list">
+                            <span class="feature-item"><i class="material-icons">integration_instructions</i> Integração com ERP e Marketing</span>
+                            <span class="feature-item"><i class="material-icons">dashboard</i> Organização de Dados de Vendas</span>
+                            <span class="feature-item"><i class="material-icons">school</i> 1h de Mentoria com Especialista</span>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-cta-premium">
+                        <a href="https://www.aionsolution.com.br/request_consulting?type=u" class="cta-button-premium">
+                            <span class="cta-text">Quero Organizar Meus Dados</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Passo 2: Evolução Contínua -->
+                <div class="pricing-card-premium evolution-card">
+                    <div class="pricing-header-premium">
+                        <span class="pricing-badge-secondary">PRÓXIMOS PASSOS</span>
+                        <h3>Evolua com Módulos de IA</h3>
+                        <div class="price-display">
+                            <p class="evolution-description">Após organizar seus dados, ative módulos inteligentes para acelerar seu crescimento.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-features-premium">
+                        <div class="features-list">
+                            <span class="feature-item"><i class="material-icons">bubble_chart</i> <strong>BI + Assistente:</strong> Dashboards e assistente virtual.</span>
+                            <span class="feature-item"><i class="material-icons">ads_click</i> <strong>Otimização de Marketing:</strong> Melhore o ROI de campanhas.</span>
+                            <span class="feature-item"><i class="material-icons">sell</i> <strong>Pricing Inteligente:</strong> Sugestões de preços baseadas em dados.</span>
+                            <span class="feature-item"><i class="material-icons">inventory_2</i> <strong>Abastecimento com IA:</strong> Gestão preditiva de estoque.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-cta-premium">
+                        <p class="evolution-footer-text">Módulos com planos mensais flexíveis, ativados sob demanda.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Pronto para Organizar seus Dados?</h2>
+            <p class="section-subtitle">Comece hoje mesmo a transformação do seu e-commerce. Dados organizados em 30 dias garantidos.</p>
+            
+            <div class="contact-cta-container">
+                <a href="https://www.aionsolution.com.br/request_consulting?type=u" target="_blank" class="contact-main-cta">
+                    <span class="cta-text">Organizar Meus Dados por R$ 499</span>
+                    <span class="cta-subtitle">Consultoria gratuita + organização completa</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section">
+        <div class="faq-particles"></div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Perguntas Frequentes</h2>
+                <p class="section-subtitle">Tire suas dúvidas sobre AION para e-commerce</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>O AION funciona com minha plataforma de e-commerce?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim! Já temos integração com os principais ERPs (Bling, TinyERP, Olist) e plataformas de marketing (Google Analytics, Google Ads, Meta Ads). Se você usa outro sistema, entre em contato que avaliamos a integração personalizada. Confira mais opções na <a href="index.html">página inicial</a>.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quanto tempo demora para organizar meus dados?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Organizamos todos os seus dados em exatamente 30 dias. Isso inclui integração com ERP, plataformas de marketing, organização de faturamento, estoque e cadastro de clientes. No final, você recebe 1h de mentoria com insights personalizados.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Preciso ter conhecimento técnico para usar?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Não! Nossa equipe faz toda a parte técnica da integração e organização. Você só precisa fornecer acesso aos sistemas. Depois, tudo funciona de forma simples e intuitiva através de dashboards e assistente virtual.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Como funciona a mentoria de 1h?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Após organizar seus dados, agendamos uma reunião de 1h com um especialista AION. Como já teremos todos os seus dados organizados, daremos insights específicos sobre seu negócio: produtos mais lucrativos, problemas de estoque, oportunidades de crescimento e sugestões de próximos passos.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Funciona para marketplace também?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim! Temos experiência com diversos tipos de e-commerce: loja própria, marketplace, multi-canal. Nossos cases incluem desde e-commerces tradicionais como Urbane até grandes marketplaces como EMS. A metodologia se adapta ao seu modelo de negócio.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Posso cancelar os módulos quando quiser?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, todos os módulos são assinatura mensal sem fidelidade. O investimento inicial de R$ 499 é apenas para organização dos dados (uma única vez). Depois, você escolhe quais módulos quer manter e pode cancelar quando quiser. Nossa confiança está nos resultados que entregamos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         COMPONENTES COMPARTILHADOS 
+         ============================================ -->
+    
+    <!-- Container para Footer -->
+    <div id="shared-footer"></div>
+    
+    <!-- Container para Botão WhatsApp -->
+    <div id="shared-whatsapp"></div>
+
+    <!-- ============================================
+         SCRIPTS
+         ============================================ -->
+    
+    <!-- Configuração -->
+    <script src="assets/js/components/config.js" onerror="console.error('Erro ao carregar config.js')"></script>
+    
+    <!-- Componentes Compartilhados -->
+    <script src="assets/js/components/shared-components.js" onerror="console.error('Erro ao carregar shared-components.js')"></script>
+    
+    <!-- Scripts específicos da página -->
+    <script src="assets/js/script.js" onerror="console.error('Erro ao carregar script.js')"></script>
+    
+    <!-- Debug Script para GitHub Pages -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Verifica se o CSS foi carregado
+            const mainCss = document.querySelector('link[href*="main-ecommerce.css"]');
+            if (mainCss) {
+                console.log('✅ main-ecommerce.css carregado');
+            } else {
+                console.error('❌ main-ecommerce.css não encontrado');
+            }
+            
+            // Verifica se AION_CONFIG foi carregado
+            if (window.AION_CONFIG) {
+                console.log('✅ AION_CONFIG carregado');
+            } else {
+                console.error('❌ AION_CONFIG não encontrado');
+            }
+            
+            // Força recarga dos componentes se não carregaram
+            setTimeout(function() {
+                if (!document.querySelector('#shared-header').innerHTML) {
+                    console.warn('⚠️ Componentes não carregaram, tentando novamente...');
+                    if (window.initSharedComponents) {
+                        window.initSharedComponents();
+                    }
+                }
+            }, 2000);
+        });
+    </script>
+</body>
+</html> 

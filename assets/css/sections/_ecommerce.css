@@ -1,0 +1,78 @@
+/* Estilos específicos para a página de E-commerce */
+
+.pricing-evolution-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    align-items: stretch; /* Garante que os cards tenham a mesma altura */
+    margin-top: 3rem;
+}
+
+.pricing-evolution-grid .pricing-features-premium {
+    flex-grow: 1; /* Faz a área de features crescer */
+}
+
+.evolution-card .pricing-badge-secondary {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary);
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.evolution-card .pricing-header-premium h3 {
+    margin-top: 1rem; /* Alinha com título da esquerda */
+}
+
+.evolution-card .price-display {
+    min-height: 85px; /* Altura exata para alinhar com o preço */
+    display: flex;
+    align-items: flex-start;
+    padding-top: 1rem;
+}
+
+.evolution-card .evolution-description {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.evolution-card .pricing-features-premium {
+    padding-top: 1rem;
+}
+
+.evolution-card .features-list .feature-item {
+    color: var(--text-secondary);
+}
+
+.evolution-card .pricing-cta-premium {
+    min-height: 80px; /* Altura para alinhar com o botão */
+    border: none;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.evolution-card .evolution-footer-text {
+    font-size: 0.9rem;
+    color: var(--text-tertiary);
+}
+
+/* Esconder os layouts antigos */
+.optional-modules, .pricing-grid-1-featured {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .pricing-evolution-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 2rem;
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+}
