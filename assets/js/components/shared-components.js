@@ -135,11 +135,24 @@ function createFooter() {
                     
                     <div class="footer-links">
                         ${config.footer.sections.map(section => `
-                            <div class="footer-section">
+                            <div class="footer-section ${section.type === 'sharing' ? 'footer-sharing-section' : ''}">
                                 <h4>${section.title}</h4>
-                                ${section.links.map(link => `
-                                    <a href="${link.url}" ${link.external ? 'target="_blank"' : ''}>${link.title}</a>
-                                `).join('')}
+                                ${section.type === 'sharing' ? 
+                                    `<div class="footer-sharing-buttons">
+                                        ${section.links.map(link => `
+                                            <a href="${link.url}" ${link.external ? 'target="_blank" rel="noopener noreferrer"' : ''} 
+                                                                                               class="footer-share-btn" 
+                                               title="Compartilhar no ${link.title}"
+                                               aria-label="Compartilhar no ${link.title}">
+                                                <i class="${link.icon}"></i>
+                                            </a>
+                                        `).join('')}
+                                    </div>` 
+                                    : 
+                                    section.links.map(link => `
+                                        <a href="${link.url}" ${link.external ? 'target="_blank"' : ''}>${link.title}</a>
+                                    `).join('')
+                                }
                             </div>
                         `).join('')}
                     </div>
@@ -392,5 +405,135 @@ function initSharedComponents() {
     console.log('✅ AION Shared Components initialized successfully');
 }
 
+// Função para compartilhamento nativo
+function shareNative() {
+    if (navigator.share) {
+        const currentUrl = window.location.href;
+        const pageTitle = document.title;
+        
+        navigator.share({
+            title: pageTitle,
+            text: 'Conheça a AION - Soluções de IA para empresas',
+            url: currentUrl
+        }).then(() => {
+            console.log('Compartilhamento realizado com sucesso');
+        }).catch((error) => {
+            console.log('Erro no compartilhamento:', error);
+            // Fallback para o compartilhamento manual
+            copyToClipboard(currentUrl);
+        });
+    } else {
+        // Fallback para navegadores que não suportam Web Share API
+        copyToClipboard(window.location.href);
+    }
+}
+
+// Função para copiar URL para clipboard
+function copyToClipboard(text) {
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(() => {
+            showNotification('URL copiada para a área de transferência!');
+        }).catch(() => {
+            fallbackCopyToClipboard(text);
+        });
+    } else {
+        fallbackCopyToClipboard(text);
+    }
+}
+
+// Fallback para copiar para clipboard
+function fallbackCopyToClipboard(text) {
+    const textArea = document.createElement("textarea");
+    textArea.value = text;
+    textArea.style.position = "fixed";
+    textArea.style.left = "-999999px";
+    textArea.style.top = "-999999px";
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    
+    try {
+        document.execCommand('copy');
+        showNotification('URL copiada para a área de transferência!');
+    } catch (err) {
+        console.error('Erro ao copiar:', err);
+        showNotification('Erro ao copiar URL');
+    }
+    
+    document.body.removeChild(textArea);
+}
+
+// Função para mostrar notificação
+function showNotification(message) {
+    // Criar elemento de notificação
+    const notification = document.createElement('div');
+    notification.className = 'copy-notification';
+    notification.textContent = message;
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: var(--color-blue);
+        color: white;
+        padding: 12px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        z-index: 10000;
+        font-size: 14px;
+        font-weight: 500;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: all 0.3s ease;
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Animar entrada
+    setTimeout(() => {
+        notification.style.opacity = '1';
+        notification.style.transform = 'translateX(0)';
+    }, 100);
+    
+    // Remover após 3 segundos
+    setTimeout(() => {
+        notification.style.opacity = '0';
+        notification.style.transform = 'translateX(100%)';
+        setTimeout(() => {
+            if (document.body.contains(notification)) {
+                document.body.removeChild(notification);
+            }
+        }, 300);
+    }, 3000);
+}
+
+// Adicionar botão de compartilhamento nativo como alternativa
+function addNativeShareButton() {
+    // Adiciona um botão de compartilhamento nativo se suportado
+    if (navigator.share) {
+        const shareButtons = document.querySelectorAll('.footer-sharing-buttons');
+        shareButtons.forEach(container => {
+            const nativeShareBtn = document.createElement('a');
+            nativeShareBtn.href = '#';
+            nativeShareBtn.className = 'footer-share-btn footer-native-share';
+            nativeShareBtn.title = 'Compartilhar';
+            nativeShareBtn.innerHTML = `
+                <i class="fas fa-share-alt"></i>
+            `;
+            
+            nativeShareBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                shareNative();
+            });
+            
+            container.appendChild(nativeShareBtn);
+        });
+    }
+}
+
 // Auto-inicialização quando o script é carregado
-initSharedComponents(); 
+initSharedComponents();
+
+// Adicionar botão nativo após componentes serem carregados
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(addNativeShareButton, 1000);
+}); 

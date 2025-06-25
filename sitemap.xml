@@ -5,22 +5,142 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
+<!-- Página Principal -->
 <url>
   <loc>https://www.aionsolution.com.br/</loc>
-  <lastmod>2024-06-24T12:00:00+00:00</lastmod>
+  <lastmod>2024-12-21T12:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>1.00</priority>
 </url>
+
+<!-- Soluções por Segmento -->
 <url>
   <loc>https://www.aionsolution.com.br/servicos.html</loc>
-  <lastmod>2024-07-29</lastmod>
+  <lastmod>2024-12-21T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
+
+<url>
+  <loc>https://www.aionsolution.com.br/ecommerce.html</loc>
+  <lastmod>2024-12-21T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
+
+<url>
+  <loc>https://www.aionsolution.com.br/consultoria.html</loc>
+  <lastmod>2024-12-21T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
+
+<!-- Seções Importantes da Página Principal -->
+<url>
+  <loc>https://www.aionsolution.com.br/#solutions</loc>
+  <lastmod>2024-12-21T12:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
+
 <url>
-  <loc>https://www.aionsolution.com.br/ecommerce.html</loc>
-  <lastmod>2024-07-30</lastmod>
+  <loc>https://www.aionsolution.com.br/#cases</loc>
+  <lastmod>2024-12-21T12:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.aionsolution.com.br/#founders</loc>
+  <lastmod>2024-12-21T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://www.aionsolution.com.br/#resources</loc>
+  <lastmod>2024-12-21T12:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<!-- Seções de Recursos Específicas -->
+<url>
+  <loc>https://www.aionsolution.com.br/servicos.html#resources</loc>
+  <lastmod>2024-12-21T12:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://www.aionsolution.com.br/ecommerce.html#resources</loc>
+  <lastmod>2024-12-21T12:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://www.aionsolution.com.br/consultoria.html#resources</loc>
+  <lastmod>2024-12-21T12:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<!-- Seções Específicas das Páginas de Soluções -->
+<url>
+  <loc>https://www.aionsolution.com.br/servicos.html#metodo</loc>
+  <lastmod>2024-12-21T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://www.aionsolution.com.br/servicos.html#how-works</loc>
+  <lastmod>2024-12-21T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://www.aionsolution.com.br/servicos.html#precos</loc>
+  <lastmod>2024-12-21T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://www.aionsolution.com.br/ecommerce.html#metodo</loc>
+  <lastmod>2024-12-21T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://www.aionsolution.com.br/ecommerce.html#how-works</loc>
+  <lastmod>2024-12-21T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://www.aionsolution.com.br/ecommerce.html#precos</loc>
+  <lastmod>2024-12-21T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://www.aionsolution.com.br/consultoria.html#metodo</loc>
+  <lastmod>2024-12-21T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://www.aionsolution.com.br/consultoria.html#how-works</loc>
+  <lastmod>2024-12-21T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
 </url>
 
 </urlset> 

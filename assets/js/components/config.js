@@ -92,6 +92,36 @@ window.AION_CONFIG = {
                     { title: "WhatsApp", url: "https://whatsa.me/5511965833332/?t=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20quero%20saber%20mais%20sobre%20o%20Aion.&type=phone_number&app_absent=0", external: true },
                     { title: "E-mail", url: "mailto:contato@aionsolution.com.br" }
                 ]
+            },
+            {
+                title: "Compartilhar",
+                type: "sharing",
+                links: [
+                    { 
+                        title: "Facebook", 
+                        url: "https://www.facebook.com/dialog/share?href=https%3A%2F%2Fwww.aionsolution.com.br&app_id=289255557788943",
+                        icon: "fab fa-facebook-f",
+                        external: true 
+                    },
+                    { 
+                        title: "WhatsApp", 
+                        url: "https://api.whatsapp.com/send?text=Conheça%20a%20AION%20-%20Soluções%20de%20IA%20para%20empresas%20https%3A%2F%2Fwww.aionsolution.com.br",
+                        icon: "fab fa-whatsapp",
+                        external: true 
+                    },
+                    { 
+                        title: "LinkedIn", 
+                        url: "https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.aionsolution.com.br",
+                        icon: "fab fa-linkedin-in",
+                        external: true 
+                    },
+                    { 
+                        title: "Twitter", 
+                        url: "https://twitter.com/intent/tweet?text=Conheça%20a%20AION%20-%20Soluções%20de%20IA%20para%20empresas&url=https%3A%2F%2Fwww.aionsolution.com.br",
+                        icon: "fab fa-twitter",
+                        external: true 
+                    }
+                ]
             }
         ]
     }

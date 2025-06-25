@@ -28,8 +28,9 @@
 
 .footer-links {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+    align-items: start;
 }
 
 .footer-section h4 {
@@ -108,6 +109,86 @@
     color: #fff;
 }
 
+/* Estilos para seção de compartilhamento - Design Clean */
+.footer-sharing-section {
+    align-self: start;
+}
+
+.footer-sharing-section h4 {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-sharing-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.footer-share-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: var(--surface-glass);
+    border: 1px solid var(--border-glass);
+    border-radius: 10px;
+    color: var(--color-gray-400) !important;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 0 !important;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.footer-share-btn:hover {
+    color: white !important;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.footer-share-btn i {
+    font-size: 1rem;
+    z-index: 2;
+    position: relative;
+}
+
+.footer-share-btn span {
+    display: none; /* Oculta texto, apenas ícones */
+}
+
+/* Cores específicas para cada rede social com gradiente sutil */
+.footer-share-btn[href*="facebook"]:hover {
+    background: linear-gradient(135deg, #1877f2, #42a5f5) !important;
+    border-color: #1877f2;
+}
+
+.footer-share-btn[href*="whatsapp"]:hover {
+    background: linear-gradient(135deg, #25d366, #4caf50) !important;
+    border-color: #25d366;
+}
+
+.footer-share-btn[href*="linkedin"]:hover {
+    background: linear-gradient(135deg, #0077b5, #2196f3) !important;
+    border-color: #0077b5;
+}
+
+.footer-share-btn[href*="twitter"]:hover {
+    background: linear-gradient(135deg, #1da1f2, #42a5f5) !important;
+    border-color: #1da1f2;
+}
+
+/* Botão de compartilhamento nativo */
+.footer-native-share:hover {
+    background: linear-gradient(135deg, var(--color-blue), #42a5f5) !important;
+    border-color: var(--color-blue);
+}
+
 @media (max-width: 768px) {
     .footer-content {
         grid-template-columns: 1fr;
@@ -116,9 +197,29 @@
     }
     
     .footer-links {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 1.5rem;
-        text-align: left;
+        text-align: center;
+    }
+    
+    /* Em mobile, a seção de compartilhamento fica mais compacta */
+    .footer-sharing-section {
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+    
+    .footer-sharing-buttons {
+        justify-content: center;
+        gap: 0.75rem;
+    }
+    
+    .footer-share-btn {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .footer-share-btn i {
+        font-size: 1.1rem;
     }
 
     .footer-brand {
