@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    
+    <!-- SEO Meta Tags -->
+    <title>AION | Consultoria Estratégica em Dados e IA</title>
+    <meta name="description" content="Alavanque seu negócio com a consultoria estratégica da AION. Transformamos dados brutos em planos de ação para crescimento, eficiência e inovação.">
+    <meta name:="keywords" content="consultoria de dados, consultoria de ia, estratégia de dados, business intelligence, transformação digital, consultoria para empresas">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.aionsolution.com.br/consultoria.html">
+    <meta property="og:title" content="AION | Consultoria Estratégica em Dados e IA">
+    <meta property="og:description" content="Alavanque seu negócio com a consultoria estratégica da AION. Transformamos dados brutos em planos de ação para crescimento, eficiência e inovação.">
+    <meta property="og:image" content="https://www.aionsolution.com.br/assets/images/solutions/aion-consulting.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.aionsolution.com.br/consultoria.html">
+    <meta property="twitter:title" content="AION | Consultoria Estratégica em Dados e IA">
+    <meta property="twitter:description" content="Alavanque seu negócio com a consultoria estratégica da AION. Transformamos dados brutos em planos de ação para crescimento, eficiência e inovação.">
+    <meta property="twitter:image" content="https://www.aionsolution.com.br/assets/images/solutions/aion-consulting.webp">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="icon" type="image/webp" href="assets/images/aion-favicon.webp">
+    <link rel="apple-touch-icon" href="assets/images/aion-favicon.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Estilos -->
+    <!-- <link rel="stylesheet" href="assets/css/styles.css"> -->
+    <link rel="stylesheet" href="assets/css/main.css" onerror="console.error('Erro ao carregar main.css')">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <script>
+        // Configuração específica para página de serviços
+        // Sobrescreve configuração padrão para adaptar menu aos conteúdos desta página
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.AION_CONFIG) {
+                // Adapta navegação para página de serviços - Menu simplificado
+                window.AION_CONFIG.navigation.main = [
+                    {
+                        title: "Início",
+                        id: "inicio",
+                        url: "index.html"
+                    },
+                    {
+                        title: "Soluções",
+                        id: "solutions",
+                        dropdown: [
+                            {
+                                title: "Para Empresas de Serviços",
+                                description: "Otimize sua operação e atendimento.",
+                                url: "servicos.html"
+                            },
+                            {
+                                title: "Para E-commerces",
+                                description: "Transforme dados em lucro e eficiência.",
+                                url: "ecommerce.html"
+                            },
+                            {
+                                title: "Consultoria Estratégica",
+                                description: "Estratégias de quem transformou bilhões.",
+                                url: "consultoria.html"
+                            }
+                        ]
+                    },
+                    {
+                        title: "Método",
+                        id: "metodo"
+                    },
+                    {
+                        title: "Como Funciona",
+                        id: "how-works"
+                    },
+                    {
+                        title: "Cases",
+                        id: "cases"
+                    },
+                    {
+                        title: "Preços",
+                        id: "precos"
+                    }
+                ];
+            }
+        });
+    </script>
+    <!-- ============================================
+         COMPONENTES COMPARTILHADOS 
+         ============================================ -->
+    
+    <!-- Container para Header + Barra de Progresso -->
+    <div id="shared-header"></div>
+    
+    <!-- Container para Menu Mobile + Hambúrguer -->
+    <div id="shared-mobile-menu"></div>
+
+    <!-- ============================================
+         CONTEÚDO OTIMIZADO DA PÁGINA SERVIÇOS
+         ============================================ -->
+
+    <!-- Hero Section -->
+	<section id="home" class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="assets/videos/home-hero-section-services.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <img src="assets/logos/aionLogoWhite.svg" alt="AION" class="hero-logo">
+
+			<!-- Badges de Setores Premium - Carrossel -->
+            <div class="service-badges">
+                <div class="badge-carousel">
+                    <div class="badge-track">
+                        <!-- Primeiro conjunto -->
+                        <div class="service-badge">
+                            <i class="material-icons">trending_up</i>
+                            <span>Startups</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">business</i>
+                            <span>Scale-ups</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">domain</i>
+                            <span>Corporações</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">store</i>
+                            <span>E-commerce</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">local_hospital</i>
+                            <span>Saúde</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">checkroom</i>
+                            <span>Varejo</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">account_balance</i>
+                            <span>Fintech</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">school</i>
+                            <span>EdTech</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">engineering</i>
+                            <span>Manufatura</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">campaign</i>
+                            <span>Marketing</span>
+                        </div>
+                        
+                        <!-- Segundo conjunto (duplicado para scroll infinito) -->
+                        <div class="service-badge">
+                            <i class="material-icons">trending_up</i>
+                            <span>Startups</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">business</i>
+                            <span>Scale-ups</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">domain</i>
+                            <span>Corporações</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">store</i>
+                            <span>E-commerce</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">local_hospital</i>
+                            <span>Saúde</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">checkroom</i>
+                            <span>Varejo</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">account_balance</i>
+                            <span>Fintech</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">school</i>
+                            <span>EdTech</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">engineering</i>
+                            <span>Manufatura</span>
+                        </div>
+                        <div class="service-badge">
+                            <i class="material-icons">campaign</i>
+                            <span>Marketing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="hero-title">TRANSFORME DADOS <br />EM ESTRATÉGIA</h1>
+            <p class="hero-subtitle">Consultoria executiva que gerou <br />mais de R$ 3 Bilhões em resultados</p>
+            <div class="hero-buttons">
+                <a href="https://www.aionsolution.com.br/request_consulting?type=u" class="btn-primary">Agendar Análise Estratégica</a>
+                <a href="#metodo" class="btn-secondary">Conhecer Metodologia</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Método AION Section -->
+    <section id="metodo" class="method-section particles-section">
+        <div class="particles"></div>
+        <div class="container">
+            <div class="method-header">
+                <h2 class="section-title">O que o AION faz pelo seu Negócio</h2>
+            </div>
+            
+            <!-- Transformação -->
+            <div class="transformation-wrapper">
+                <div class="transformation-content">
+                    
+                    <div class="transformation-bridge-layout">
+                        <div class="transformation-grid-3col">
+                            <!-- Headers das 3 colunas -->
+                            <div class="transformation-headers">
+                                <div class="before-header">
+                                    <h3>Sua Situação Atual</h3>
+                                    <p>Como a maioria dos negócios em crescimento</p>
+                                </div>
+                                <div class="bridge-header-spacer"></div>
+                                <div class="after-header desktop-only">
+                                    <h3>Com a Consultoria AION</h3>
+                                    <p>Estratégia clara para crescimento sustentável</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Conteúdo das 3 colunas -->
+                            <div class="transformation-content-grid">
+                                <!-- Coluna ANTES -->
+                                <div class="before-column">
+                                    <div class="transformation-item">
+                                        <i class="material-icons status-icon problem">account_balance_wallet</i>
+                                        <span>Dados espalhados e sem controle</span>
+                                    </div>
+                                    <div class="transformation-item">
+                                        <i class="material-icons status-icon problem">help_outline</i>
+                                        <span>Decisões sem insights reais</span>
+                                    </div>
+                                    <div class="transformation-item">
+                                        <i class="material-icons status-icon problem">trending_down</i>
+                                        <span>Sem metodologia estruturada</span>
+                                    </div>
+                                    <div class="transformation-item">
+                                        <i class="material-icons status-icon problem">visibility_off</i>
+                                        <span>Falta de direcionamento estratégico</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Coluna CENTRAL (Imagem AION) -->
+                                <div class="bridge-column">
+                                    <div class="bridge-content">
+                                        <div class="bridge-header">
+                                            <div class="aion-bridge-badge">AION</div>
+                                            <p>Transformando dados em estratégia</p>
+                                        </div>
+                                        <div class="aion-bridge-image">
+                                            <img src="assets/images/solutions/aion-consulting.webp" alt="Consultoria estratégica e transformação digital AION" class="bridge-img" loading="lazy">
+                                            <div class="bridge-glow"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Header "Com AION" para mobile (aparece após a imagem) -->
+                                    <div class="after-header mobile-only">
+                                        <h3>Com a Consultoria AION</h3>
+                                        <p>Estratégia clara para crescimento sustentável</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Coluna DEPOIS -->
+                                <div class="after-column">
+                                    <div class="transformation-item">
+                                        <i class="material-icons status-icon success">account_balance</i>
+                                        <span>Diagnóstico financeiro da operação</span>
+                                    </div>
+                                    <div class="transformation-item">
+                                        <i class="material-icons status-icon success">insights</i>
+                                        <span>Insights para otimizar resultados</span>
+                                    </div>
+                                    <div class="transformation-item">
+                                        <i class="material-icons status-icon success">auto_awesome</i>
+                                        <span>Growth hacking com metodologia prática</span>
+                                    </div>
+                                    <div class="transformation-item">
+                                        <i class="material-icons status-icon success">explore</i>
+                                        <span>Estratégia baseada em dados</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Os 4 Passos da Metodologia AION -->
+            <div class="pillars-wrapper">
+                <div class="pillars-header">
+                    <h3 class="pillars-title">Nossa Metodologia em 4 Passos</h3>
+                    <p class="pillars-subtitle">Processo estruturado para transformação estratégica</p>
+                </div>
+                <div class="pillars-grid">
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <span class="pillar-step">1</span>
+                        </div>
+                        <div class="pillar-content">
+                            <p class="pillar-title"><strong>Diagnóstico e Imersão</strong></p>
+                            <p>Mapeamos seus processos, fontes de dados e desafios de negócio para entender profundamente sua realidade e seus objetivos.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <span class="pillar-step">2</span>
+                        </div>
+                        <div class="pillar-content">
+                            <p class="pillar-title"><strong>Plano de Ação Estratégico</strong></p>
+                            <p>Desenvolvemos um roadmap claro com as iniciativas, tecnologias e KPIs para transformar seus dados em um diferencial competitivo.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <span class="pillar-step">3</span>
+                        </div>
+                        <div class="pillar-content">
+                            <p class="pillar-title"><strong>Implementação de Testes</strong></p>
+                            <p>Aplicamos metodologia de growth hacking para testar hipóteses rapidamente, validar estratégias e identificar o que realmente funciona no seu mercado.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <span class="pillar-step">4</span>
+                        </div>
+                        <div class="pillar-content">
+                            <p class="pillar-title"><strong>Escala</strong></p>
+                            <p>Apoiamos a execução do plano, medindo os resultados e ajustando a estratégia para garantir o máximo impacto no seu negócio.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA Seção Método -->
+                <div class="section-cta-container">
+                    <a href="https://www.aionsolution.com.br/request_consulting?type=u" target="_blank" class="section-cta">
+                        <span class="section-cta-text">
+                            <span class="desktop-text">Quero transformar meu negócio com dados e estratégia</span>
+                            <span class="mobile-text">Começar transformação</span>
+                        </span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona Section -->
+    <section id="how-works" class="section how-works-section">
+        <div class="container">
+            <h2 class="section-title">Sua Transformação Digital em 90 Dias</h2>
+            <p class="section-subtitle">Da intuição aos dados: metodologia estratégica em 3 fases</p>
+            
+            <div class="transformation-journey">
+                <!-- Progress Timeline -->
+                <div class="journey-timeline">
+                    <div class="timeline-progress">
+                        <div class="progress-line"></div>
+                        <div class="progress-dots">
+                            <div class="progress-dot active" data-phase="1"></div>
+                            <div class="progress-dot" data-phase="2"></div>
+                            <div class="progress-dot" data-phase="3"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Journey Phases -->
+                <div class="journey-phases">
+                    <!-- Fase 1: Diagnóstico e Imersão -->
+                    <div class="journey-phase" data-phase="1">
+                        <div class="phase-content">
+                            <div class="phase-header">
+                                <div class="phase-timing">
+                                    <span class="phase-days">Dias 1-30</span>
+                                    <div class="phase-badge setup">Diagnóstico e Imersão</div>
+                                </div>
+                                <h3>Organização e Mapeamento dos Dados</h3>
+                                <p class="phase-description">Organizamos seus dados espalhados e mapeamos processos para criar uma base sólida de decisão</p>
+                            </div>
+                            
+                            <div class="phase-details">
+                                <div class="phase-actions">
+                                    <div class="action-item">
+                                        <i class="material-icons">folder_open</i>
+                                        <div class="action-content">
+                                            <strong>Organização Completa dos Dados</strong>
+                                            <p>Centralizamos dados financeiros, vendas e marketing dispersos em uma única visão</p>
+                                        </div>
+                                    </div>
+                                    <div class="action-item">
+                                        <i class="material-icons">assessment</i>
+                                        <div class="action-content">
+                                            <strong>Diagnóstico Financeiro da Operação</strong>
+                                            <p>Análise profunda do fluxo de caixa e indicadores financeiros</p>
+                                        </div>
+                                    </div>
+                                    <div class="action-item">
+                                        <i class="material-icons">explore</i>
+                                        <div class="action-content">
+                                            <strong>Mapeamento de Oportunidades</strong>
+                                            <p>Identificação de gargalos e oportunidades de crescimento ocultas</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="phase-results">
+                                    <div class="result-metric">
+                                        <span class="metric-number">100%</span>
+                                        <span class="metric-label">Dados organizados</span>
+                                    </div>
+                                    <div class="result-testimonial">
+                                        <p>"Finalmente conseguimos ver onde estava nosso dinheiro e quais investimentos realmente davam retorno. O diagnóstico foi revelador."</p>
+                                        <span>- Ana Costa, Diretora Financeira</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="phase-visual">
+							<img src="assets/images/solutions/diagnostico.webp" alt="Diagnóstico estratégico e organização de dados AION" class="bridge-img" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Fase 2: Plano de Ação Estratégico -->
+                    <div class="journey-phase" data-phase="2">
+                        <div class="phase-content">
+                            <div class="phase-header">
+                                <div class="phase-timing">
+                                    <span class="phase-days">Dias 31-60</span>
+                                    <div class="phase-badge campaigns">Plano Estratégico</div>
+                                </div>
+                                <h3>Roadmap e Estratégia Baseada em Dados</h3>
+                                <p class="phase-description">Desenvolvemos o plano de ação estratégico com KPIs claros e direcionamento fundamentado em insights reais</p>
+                            </div>
+                            
+                            <div class="phase-details">
+                                <div class="phase-actions">
+                                    <div class="action-item">
+                                        <i class="material-icons">route</i>
+                                        <div class="action-content">
+                                            <strong>Roadmap Estratégico Personalizado</strong>
+                                            <p>Plano detalhado com iniciativas, tecnologias e KPIs específicos para seu negócio</p>
+                                        </div>
+                                    </div>
+                                    <div class="action-item">
+                                        <i class="material-icons">insights</i>
+                                        <div class="action-content">
+                                            <strong>Insights para Otimizar Resultados</strong>
+                                            <p>Análise de dados que gera recomendações práticas e acionáveis</p>
+                                        </div>
+                                    </div>
+                                    <div class="action-item">
+                                        <i class="material-icons">explore</i>
+                                        <div class="action-content">
+                                            <strong>Estratégia Baseada em Dados</strong>
+                                            <p>Direcionamento estratégico fundamentado em evidências ao invés de intuição</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="phase-results">
+                                    <div class="result-metric">
+                                        <span class="metric-number">+85%</span>
+                                        <span class="metric-label">Clareza estratégica</span>
+                                    </div>
+                                    <div class="result-testimonial">
+                                        <p>"Saímos das decisões por intuição para uma estratégia fundamentada em dados. O roadmap nos deu clareza total sobre onde investir."</p>
+                                        <span>- Carlos Mendes, CEO</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="phase-visual">
+							<img src="assets/images/solutions/estrategia.webp" alt="Desenvolvimento de estratégia baseada em dados e roadmap personalizado" class="bridge-img" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Fase 3: Implementação de Testes -->
+                    <div class="journey-phase" data-phase="3">
+                        <div class="phase-content">
+                            <div class="phase-header">
+                                <div class="phase-timing">
+                                    <span class="phase-days">Dias 61-90</span>
+                                    <div class="phase-badge growth">Growth Hacking</div>
+                                </div>
+                                <h3>Testes e Validação de Estratégias</h3>
+                                <p class="phase-description">Aplicamos metodologia de growth hacking para testar hipóteses rapidamente e validar o que realmente funciona</p>
+                            </div>
+                            
+                            <div class="phase-details">
+                                <div class="phase-actions">
+                                    <div class="action-item">
+                                        <i class="material-icons">science</i>
+                                        <div class="action-content">
+                                            <strong>Metodologia de Growth Hacking</strong>
+                                            <p>Testes rápidos de hipóteses para identificar o que realmente funciona no seu mercado</p>
+                                        </div>
+                                    </div>
+                                    <div class="action-item">
+                                        <i class="material-icons">speed</i>
+                                        <div class="action-content">
+                                            <strong>Experimentos Controlados</strong>
+                                            <p>Implementação de testes A/B e experimentos para validar estratégias</p>
+                                        </div>
+                                    </div>
+                                    <div class="action-item">
+                                        <i class="material-icons">auto_awesome</i>
+                                        <div class="action-content">
+                                            <strong>Otimização Baseada em Resultados</strong>
+                                            <p>Ajustes contínuos baseados nos dados dos testes realizados</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="phase-results">
+                                    <div class="result-metric">
+                                        <span class="metric-number">3x</span>
+                                        <span class="metric-label">Velocidade de validação</span>
+                                    </div>
+                                    <div class="result-testimonial">
+                                        <p>"Com os testes estruturados da AION, descobrimos em semanas o que antes levava meses para entender. Nossa velocidade de inovação triplicou."</p>
+                                        <span>- Fernanda Silva, Head de Growth</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="phase-visual">
+							<img src="assets/images/solutions/growth.webp" alt="Implementação de growth hacking e testes de validação estratégica" class="bridge-img" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Fase 4: Escala -->
+                    <div class="journey-phase" data-phase="4">
+                        <div class="phase-content">
+                            <div class="phase-header">
+                                <div class="phase-timing">
+                                    <span class="phase-days">Contínuo</span>
+                                    <div class="phase-badge scale">Escala</div>
+                                </div>
+                                <h3>Expansão e Crescimento Sustentável</h3>
+                                <p class="phase-description">Escalamos as estratégias validadas com mentoria executiva e implementação de IA para crescimento sustentável</p>
+                            </div>
+                            
+                            <div class="phase-details">
+                                <div class="phase-actions">
+                                    <div class="action-item">
+                                        <i class="material-icons">trending_up</i>
+                                        <div class="action-content">
+                                            <strong>Expansão das Estratégias Validadas</strong>
+                                            <p>Implementação em grande escala das táticas que provaram funcionar nos testes</p>
+                                        </div>
+                                    </div>
+                                    <div class="action-item">
+                                        <i class="material-icons">psychology</i>
+                                        <div class="action-content">
+                                            <strong>Implementação de IA Avançada</strong>
+                                            <p>Soluções de inteligência artificial para automatizar e otimizar processos</p>
+                                        </div>
+                                    </div>
+                                    <div class="action-item">
+                                        <i class="material-icons">school</i>
+                                        <div class="action-content">
+                                            <strong>Mentoria Executiva Contínua</strong>
+                                            <p>Acompanhamento estratégico para manter o crescimento sustentável</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="phase-results">
+                                    <div class="result-metric">
+                                        <span class="metric-number">10x</span>
+                                        <span class="metric-label">Potencial de escala</span>
+                                    </div>
+                                    <div class="result-testimonial">
+                                        <p>"Com a AION, saímos de uma startup confusa para uma scaleup com processos claros e crescimento previsível. O apoio é contínuo e transformador."</p>
+                                        <span>- Ricardo Santos, CEO</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="phase-visual">
+							<img src="assets/images/solutions/escala.webp" alt="Escala e crescimento sustentável com mentoria executiva e IA" class="bridge-img" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA Seção Como Funciona -->
+                <div class="section-cta-container">
+                    <a href="https://www.aionsolution.com.br/request_consulting?type=u" target="_blank" class="section-cta">
+                        <span class="section-cta-text">
+                            <span class="desktop-text">Agendar análise estratégica gratuita</span>
+                            <span class="mobile-text">Agendar análise gratuita</span>
+                        </span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+        <!-- Cases Section -->
+		<section id="cases" class="section">
+			<div class="container">
+				<h2 class="section-title">Cases de Transformação Estratégica</h2>
+				<p class="section-subtitle">Como transformamos gigantes do varejo com consultoria estratégica baseada em dados</p>
+				
+				<div class="cases-grid">
+					<!-- Case C&A -->
+					<div class="case-card case-ecommerce">
+						<div class="case-header">
+							<div class="case-logo">
+								<div class="case-type-badge">Varejo Digital</div>
+								<div class="case-company">C&A Digital</div>
+								<div class="case-location">Consultoria Estratégica - 1 ano</div>
+							</div>
+							<span class="case-period">"Quando o VP nos convidou, disse que o problema era o site. Descobrimos que na verdade era o formato da operação como um todo que impedia o crescimento. Com nosso DRE por produto, evitamos queimar milhões na Black Friday e fizemos a melhor Black Friday da história da C&A Digital."</span>
+						</div>
+						<div class="case-body">
+							<div class="case-description">
+								<p>DRE por produto, metodologia de gestão com playbooks e otimização estratégica de growth</p>
+							</div>
+							<div class="case-metrics">
+								<div class="metric">
+									<span class="metric-value">+40%</span>
+									<span class="metric-label">Faturamento Digital</span>
+								</div>
+								<div class="metric">
+									<span class="metric-value">+66%</span>
+									<span class="metric-label">Crescimento do Lucro</span>
+								</div>
+							</div>
+						</div>
+					</div>
+	
+					<!-- Case Dafiti -->
+					<div class="case-card case-ecommerce">
+						<div class="case-header">
+							<div class="case-logo">
+								<div class="case-type-badge">E-commerce Fashion</div>
+								<div class="case-company">Dafiti Group</div>
+								<div class="case-location">Transformação Estratégica - 6 países</div>
+							</div>
+							<span class="case-period">"Implementamos sistemas de dados e processos que transformaram radicalmente a operação. Com DRE por produto e correlação volume x preço, descobrimos o preço que gera mais lucro absoluto e otimizamos cada real investido para maximizar o lucro total da companhia."</span>
+						</div>
+						<div class="case-body">
+							<div class="case-description">
+								<p>Sistema de planejamento baseado em dados para 150+ compradores e 6 países</p>
+							</div>
+							<div class="case-metrics">
+								<div class="metric">
+									<span class="metric-value">R$ 1Bi → R$ 2Bi</span>
+									<span class="metric-label">Faturamento Anual</span>
+								</div>
+								<div class="metric">
+									<span class="metric-value">-R$ 120M → Positivo</span>
+									<span class="metric-label">De Prejuízo para Lucro</span>
+								</div>
+							</div>
+						</div>
+					</div>
+	
+					<!-- Case EMS -->
+					<div class="case-card case-ecommerce">
+						<div class="case-header">
+							<div class="case-logo">
+								<div class="case-type-badge">Farmacêutica</div>
+								<div class="case-company">EMS</div>
+								<div class="case-location">Consultoria Executiva - 3.5 anos</div>
+							</div>
+							<span class="case-period">"Durante 3 anos e meio como consultores na maior farmacêutica do Brasil, construímos um DRE por produto completo e desenvolvemos um marketplace para farmácias que saiu do zero e atingiu números extraordinários em tempo recorde."</span>
+						</div>
+						<div class="case-body">
+							<div class="case-description">
+								<p>DRE por produto e criação de marketplace farmacêutico do zero</p>
+							</div>
+							<div class="case-metrics">
+								<div class="metric">
+									<span class="metric-value">R$ 450M</span>
+									<span class="metric-label">Marketplace em 1.5 anos</span>
+								</div>
+								<div class="metric">
+									<span class="metric-value">100%</span>
+									<span class="metric-label">Organização de Dados</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- CTA Seção Cases -->
+				<div class="section-cta-container">
+					<a href="https://www.aionsolution.com.br/request_consulting?type=u" target="_blank" class="section-cta">
+						<span class="section-cta-text">
+							<span class="desktop-text">Alcance resultados similares com nossa consultoria estratégica</span>
+							<span class="mobile-text">Transforme seu negócio</span>
+						</span>
+						<i class="fas fa-arrow-right"></i>
+					</a>
+				</div>
+			</div>
+		</section>
+
+
+
+    <!-- Seção Fundadores -->
+    <div id="fundadores"></div>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section faq-section">
+        <div class="faq-particles"></div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Perguntas Frequentes</h2>
+                <p class="section-subtitle">Tire suas dúvidas sobre a Consultoria Estratégica AION</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Qual o diferencial da consultoria AION comparado a outras consultorias?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Não somos consultores teóricos. Somos executivos que transformaram gigantes como Dafiti (R$1Bi→R$2Bi, de -R$120M para lucro), C&A (+40% faturamento, +66% lucro) e EMS (marketplace R$450M do zero). Combinamos experiência executiva real com implementação técnica hands-on. Entregamos resultados, não apenas PowerPoints.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Como vocês garantem que vão resolver meus problemas específicos?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Começamos sempre com um diagnóstico profundo e personalizado. Na C&A, o VP disse que o problema era o site, mas descobrimos que era o formato da operação. Essa abordagem investigativa nos permite identificar as causas raiz reais e criar soluções baseadas em dados, não em suposições.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quanto tempo demora para ver resultados concretos?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Em 30 dias você tem o diagnóstico completo com insights acionáveis. Em 60 dias implementamos o plano estratégico. Em 90 dias aplicamos growth hacking para validar o que funciona. Na C&A, nossa análise evitou que queimassem milhões 3 dias antes da Black Friday e fizeram a melhor Black Friday da história.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>A consultoria funciona para meu tipo e tamanho de empresa?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Já transformamos desde startups até corporações multinacionais. Na Dafiti, gerenciamos operações em 6 países com 150+ compradores. Na EMS, atuamos por 3,5 anos na maior farmacêutica do Brasil. Nossa metodologia se adapta ao contexto, mas os princípios de dados e estratégia funcionam em qualquer escala.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Como funciona essa metodologia de growth hacking que vocês aplicam?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Substituímos decisões por intuição por testes rápidos e dados. Na Dafiti, criamos correlação volume x preço para descobrir o preço que gera mais lucro absoluto. Testamos hipóteses em semanas, não meses. Isso acelera 3x a velocidade de inovação e elimina investimentos em estratégias que não funcionam.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Qual o investimento e como sei que vale a pena?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O investimento varia conforme escopo, mas nosso ROI é comprovado: C&A cresceu 66% em lucro, Dafiti saiu de -R$120M para positivo. Oferecemos diagnóstico inicial para mostrar o potencial de retorno no seu negócio específico. Agende uma análise gratuita para ver sua oportunidade de transformação.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Preciso de equipe técnica ou vocês implementam tudo?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Fazemos toda a implementação técnica e treinamos sua equipe. Não entregamos apenas estratégia - implementamos DRE por produto, dashboards, sistemas de BI e processos completos. Sua equipe fica capacitada para continuar sem dependência externa. É consultoria executiva, não apenas consultiva.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         COMPONENTES COMPARTILHADOS 
+         ============================================ -->
+    
+    <!-- Container para Footer -->
+    <div id="shared-footer"></div>
+    
+    <!-- Container para Botão WhatsApp -->
+    <div id="shared-whatsapp"></div>
+
+    <!-- ============================================
+         SCRIPTS
+         ============================================ -->
+    
+    <!-- Configuração -->
+    <script src="assets/js/components/config.js" onerror="console.error('Erro ao carregar config.js')"></script>
+    
+    <!-- Componentes Compartilhados -->
+    <script src="assets/js/components/shared-components.js" onerror="console.error('Erro ao carregar shared-components.js')"></script>
+    
+    <!-- Scripts específicos da página -->
+    <script src="assets/js/script.js" onerror="console.error('Erro ao carregar script.js')"></script>
+    
+    <!-- Debug Script para GitHub Pages -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Verifica se o CSS foi carregado
+            const mainCss = document.querySelector('link[href*="main-servicos.css"]');
+            if (mainCss) {
+                console.log('✅ main-servicos.css carregado');
+            } else {
+                console.error('❌ main-servicos.css não encontrado');
+            }
+            
+            // Verifica se AION_CONFIG foi carregado
+            if (window.AION_CONFIG) {
+                console.log('✅ AION_CONFIG carregado');
+            } else {
+                console.error('❌ AION_CONFIG não encontrado');
+            }
+            
+            // Força recarga dos componentes se não carregaram
+            setTimeout(function() {
+                if (!document.querySelector('#shared-header').innerHTML) {
+                    console.warn('⚠️ Componentes não carregaram, tentando novamente...');
+                    if (window.initSharedComponents) {
+                        window.initSharedComponents();
+                    }
+                }
+            }, 2000);
+        });
+    </script>
+</body>
+</html> 

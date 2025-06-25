@@ -45,13 +45,13 @@ window.AION_CONFIG = {
                         title: "Para E-commerces",
                         description: "Transforme dados em lucro e eficiência.",
                         url: "ecommerce.html"
+                    },
+                    {
+                        title: "Consultoria Estratégica",
+                        description: "Estratégias de quem transformou bilhões.",
+                        url: "consultoria.html"
                     }
                 ]
-            },
-            {
-                title: "Consultoria",
-                id: "consultoria",
-                url: "servicos.html#consultoria"
             },
             {
                 title: "Cases",
@@ -74,7 +74,7 @@ window.AION_CONFIG = {
                 links: [
                     { title: "Para Empresas de Serviços", url: "servicos.html" },
                     { title: "Para E-commerces", url: "ecommerce.html" },
-                    { title: "Consultoria Estratégica", url: "servicos.html#consultoria" },
+                    { title: "Consultoria Estratégica", url: "consultoria.html" },
                 ]
             },
             {
@@ -104,10 +104,10 @@ const navLinks = [
         isDropdown: true,
         dropdownLinks: [
             { title: "Para Empresas de Serviços", url: "servicos.html", description: "Otimize sua operação e atendimento." },
-            { title: "Para E-commerces", url: "ecommerce.html", description: "Transforme dados em lucro e eficiência." }
+            { title: "Para E-commerces", url: "ecommerce.html", description: "Transforme dados em lucro e eficiência." },
+            { title: "Consultoria Estratégica", url: "consultoria.html", description: "Estratégias de quem transformou bilhões." }
         ]
     },
-    { title: "Consultoria", url: "servicos.html#consultoria" },
     { title: "Cases", url: "index.html#cases" },
     { title: "Fundadores", url: "index.html#fundadores" }
 ];
@@ -118,7 +118,7 @@ const footerSections = {
         links: [
             { title: "Para Empresas de Serviços", url: "servicos.html" },
             { title: "Para E-commerces", url: "ecommerce.html" },
-            { title: "Consultoria Estratégica", url: "servicos.html#consultoria" },
+            { title: "Consultoria Estratégica", url: "consultoria.html" },
         ]
     },
     company: {
