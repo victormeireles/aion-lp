@@ -61,7 +61,7 @@ window.AION_CONFIG = {
             {
                 title: "Fundadores",
                 id: "fundadores",
-                url: "index.html#fundadores"
+                url: "index.html#founders"
             }
         ]
     },
@@ -80,7 +80,7 @@ window.AION_CONFIG = {
             {
                 title: "Empresa",
                 links: [
-                    { title: "Sobre Nós", url: "index.html#fundadores" },
+                    { title: "Sobre Nós", url: "index.html#founders" },
                     { title: "Cases", url: "index.html#cases" },
                     { title: "Política de Privacidade", url: "#" }
                 ]
@@ -139,7 +139,7 @@ const navLinks = [
         ]
     },
     { title: "Cases", url: "index.html#cases" },
-    { title: "Fundadores", url: "index.html#fundadores" }
+    { title: "Fundadores", url: "index.html#founders" }
 ];
 
 const footerSections = {
@@ -155,7 +155,7 @@ const footerSections = {
         title: "Institucional",
         links: [
             { title: "Home", url: "index.html" },
-            { title: "Sobre Nós", url: "index.html#fundadores" },
+            { title: "Sobre Nós", url: "index.html#founders" },
             { title: "Cases", url: "index.html#cases" }
         ]
     },
