@@ -16,6 +16,66 @@
     z-index: 10;
 }
 
+/* ============================================
+   FOUNDERS SECTION LINKS STYLING
+   ============================================ */
+
+/* Links na seção de fundadores - Estilo premium */
+#founders .section-subtitle a,
+#founders .founder-description a,
+#founders .credibility-text a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    position: relative;
+    font-weight: 500;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(147, 51, 234, 0.1));
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#founders .section-subtitle a:hover,
+#founders .founder-description a:hover,
+#founders .credibility-text a:hover {
+    color: var(--color-white);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(147, 51, 234, 0.2));
+    border-color: rgba(59, 130, 246, 0.4);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+/* Links específicos para empresas (C&A, Dafiti, EMS) - Destaque sutil */
+#founders .section-subtitle a[href*="cea.com.br"],
+#founders .section-subtitle a[href*="dafiti.com.br"], 
+#founders .section-subtitle a[href*="ems.com.br"] {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 193, 7, 0.1));
+    border-color: rgba(255, 215, 0, 0.3);
+    color: rgba(255, 255, 255, 0.95);
+}
+
+#founders .section-subtitle a[href*="cea.com.br"]:hover,
+#founders .section-subtitle a[href*="dafiti.com.br"]:hover,
+#founders .section-subtitle a[href*="ems.com.br"]:hover {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 193, 7, 0.2));
+    border-color: rgba(255, 215, 0, 0.5);
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
+}
+
+/* Links para G4 Educação - Destaque em azul AION */
+#founders a[href*="g4educacao.com.br"] {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(37, 99, 235, 0.15));
+    border-color: rgba(59, 130, 246, 0.3);
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 600;
+}
+
+#founders a[href*="g4educacao.com.br"]:hover {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.25), rgba(37, 99, 235, 0.25));
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
 /* Background Particle Effects */
 .founders-particles {
     position: absolute;
@@ -290,5 +350,24 @@
     .founders-credibility {
         margin: 2rem 1rem !important;
         padding: 1.5rem !important;
+    }
+
+    /* Links responsivos em mobile */
+    #founders .section-subtitle a,
+    #founders .founder-description a,
+    #founders .credibility-text a {
+        padding: 3px 8px;
+        font-size: 0.9rem;
+        border-radius: 6px;
+        display: inline-block;
+        margin: 1px 0;
+    }
+
+    /* Touch targets maiores para mobile */
+    #founders .section-subtitle a:hover,
+    #founders .founder-description a:hover,
+    #founders .credibility-text a:hover {
+        transform: none; /* Remove translateY em mobile */
+        box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
     }
 }

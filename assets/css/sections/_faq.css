@@ -152,6 +152,58 @@
     margin: 0;
 }
 
+/* Links na seção FAQ - Estilo consistente com seção de fundadores */
+.faq-answer a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    position: relative;
+    font-weight: 500;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(147, 51, 234, 0.1));
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-answer a:hover {
+    color: var(--color-white);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(147, 51, 234, 0.2));
+    border-color: rgba(59, 130, 246, 0.4);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+/* Links específicos para empresas no FAQ */
+.faq-answer a[href*="cea.com.br"],
+.faq-answer a[href*="dafiti.com.br"], 
+.faq-answer a[href*="ems.com.br"] {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 193, 7, 0.1));
+    border-color: rgba(255, 215, 0, 0.3);
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.faq-answer a[href*="cea.com.br"]:hover,
+.faq-answer a[href*="dafiti.com.br"]:hover,
+.faq-answer a[href*="ems.com.br"]:hover {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 193, 7, 0.2));
+    border-color: rgba(255, 215, 0, 0.5);
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
+}
+
+/* Links para G4 Educação no FAQ */
+.faq-answer a[href*="g4educacao.com.br"] {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(37, 99, 235, 0.15));
+    border-color: rgba(59, 130, 246, 0.3);
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 600;
+}
+
+.faq-answer a[href*="g4educacao.com.br"]:hover {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.25), rgba(37, 99, 235, 0.25));
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
 /* ============================================
    RESPONSIVE
    ============================================ */
@@ -185,5 +237,20 @@
     
     .faq-item.active .faq-answer {
         padding: 0 1.5rem 1rem;
+    }
+
+    /* Links responsivos no FAQ em mobile */
+    .faq-answer a {
+        padding: 3px 8px;
+        font-size: 0.9rem;
+        border-radius: 6px;
+        display: inline-block;
+        margin: 1px 0;
+    }
+
+    /* Touch targets maiores para mobile no FAQ */
+    .faq-answer a:hover {
+        transform: none; /* Remove translateY em mobile */
+        box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
     }
 }
