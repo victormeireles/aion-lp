@@ -61,7 +61,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
     <!-- Estilos -->
-    <!-- <link rel="stylesheet" href="assets/css/styles.css"> -->
     <link rel="stylesheet" href="assets/css/main.css" onerror="console.error('Erro ao carregar main.css')">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -501,34 +500,5 @@
     <!-- Scripts específicos da página -->
     <script src="assets/js/script.js" onerror="console.error('Erro ao carregar script.js')"></script>
     
-    <!-- Debug Script para GitHub Pages -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Verifica se o CSS foi carregado
-            const mainCss = document.querySelector('link[href*="main.css"]');
-            if (mainCss) {
-                console.log('✅ main.css carregado');
-            } else {
-                console.error('❌ main.css não encontrado');
-            }
-            
-            // Verifica se AION_CONFIG foi carregado
-            if (window.AION_CONFIG) {
-                console.log('✅ AION_CONFIG carregado');
-            } else {
-                console.error('❌ AION_CONFIG não encontrado');
-            }
-            
-            // Força recarga dos componentes se não carregaram
-            setTimeout(function() {
-                if (!document.querySelector('#shared-header').innerHTML) {
-                    console.warn('⚠️ Componentes não carregaram, tentando novamente...');
-                    if (window.initSharedComponents) {
-                        window.initSharedComponents();
-                    }
-                }
-            }, 2000);
-        });
-    </script>
 </body>
 </html> 

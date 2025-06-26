@@ -16,7 +16,9 @@
 @import url('sections/_hero.css');
 @import url('sections/_cases.css');
 @import url('sections/_faq.css');
-@import url('sections/_resources.css');
 @import url('sections/_method.css');
-@import url('sections/_pricing.css');
+@import url('sections/_resources.css');
 @import url('sections/_how-works.css');
+
+/* Custom */
+@import url('custom/_consultoria.css');
