@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<!-- Init consent for Google Tag Manager -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		if (window.gtag === undefined) {
+			window.gtag = function() {
+				dataLayer.push(arguments);
+			}
+		}
+
+		window.gtag('consent', 'default', {
+			'ad_storage': 'granted',
+			'ad_user_data': 'granted',
+			'ad_personalization': 'granted',
+			'analytics_storage': 'granted',
+			'functionality_storage': 'granted',
+			'personalization_storage': 'granted',
+			'security_storage': 'granted',
+		});
+	</script>
+	<!-- End Init consent for Google Tag Manager -->
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-TF7BZXLF');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta property="og:locale" content="pt_BR">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="https://estyle.vteximg.com.br/arquivos/aion_favicon.png?v=638494064601530000">
+
+    <link rel="icon" type="image/png" href="https://estyle.vteximg.com.br/arquivos/aion_favicon.png?v=638494064601530000">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <link rel="stylesheet" href="request_consulting.css">
+    <title>Aion Solution - Formulário de interesse</title>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TF7BZXLF"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="main-content">
+    <div id="stepper-container">
+        <div class="header">
+            <img src="assets/logos/aionLogoForBlackBackground.png" alt="Consultoria Aion - Crescimento Empresarial">
+            <p id="aion-plan"></p>
+        </div>
+        <ul class="steps">
+            <li class="step" id="step-1"></li>
+            <li class="step" id="step-2"></li>
+            <li class="step" id="step-3"></li>
+            <li class="step" id="step-4"></li>
+            <li class="step" id="step-5"></li>
+            <li class="step" id="step-6"></li>
+            <li class="step" id="step-7"></li>
+            <li class="step" id="step-8"></li>
+            <li class="step" id="step-9"></li>
+            <li class="step" id="step-10"></li>
+        </ul>
+
+        <div id="send-personal-content" class="stepper-title-content">
+            <div class="title"><p>Obrigado pelo seu interesse.</p></div>
+
+            <div class="stepper-content">
+                <form data-gtm-plan="personal_info_form_name" class="personal-info-form" id="personal-info-form-1" action="">
+                    <label for="personal-info-1">Qual é o seu nome completo?</label>
+                    <input class="input-text" type="text" id="personal-info-1" name="FNAME" required placeholder="Nome">
+                    <div class="form-buttons">
+                        <input class="input-button continue" id="send-personal-info-1" type="submit" value="Continuar ->">
+                    </div>
+                </form>
+                <form data-gtm-plan="personal_info_form_whatsapp" class="personal-info-form" id="personal-info-form-2" action="" >
+                    <label for="personal-info-2">Qual é o seu WhatsApp para contato?</label>
+                    <input class="input-text" type="text" id="personal-info-2" maxlength="15" name="PHONE" required placeholder="(00) 00000-0000">
+                    <span id="phone-error-msg" style="color:red; display:none;">Por favor, insira um número de telefone válido.</span>
+                    <div class="form-buttons">
+                        <input class="input-button continue" id="send-personal-info-2" type="submit" value="Continuar ->">
+                        <button class="back-button">Voltar</button>
+                    </div>
+                </form>
+                <form data-gtm-plan="personal_info_form_email" class="personal-info-form" id="personal-info-form-3" action="">
+                    <label for="email">Qual email você mais utiliza?</label>
+                    <input class="input-text" type="email" id="email" name="EMAIL" required placeholder="email@email.com">
+                    <p class="error-message" id="email-error"></p>
+                    <div class="form-buttons">
+                        <input class="input-button" id="send-email" type="submit" value="Continuar ->">
+                        <button class="back-button">Voltar</button>
+                    </div>
+                </form>
+                <form data-gtm-plan="personal_info_form_company_name" class="personal-info-form" id="personal-info-form-4" action="">
+                    <label for="personal-info-4">Qual é o nome da sua empresa?</label>
+                    <input class="input-text" type="text" id="personal-info-4" name="COMPANY" required placeholder="Nome da Empresa">
+                    <p class="error-message" id="company-error"></p>
+                    <div class="form-buttons">
+                        <input class="input-button continue" id="send-company" type="submit" value="Continuar ->">
+                        <button class="back-button">Voltar</button>
+                    </div>
+                </form>
+                <form data-gtm-plan="personal_info_form_tax_id" class="personal-info-form" id="personal-info-form-5" action="">
+                    <label for="personal-info-5">Qual é o CNPJ da sua empresa?</label>
+                    <input class="input-text" type="text" id="personal-info-5" name="CNPJ" required placeholder="CNPJ">
+                    <p class="error-message" id="cnpj-error">Por favor, digite um CNPJ válido.</p>
+                    <div class="form-buttons">
+                        <input class="input-button continue" id="send-personal-info-5" type="submit" value="Continuar ->">
+                        <button class="back-button">Voltar</button>
+                    </div>
+                </form>
+                <form data-gtm-plan="personal_info_form_website" class="personal-info-form" id="personal-info-form-6" action="">
+                    <label for="personal-info-6">Qual é o site da sua empresa? (opcional)</label>
+                    <input class="input-text" type="text" id="personal-info-6" name="WEBSITE" placeholder="URL do site">
+                    <div class="form-buttons">
+                        <input class="input-button continue" id="send-personal-info-6" type="submit" value="Continuar ->">
+                        <button class="back-button">Voltar</button>
+                    </div>
+                </form>
+                <form data-gtm-plan="personal_info_form_sales_channel" class="personal-info-form" id="personal-info-form-7" action="">
+                    <p>Qual é o principal canal que sua empresa utiliza?</p>
+                    <div class="radio-button">
+                        <input type="radio" id="channel1" name="CHANNEL" required value="Online">
+                        <label for="channel1">Online</label>
+                    </div>
+                    <div class="radio-button">
+                        <input type="radio" id="channel2" name="CHANNEL" required value="Físico">
+                        <label for="channel2">Físico</label>
+                    </div>
+                    <div class="radio-button">
+                        <input type="radio" id="channel3" name="CHANNEL" required value="Online e Físico">
+                        <label for="channel3">Online e Físico</label>
+                    </div>
+                    <div class="form-buttons">
+                        <input class="input-button continue" id="send-personal-info-7" type="submit"  value="Continuar ->">
+                        <button class="back-button">Voltar</button>
+                    </div>
+                </form>
+                <form data-gtm-plan="personal_info_form_segment" class="personal-info-form" id="personal-info-form-8" action="">
+                    <p>Qual é o segmento da sua empresa?</p>
+                    <select id="searchable-dropdown" name="SEGMENT">
+                        <option value="" disabled selected>Selecione uma opção</option>
+                    </select>
+                    <div class="form-buttons">
+                        <input class="input-button continue" id="send-personal-info-8" type="submit" value="Continuar ->">
+                        <button class="back-button">Voltar</button>
+                    </div>
+                </form>
+                <form data-gtm-plan="personal_info_form_annual_revenue" class="personal-info-form" id="personal-info-form-9" action="">
+                    <p>Qual é o faturamento anual da sua empresa? Esta informação nos ajuda a adaptar <strong>estratégias de crescimento</strong> personalizadas.</p>
+                    <div class="radio-button">
+                        <input type="radio" id="invoicing1" name="INVOICING" value="Até 500k">
+                        <label for="invoicing1">Até 500k</label>
+                    </div>
+                    <div class="radio-button">
+                        <input type="radio" id="invoicing2" name="INVOICING" value="500k a 1M">
+                        <label for="invoicing2">500k a 1M</label>
+                    </div>
+                    <div class="radio-button">
+                        <input type="radio" id="invoicing3" name="INVOICING" value="1M a 10M">
+                        <label for="invoicing3">1M a 10M</label>
+                    </div>
+                    <div class="radio-button">
+                        <input type="radio" id="invoicing4" name="INVOICING" value="10M a 100M">
+                        <label for="invoicing4">10M a 100M</label>
+                    </div>
+                    <div class="radio-button">
+                        <input type="radio" id="invoicing5" name="INVOICING" value="Mais de 100M">
+                        <label for="invoicing5">Mais de 100M</label>
+                    </div>
+                    <div class="form-buttons">
+                        <input class="input-button continue" id="send-personal-info-9" type="submit" value="Confirmar">
+                        <button class="back-button">Voltar</button>
+                    </div>
+                </form>
+                <form data-gtm-plan="personal_info_form_erp" class="personal-info-form" id="personal-info-form-10" action="">
+                    <p>Qual ERP você utiliza??</p>
+                    <div class="radio-button">
+                        <input type="radio" id="erp1" name="ERP" value="bling">
+                        <label for="erp1">Bling</label>
+                    </div>
+                    <div class="radio-button">
+                        <input type="radio" id="erp2" name="ERP" value="tiny">
+                        <label for="erp2">Tiny</label>
+                    </div>
+                    <div class="radio-button">
+                        <input type="radio" id="erp3" name="ERP" value="other">
+                        <label for="erp3">Outro:</label>
+                    </div>
+                    <input class="input-text" type="text" id="erp-other" name="ERP-OTHER" placeholder="Insira aqui o ERP que você utiliza">
+                    <label for="erp-other"></label>
+                    <p class="error-message" id="erp-error">Selecione uma das opções</p>
+                    <div class="form-buttons">
+                        <input class="input-button continue" id="send-personal-info-10" type="submit" value="Confirmar">
+                        <button class="back-button">Voltar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="send-whatsapp-message" class="stepper-title-content">
+            <div id="checkout-title" class="title"></div>
+            <p id="checkout-description" class="description"></p>
+            <a id="whatsapp-contact-button" class="checkout-button GTM-consulting-whatsapp-redirect" target="_blank" href="" onclick="getWhatsAppMessage()"><img src="icons/whatsappIcon.svg" alt=""><p>Fale Conosco</p></a>
+            <div id="pagbank-checkout">
+                <form id="pagbank-form" action="https://pagseguro.uol.com.br/pre-approvals/request.html" target="_blank" method="post" class="GTM-pagbank-form">
+                    <input type="hidden" name="code" value="4B5A177C8F8FE5DFF42BDF9BEDDFF9BB" />
+                    <input type="hidden" name="iot" value="button" />
+                    <button type="submit" class="checkout-button pagbank-checkout-button">
+                        <p>Continuar</p>
+                        <img src="icons/pagBankIcon.svg" alt="">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="whatsapp-wrapper desktop-whatsapp">
+		<a id="desktop-whatsapp-link" href="https://web.whatsapp.com/send/?phone=5511965833332&text=Olá%2C+tudo+bem%3F+Gostaria+de+saber+mais+sobre+o+AION+e+os+serviços+que+vocês+oferecem.+Poderiam+me+passar+mais+informações%3F&type=phone_number&app_absent=0" target="_blank">
+			<div class="whatsapp-logo-container">
+				<svg aria-hidden="true" class="whatsapp-logo" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg>
+			</div>
+		</a>
+	</div>
+
+    <div class="whatsapp-wrapper mobile-whatsapp">
+		<a id="mobile-whatsapp-link" href="https://api.whatsapp.com/send/?phone=5511965833332&text=Olá%2C+tudo+bem%3F+Gostaria+de+saber+mais+sobre+o+AION+e+os+serviços+que+vocês+oferecem.+Poderiam+me+passar+mais+informações%3F&type=phone_number&app_absent=0" target="_blank">
+			<div class="whatsapp-logo-container">
+				<svg aria-hidden="true" class="whatsapp-logo" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg>
+			</div>
+		</a>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js" integrity="sha512-a+SUDuwNzXDvz4XrIcXHuCf089/iJAoN4lmrXJg18XnduKK6YlDHNRalv4yd1N40OKI80tFidF+rqTFKGPoWFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="shared.js"></script>
+    <script src="request_consulting_script.js"></script>
+</body>
+</html>

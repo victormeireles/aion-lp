@@ -1,0 +1,33 @@
+# Configuração de Charset UTF-8 para todas as páginas
+AddDefaultCharset UTF-8
+
+# Configuração específica para arquivos HTML
+<FilesMatch "\.(html|htm)$">
+    Header set Content-Type "text/html; charset=utf-8"
+</FilesMatch>
+
+# Configuração para arquivos CSS
+<FilesMatch "\.css$">
+    Header set Content-Type "text/css; charset=utf-8"
+</FilesMatch>
+
+# Configuração para arquivos JavaScript
+<FilesMatch "\.js$">
+    Header set Content-Type "application/javascript; charset=utf-8"
+</FilesMatch>
+
+# Configuração para arquivos JSON
+<FilesMatch "\.json$">
+    Header set Content-Type "application/json; charset=utf-8"
+</FilesMatch>
+
+# Habilitação do mod_headers (necessário para as configurações acima)
+<IfModule mod_headers.c>
+    # Force UTF-8 encoding
+    Header always set Content-Type "text/html; charset=utf-8"
+</IfModule>
+
+# Configuração alternativa para servidores que não suportam Header
+<IfModule mod_mime.c>
+    AddCharset utf-8 .html .htm .css .js .json
+</IfModule> 

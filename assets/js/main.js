@@ -148,14 +148,46 @@ class AIONApp {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         const img = entry.target;
+                        
+                        // Carrega a imagem
                         img.src = img.dataset.src;
+                        
+                        // Remove o atributo data-src para evitar reprocessamento
+                        img.removeAttribute('data-src');
+                        
+                        // Remove classes relacionadas ao lazy loading
                         img.classList.remove('lazy');
+                        
+                        // Adiciona evento para quando a imagem carregar
+                        img.addEventListener('load', function() {
+                            // Adiciona classe fade-in para efeito suave
+                            this.classList.add('loaded');
+                        });
+                        
+                        // Para casos de erro no carregamento
+                        img.addEventListener('error', function() {
+                            console.warn('Erro ao carregar imagem:', this.dataset.src || this.src);
+                            this.classList.add('error');
+                        });
+                        
+                        // Para de observar esta imagem
                         imageObserver.unobserve(img);
                     }
                 });
+            }, {
+                // Configurações do observer
+                threshold: 0.1,
+                rootMargin: '50px 0px 50px 0px' // Carrega imagens um pouco antes de entrarem na viewport
             });
 
-            images.forEach(img => imageObserver.observe(img));
+            // Observa todas as imagens lazy
+            images.forEach(img => {
+                // Adiciona classe inicial para styling
+                img.classList.add('lazy');
+                imageObserver.observe(img);
+            });
+            
+            console.log(`Lazy loading inicializado para ${images.length} imagens`);
         }
     }
 

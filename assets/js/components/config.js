@@ -12,7 +12,7 @@ window.AION_CONFIG = {
 
     // URLs principais
     urls: {
-        consultation: "https://www.aionsolution.com.br/request_consulting?type=u",
+        consultation: "request_consulting.html?type=u",
         whatsapp: "https://whatsa.me/5511965833332/?t=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20quero%20saber%20mais%20sobre%20o%20Aion.&type=phone_number&app_absent=0",
         email: "mailto:contato@aionsolution.com.br",
         privacy: "/politica-privacidade",
@@ -88,7 +88,7 @@ window.AION_CONFIG = {
             {
                 title: "Contato",
                 links: [
-                    { title: "Consultoria Gratuita", url: "https://www.aionsolution.com.br/request_consulting?type=u", external: true },
+                    { title: "Consultoria Gratuita", url: "request_consulting.html?type=u", external: false },
                     { title: "WhatsApp", url: "https://whatsa.me/5511965833332/?t=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20quero%20saber%20mais%20sobre%20o%20Aion.&type=phone_number&app_absent=0", external: true },
                     { title: "E-mail", url: "mailto:contato@aionsolution.com.br" }
                 ]
