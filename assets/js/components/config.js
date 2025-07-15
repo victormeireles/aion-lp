@@ -62,6 +62,12 @@ window.AION_CONFIG = {
                 title: "Fundadores",
                 id: "fundadores",
                 url: "index.html#founders"
+            },
+            {
+                title: "Blog",
+                id: "blog",
+                url: "https://blog.aionsolution.com.br/",
+                external: true
             }
         ]
     },
@@ -82,6 +88,7 @@ window.AION_CONFIG = {
                 links: [
                     { title: "Sobre Nós", url: "index.html#founders" },
                     { title: "Cases", url: "index.html#cases" },
+                    { title: "Blog", url: "https://blog.aionsolution.com.br/", external: true },
                     { title: "Política de Privacidade", url: "#" }
                 ]
             },
